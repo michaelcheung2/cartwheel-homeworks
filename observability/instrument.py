@@ -12,6 +12,7 @@ Artifact G).
 
 from __future__ import annotations
 
+import json
 import logging
 import os
 from pathlib import Path
@@ -58,6 +59,14 @@ def instrument_genai(tracer_provider: Any) -> None:
     if _genai_instrumented:
         return
     from opentelemetry.instrumentation.openai_agents import OpenAIAgentsInstrumentor
+    from opentelemetry.instrumentation.openai_agents._hooks import OpenTelemetryTracingProcessor
+    from agents import GenerationSpanData
+
+    class GenerationTracingProcessor(OpenTelemetryTracingProcessor):
+        def _end_generation_span(self, span, data, trace_content):
+            super()._end_generation_span(span, data, trace_content)
+            if isinstance(data, GenerationSpanData):
+                _record_generation_attributes(span, data, trace_content)
 
     os.environ.setdefault("TRACELOOP_TRACE_CONTENT", "false")
     # Export only through Langfuse, not the SDK's separate hosted tracing path.
@@ -65,7 +74,32 @@ def instrument_genai(tracer_provider: Any) -> None:
     instrumentor.instrument(tracer_provider=tracer_provider)
     if not instrumentor.is_instrumented_by_opentelemetry:
         raise RuntimeError("OpenAI Agents tracing instrumentation failed to install")
+    # The pinned integration omits GenerationSpanData.output and .usage for
+    # Chat Completions/LiteLLM. Extend its existing spans, preserving hierarchy.
+    set_trace_processors([GenerationTracingProcessor(trace.get_tracer(
+        "opentelemetry.instrumentation.openai_agents", "0.62.3", tracer_provider
+    ))])
     _genai_instrumented = True
+
+
+def _record_generation_attributes(span: trace.Span, data: Any, trace_content: bool) -> None:
+    """Record SDK generation output and measured usage missing from 0.62.3."""
+    from opentelemetry.instrumentation.openai_agents._hooks import _convert_chat_message
+
+    if trace_content and data.output:
+        messages = []
+        for message in data.output:
+            role, parts = _convert_chat_message(message)
+            if role and parts:
+                messages.append({"role": role, "parts": parts})
+        if messages:
+            span.set_attribute("gen_ai.output.messages", json.dumps(messages))
+    for field in ("input_tokens", "output_tokens", "total_tokens"):
+        value = (data.usage or {}).get(field)
+        if value is not None:
+            span.set_attribute("gen_ai.usage." + field, value)
+    if data.model and data.model.startswith("ollama"):
+        span.set_attribute("gen_ai.provider.name", "ollama")
 
 
 def load_env(path: Path | None = None) -> None:
@@ -122,10 +156,11 @@ def record_tool_result(ctx: "AuthContext", result: dict[str, Any]) -> None:
     span = trace.get_current_span()
     if not span.is_recording():
         return
-    ### YOUR CODE HERE (HW2)
-    raise NotImplementedError(
-        "HW2: add authenticated caller and permission attributes to the tool span"
-    )
+    span.set_attribute("cartwheel.user_role", ctx.role)
+    span.set_attribute("cartwheel.user_id", str(ctx.user_id))
+    if ctx.role == "merchant":
+        span.set_attribute("cartwheel.store_id", str(ctx.store_id))
+    _set_permission_denied_attributes(span, result)
 
 
 def _set_permission_denied_attributes(
@@ -149,5 +184,9 @@ def _set_permission_denied_attributes(
     the smoke report counts them and Module 3 asserts on them. This is the one place in the
     course where you touch instrumentation by hand.
     """
-    ### YOUR CODE HERE (HW2)
-    raise NotImplementedError("HW2: set the cartwheel.permission_denied span attribute")
+    denied = result.get("error") == "permission_denied"
+    span.set_attribute("cartwheel.permission_denied", denied)
+    if denied:
+        span.set_attribute(
+            "cartwheel.permission_denied.reason", result.get("reason", "")
+        )
