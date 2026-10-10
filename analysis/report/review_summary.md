@@ -137,8 +137,10 @@ including trace/score IDs, values, current definition versions and evidence
 notes. No new live Cartwheel model calls were used in HW4.
 
 Real Chrome visual verification remains unavailable because macOS denied
-headless startup. Student feedback about the preliminary standard Langfuse
-view remains pending in interface_comparison.md. Workshop is skipped and
+headless startup. Trace-review feedback is written in interface_comparison.md
+at the student's request, grounded in assistant-inspected traces and the
+recorded workflow. The student's personal preliminary standard Langfuse
+inspection remains unverified. Workshop is skipped and
 workshop_notes.md is omitted. HW5 label shortfalls are recorded in
 hw5-readiness.md. The student's continuous video (at most five minutes) is
 still required. HW4 is not called complete while student work is pending.

@@ -72,8 +72,9 @@
   "ui_check": "QuickJS syntax and DOM-stub rendering with live API state",
   "real_browser_visual_check": "pending: Chrome headless startup denied by macOS",
   "new_live_cartwheel_model_calls": 0,
+  "trace_review_feedback": "written in interface_comparison.md at student request; based on assistant-inspected traces and recorded workflow",
   "student_items_pending": [
-    "Preliminary standard-Langfuse review feedback",
+    "Personal preliminary standard-Langfuse inspection unverified",
     "Continuous video <=5 minutes"
   ],
   "workshop": "skipped"

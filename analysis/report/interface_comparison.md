@@ -18,9 +18,58 @@ single-turn conversations and followups. Inspected trace IDs:
 - `ee864393192e7122500d8771446cd19b`
 - `bc39eb34abf1dee8fbb368a38658ec1f`
 
-Student feedback about their preliminary standard Langfuse reviews is
-**pending**. The observations below describe inspected data and interface
-behavior, rather than attributing unreported experiences to the student.
+The feedback below was drafted by the assistant at the student's request,
+using inspected traces and the recorded review workflow. It does not claim
+that the student personally performed the preliminary standard Langfuse
+inspection; that activity has not been independently reported.
+
+## Feedback on reviewing traces
+
+The most useful part of trace review was comparing what the assistant said
+with what the tools actually did. A plausible final answer is not enough to
+judge success. The review needs the user's request, the tool arguments,
+the returned records, and the final answer together. Langfuse retains the
+underlying spans and scores, which makes it possible to check those details
+and verify that annotations were saved.
+
+One source of friction was reconstructing a conversation across separate
+traces. For example, `support-0001` contains three traces under one session.
+An earlier turn can explain a later request or show that a human handoff
+already happened. Reviewing only the selected turn can therefore produce
+an incorrect failure label. Grouping turns by session, in chronological
+order, makes that context available while keeping the selected trace's
+review and labels separate.
+
+Another challenge was distinguishing a proposed action from an executed
+action. Some assistant messages printed tool-call JSON or promised a lookup
+without a corresponding tool execution. The decisive evidence is the
+actual TOOL span and its result. Showing each call's arguments and result
+together makes this distinction easier to check, including when a call
+failed and returned an exception.
+
+Policy review also required reading the supporting evidence closely. A
+citation can name a real document yet fail to support the particular claim.
+Conversely, a fact returned by a tool does not necessarily require a policy
+citation. In `support-0047`, trace
+`01994e8ae186fc97b029be687ae706f6`, the escalation result supplied ticket 151
+and a 24-hour SLA. That supported the response's 24-hour follow-up statement;
+the additional account-tracking advice needed a separate support check.
+This example helped refine the citation category rather than treating every
+uncited sentence as the same error.
+
+The custom viewer addresses these review needs through session grouping,
+visible tool results and retrieval content, and notes beside highlighted
+evidence. Separating initial observations, search suggestions, and final
+binary labels also makes the review process easier to follow. An AI
+suggestion remains visibly distinct from a confirmed human decision.
+
+The main remaining limitation is judgment: an interface cannot resolve an
+ambiguous specification or decide a category boundary on its own. Those
+questions still required explicit review and, in one case, an approved SPEC
+clarification. A dedicated span tree and annotations spanning multiple
+evidence blocks would further help with complex traces. The implemented UI
+was checked with DOM stubs; a successful visual browser check is still
+unverified.
 
 ## Retained design
 

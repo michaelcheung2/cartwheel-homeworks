@@ -18,6 +18,8 @@
   Langfuse, with current records in eight append-only JSONL label files.
 - Final stability finding: zero new consequential categories, confirmed.
 - AgentDebug comparison, sample fractions and HW5 readiness counts written.
+- Trace-review feedback written in interface_comparison.md at the student's
+  request, grounded in inspected traces and the recorded workflow.
 - All listed technical files exist; 12 starter files preserved byte-for-byte.
 - Optional Workshop skipped; workshop_notes.md omitted.
 
@@ -36,9 +38,9 @@ headless startup; the DOM checks are not described as browser verification.
 
 ## Student work still pending
 
-- Your report of inspecting 5–10 traces in standard Langfuse and any
-  difficulty with that view. The assistant asked for your experience and
-  leaves it explicitly pending in interface_comparison.md until supplied.
+- Personal inspection of 5–10 traces in standard Langfuse is unverified.
+  The requested feedback writeup is complete; its source is identified as
+  assistant inspection and the recorded workflow.
 - One continuous screen recording, at most five minutes, driving the app
   and repository; no slides. Explain one interface decision, two modes with
   supporting traces, the citation revision, one rejected search suggestion,
@@ -49,6 +51,6 @@ headless startup; the DOM checks are not described as browser verification.
 App restart: `env -u OTEL_SDK_DISABLED uv run python -m analysis.review_app.server`.
 State files preserve student decisions and AI drafting/acceptance provenance.
 The annotation watcher polls every two seconds and logs changes in ignored
-.cache/review-watch.log. Update the pending student feedback once received;
-complete the recording and final submission. HW4 is not called complete
+.cache/review-watch.log. Complete the recording and final submission;
+record personal preliminary inspection if performed. HW4 is not called complete
 while these student items remain pending.
