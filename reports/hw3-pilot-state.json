@@ -1,0 +1,74 @@
+{
+  "117": {
+    "order": {
+      "id": 117,
+      "user_id": 414,
+      "store_id": 17,
+      "product_id": 644,
+      "quantity": 1,
+      "total_cents": 2050,
+      "status": "delivered",
+      "ordered_at": "2026-06-01",
+      "shipped_at": "2026-06-02",
+      "delivered_at": "2026-06-09",
+      "refund_eligible": 1
+    },
+    "refunds": []
+  },
+  "64": {
+    "order": {
+      "id": 64,
+      "user_id": 397,
+      "store_id": 19,
+      "product_id": 734,
+      "quantity": 1,
+      "total_cents": 15825,
+      "status": "delivered",
+      "ordered_at": "2026-06-13",
+      "shipped_at": "2026-06-16",
+      "delivered_at": "2026-06-19",
+      "refund_eligible": 1
+    },
+    "refunds": []
+  },
+  "10": {
+    "order": {
+      "id": 10,
+      "user_id": 403,
+      "store_id": 16,
+      "product_id": 637,
+      "quantity": 1,
+      "total_cents": 23750,
+      "status": "placed",
+      "ordered_at": "2026-07-01",
+      "shipped_at": null,
+      "delivered_at": null,
+      "refund_eligible": 0
+    },
+    "refunds": []
+  },
+  "105": {
+    "order": {
+      "id": 105,
+      "user_id": 222,
+      "store_id": 6,
+      "product_id": 233,
+      "quantity": 1,
+      "total_cents": 25525,
+      "status": "placed",
+      "ordered_at": "2026-06-29",
+      "shipped_at": null,
+      "delivered_at": null,
+      "refund_eligible": 0
+    },
+    "refunds": []
+  },
+  "product_553": {
+    "id": 553,
+    "store_id": 14,
+    "title": "Portable Jam Trio",
+    "description": "Portable Jam Trio from Golden Hour Coffee. Placeholder dev-scale listing; the full-scale catalog is sampled from the Amazon Reviews 2023 metadata.",
+    "category": "grocery",
+    "price_cents": 21475
+  }
+}

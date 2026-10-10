@@ -1,0 +1,66 @@
+{
+  "total": 250,
+  "groups": {
+    "coverage": 175,
+    "challenge": 75
+  },
+  "roles": {
+    "shopper": 87,
+    "merchant": 85,
+    "support": 78
+  },
+  "intents": {
+    "order_lookup": 72,
+    "refund": 55,
+    "cancellation": 25,
+    "policy_question": 34,
+    "product_search": 35,
+    "dispute": 10,
+    "account_change": 10,
+    "out_of_scope": 9
+  },
+  "styles": {
+    "neutral_conversational": 32,
+    "terse_fragmentary": 32,
+    "typo_heavy": 31,
+    "confused_rambling": 31,
+    "frustrated_impatient": 31,
+    "repetitive_pressuring": 31,
+    "operational_shorthand": 31,
+    "requests_short_plain_answer": 31
+  },
+  "data_quality_cases": {
+    "dq-order-missing-delivery-date": 5,
+    "dq-order-reversed-dates": 5,
+    "dq-order-store-mismatch": 5,
+    "dq-product-duplicate-title": 5,
+    "dq-product-invalid-price": 5,
+    "dq-product-missing-title": 5
+  },
+  "turn_counts": {
+    "3": 16,
+    "1": 172,
+    "2": 62
+  },
+  "monitoring_groups": {
+    "coverage": 35,
+    "challenge": 15
+  },
+  "review_ids": [
+    "support-0001",
+    "support-0043",
+    "support-0077",
+    "support-0101",
+    "support-0137",
+    "support-0152",
+    "support-0169",
+    "support-0171",
+    "support-0180",
+    "support-0185",
+    "support-0190",
+    "support-0195",
+    "support-0200",
+    "support-0205",
+    "support-0206"
+  ]
+}

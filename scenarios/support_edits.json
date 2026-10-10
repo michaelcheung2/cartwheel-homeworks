@@ -1,0 +1,1647 @@
+{
+  "support-0004": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I was supposed to receive my Walnut Jam Trio from Saltbox Pantry, but it's been a few days and I'm starting to get a bit worried, could you please check the status of my order 4454?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. Could you check the current status of my order 4454 from Saltbox Pantry?",
+      "followups": []
+    }
+  },
+  "support-0005": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you check the current status of our store order 1429 from Clover Field Naturals? We need this updated ASAP.",
+      "followups": [
+        "Please use the actual dates recorded, rather than estimating them. We need accurate information to resolve this issue promptly."
+      ]
+    },
+    "after": {
+      "opening_message": "Could you check the current status of our store order 1429 from Clover Field Naturals? We need this updated ASAP.",
+      "followups": [
+        "Please use the actual dates recorded, rather than estimating them. We need accurate information to resolve this issue promptly. I need a clear answer."
+      ]
+    }
+  },
+  "support-0006": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm checking on the status of this customer's order 3684 from Copperline Tools - it's been a few days and I'm getting a bit concerned.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you check the current status of this customer's order 3684 from Copperline Tools? Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0008": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you check the current status of our store order 8525 from Northwind Books?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you check the current status of our store order 8525 from Northwind Books? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0011": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you check the current status of our store ordar 7038 from Paper Lantern Press?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Coud yu chek teh current status of our store ordar 7038 from Paper Lantern Press?",
+      "followups": []
+    }
+  },
+  "support-0012": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm a bit uncertain about the status of the customer's order 5333 from Northwind Books, could you clarify what the current status is?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm a bit uncertain about the status of the customer's order 5333 from Northwind Books, could you clarify what the current status is?",
+      "followups": []
+    }
+  },
+  "support-0013": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "What's the current status of my order 4795 from Petal & Stem?",
+      "followups": [
+        "Please use the actual dates, not estimates, to check the status."
+      ]
+    },
+    "after": {
+      "opening_message": "What's the current status of my order 4795 from Petal & Stem? Please deal with this now.",
+      "followups": [
+        "Please use the actual dates, not estimates, to check the status. I need a clear answer."
+      ]
+    }
+  },
+  "support-0014": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "We're still waiting for a response on our store order 4531 from Paper Lantern Press, could you please check the current status?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "We're still waiting for a response on our store order 4531 from Paper Lantern Press, could you please check the current status? Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0016": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you check the current status of my order 6360 from Bright Socket Electronics?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you check the current status of my order 6360 from Bright Socket Electronics? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0019": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you cheak the current stauts of my order 8367 from Petal & Stem?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Coud yu cheak teh current stauts of my order 8367 from Petal & Stem?",
+      "followups": []
+    }
+  },
+  "support-0020": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm not quite sure how to proceed with the current status of our store order 539 from Harbor Knits - could you assist me in clarifying the situation?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm not quite sure how to proceed with the current status of our store order 539 from Harbor Knits - could you assist me in clarifying the situation?",
+      "followups": []
+    }
+  },
+  "support-0021": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Check this customer's order 6997 from Cascade Audio, I need to know its status ASAP.",
+      "followups": [
+        "Use actual recorded dates, don't estimate them."
+      ]
+    },
+    "after": {
+      "opening_message": "Check this customer's order 6997 from Cascade Audio, I need to know its status ASAP.",
+      "followups": [
+        "Use actual recorded dates, don't estimate them. I need a clear answer."
+      ]
+    }
+  },
+  "support-0022": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I still haven't received my order from Trailhead Supply and it's already been a few days, could you please check the status of my order 8915?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you check the current status of my order 8915 from Trailhead Supply? Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0024": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you check the current status of this customer's order 5348 from Juniper Home Goods?",
+      "followups": [
+        "Please use the exact dates recorded, rather than estimating them.",
+        "What other details would help identify the order?"
+      ]
+    },
+    "after": {
+      "opening_message": "Could you check the current status of this customer's order 5348 from Juniper Home Goods? Keep it short and plain.",
+      "followups": [
+        "Please use the exact dates recorded, rather than estimating them. Keep it short and plain.",
+        "What other details would help identify the order? Keep it short and plain."
+      ]
+    }
+  },
+  "support-0028": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm having a bit of trouble understanding the status of my order 3519 from Pocket Arcade, I placed an order for the Classic USB-C Hub but I'm not entirely sure if it's shipped or if I need to do something else to receive it, could you check the current status for me?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm having a bit of trouble understanding the status of my order 3519 from Pocket Arcade, I placed an order for the Classic USB-C Hub but I'm not entirely sure if it's shipped or if I need to do something else to receive it, could you check the current status for me?",
+      "followups": []
+    }
+  },
+  "support-0029": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to check the status of our store order 7505 from Pocket Arcade now.",
+      "followups": [
+        "Please use the actual dates recorded, not estimates."
+      ]
+    },
+    "after": {
+      "opening_message": "I need to check the status of our store order 7505 from Pocket Arcade now.",
+      "followups": [
+        "Please use the actual dates recorded, not estimates. I need a clear answer."
+      ]
+    }
+  },
+  "support-0032": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you check the current status of our store order 5524 from Golden Hour Coffee?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you check the current status of our store order 5524 from Golden Hour Coffee? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0035": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "could you cheak the curent status of our store order 8353 from Harbor Knits?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "coud yu cheak teh curent status of our store order 8353 from Harbor Knits?",
+      "followups": []
+    }
+  },
+  "support-0037": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I've been waiting a few days for my order 6280 from Paper Lantern Press, can you check the status?",
+      "followups": [
+        "Please use the actual dates recorded, not estimates, to check the status of my order."
+      ]
+    },
+    "after": {
+      "opening_message": "I've been waiting a few days for my order 6280 from Paper Lantern Press, can you check the status? Please deal with this now.",
+      "followups": [
+        "Please use the actual dates recorded, not estimates, to check the status of my order. I need a clear answer."
+      ]
+    }
+  },
+  "support-0040": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you check the current status of my order 7496 from Saltbox Pantry?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you check the current status of my order 7496 from Saltbox Pantry? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0044": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm reaching out because I'm a bit uncertain about how to proceed with our store order 6926, the Everyday Dry Bag from Trailhead Supply, and I was wondering if a full refund could be processed as the item is no longer wanted by the customer.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm reaching out because I'm a bit uncertain about how to proceed with our store order 6926, the Everyday Dry Bag from Trailhead Supply, and I was wondering if a full refund could be processed as the item is no longer wanted by the customer.",
+      "followups": []
+    }
+  },
+  "support-0045": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Refund needed for customer's order 8736 from Atlas Stationery - Signature Planner no longer wanted, please process",
+      "followups": [
+        "Where would the money go if a refund is approved?"
+      ]
+    },
+    "after": {
+      "opening_message": "Refund needed for customer's order 8736 from Atlas Stationery - Signature Planner no longer wanted, please process. Please deal with this now.",
+      "followups": [
+        "Where would the money go if a refund is approved? I need a clear answer."
+      ]
+    }
+  },
+  "support-0046": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I still need a full refund for my order 7869, the Classic Granola from Golden Hour Coffee, because I no longer want it. Please process this refund as soon as possible.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I still need a full refund for my order 7869, the Classic Granola from Golden Hour Coffee, because I no longer want it. Please process this refund as soon as possible. Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0048": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Please process a full refund for this customer's order 8594, the Travel Dry Bag from Meridian Cycles, because the item is no longer wanted.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Please process a full refund for this customer's order 8594, the Travel Dry Bag from Meridian Cycles, because the item is no longer wanted. Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0051": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "plz process a full refund for this custumers order 4301, the travel olive oil from goldin hour coffee, becuz the item is no longer wanted.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "plz proces a full refnd for this custumers order 4301, teh travel olive oil from goldin hour coffee, becuz teh item is no longer wanted.",
+      "followups": []
+    }
+  },
+  "support-0053": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Process full refund for our store order 129, Handmade Serving Bowl from Blue Heron Ceramics, since it's no longer wanted.",
+      "followups": [
+        "Where would the refund money go if approved?"
+      ]
+    },
+    "after": {
+      "opening_message": "Process full refund for our store order 129, Handmade Serving Bowl from Blue Heron Ceramics, since it's no longer wanted. Please deal with this now.",
+      "followups": [
+        "Where would the refund money go if approved? I need a clear answer."
+      ]
+    }
+  },
+  "support-0056": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Please process a full refund for our store order 7812, the Midnight Rain Shell from Harbor Knits, because the item is no longer wanted.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Please process a full refund for our store order 7812, the Midnight Rain Shell from Harbor Knits, because the item is no longer wanted. Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0060": {
+    "reason": "restore the explicit refund request; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm having some trouble with customer order 7986 from Juniper Home Goods, I'm not entirely sure what's going on, but I think the customer might have changed their mind about the Travel Dinner Plate Set. Could you clarify the next steps for me?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. Please process a full refund for this customer's order 7986, the Travel Dinner Plate Set from Juniper Home Goods, because the item is no longer wanted.",
+      "followups": []
+    }
+  },
+  "support-0061": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need a refund for my order 5539, the Modern Puzzle from Little Fox Toys - it's no longer wanted, so process the refund now.",
+      "followups": [
+        "Where would the money go if a refund is approved?"
+      ]
+    },
+    "after": {
+      "opening_message": "I need a refund for my order 5539, the Modern Puzzle from Little Fox Toys - it's no longer wanted, so process the refund now.",
+      "followups": [
+        "Where would the money go if a refund is approved? I need a clear answer."
+      ]
+    }
+  },
+  "support-0064": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Please process a full refund for my order 5964, the Midnight Hand Cream from Fern & Fog Skincare, because it's no longer needed.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Please process a full refund for my order 5964, the Midnight Hand Cream from Fern & Fog Skincare, because it's no longer needed. Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0068": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I seem to be having some trouble with our store order 6200, the Handmade Cookbook from Paper Lantern Press. I was wondering if we could process a full refund, as the item is no longer something we're interested in. Could you please clarify the next steps for this?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I seem to be having some trouble with our store order 6200, the Handmade Cookbook from Paper Lantern Press. I was wondering if we could process a full refund, as the item is no longer something we're interested in. Could you please clarify the next steps for this?",
+      "followups": []
+    }
+  },
+  "support-0069": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need a full refund for this customer's order 356, Everyday Hammer from Copperline Tools, now.",
+      "followups": [
+        "Where would the money go if a refund is approved?"
+      ]
+    },
+    "after": {
+      "opening_message": "I need a full refund for this customer's order 356, Everyday Hammer from Copperline Tools, now.",
+      "followups": [
+        "Where would the money go if a refund is approved? I need a clear answer."
+      ]
+    }
+  },
+  "support-0070": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Please process a full refund for my order 111, the Speckled Desk Lamp from Cascade Audio, because the item is no longer wanted, and I'd like this done ASAP.",
+      "followups": [
+        "Where would the money go if a refund is approved?",
+        "How can I follow up on the request to ensure it's processed correctly?"
+      ]
+    },
+    "after": {
+      "opening_message": "Please process a full refund for my order 111, the Speckled Desk Lamp from Cascade Audio, because the item is no longer wanted, and I'd like this done ASAP. Please, I need a clear answer.",
+      "followups": [
+        "Where would the money go if a refund is approved? I really need to understand this.",
+        "How can I follow up on the request to ensure it's processed correctly? I really need to understand this."
+      ]
+    }
+  },
+  "support-0072": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you please process a full refund for this customer's order 6497, a Signature Mechanical Keyboard from Bright Socket Electronics, because the item is no longer wanted?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you please process a full refund for this customer's order 6497, a Signature Mechanical Keyboard from Bright Socket Electronics, because the item is no longer wanted? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0075": {
+    "reason": "restore the explicit refund request; preserve the assigned language style",
+    "before": {
+      "opening_message": "please proces a ful refunnd for this custmers orer 5767, the Handmade Lip Balm from Fern & Fog Skincare, becuz the item iz no longer wnted.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Plese proces a full refnd for this custmer's order 5767, teh Handmade Lip Balm from Fern & Fog Skincare, because teh item is no longer wanted.",
+      "followups": []
+    }
+  },
+  "support-0076": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm having some trouble recalling the details of my purchase, but I believe it was from Second Stitch Apparel, and I'm pretty sure it was for a Slim Beanie; could you please assist me with canceling order 6654?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm having some trouble recalling the details of my purchase, but I believe it was from Second Stitch Apparel, and I'm pretty sure it was for a Slim Beanie; could you please assist me with canceling order 6654?",
+      "followups": []
+    }
+  },
+  "support-0077": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Cancel our store order 6039 from Copperline Tools; item is no longer needed, we're running out of space.",
+      "followups": [
+        "What's the status of the cancellation request for 6039 from Copperline Tools? I need this done ASAP."
+      ]
+    },
+    "after": {
+      "opening_message": "Cancel our store order 6039 from Copperline Tools; item is no longer needed, we're running out of space. Please deal with this now.",
+      "followups": [
+        "What's the status of the cancellation request for 6039 from Copperline Tools? I need this done ASAP. I need a clear answer."
+      ]
+    }
+  },
+  "support-0080": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "We'd like to cancel our store order 1663 from Saltbox Pantry, as we no longer need the item.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "We'd like to cancel our store order 1663 from Saltbox Pantry, as we no longer need the item. Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0083": {
+    "reason": "restore cancellation intent; preserve the assigned language style",
+    "before": {
+      "opening_message": "pls cancl our store order 6552 from clover field naturals; we dont need it anymore",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Plese cancel our store order 6552 from Clover Field Naturals; teh item is no longer needed.",
+      "followups": []
+    }
+  },
+  "support-0085": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Cancel my order 2926 from Trailhead Supply now - I no longer need the Slim Water Bottle.",
+      "followups": [
+        "What's the timeline for processing my cancellation request?"
+      ]
+    },
+    "after": {
+      "opening_message": "Cancel my order 2926 from Trailhead Supply now - I no longer need the Slim Water Bottle.",
+      "followups": [
+        "What's the timeline for processing my cancellation request? I need a clear answer."
+      ]
+    }
+  },
+  "support-0088": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'd like to cancel my order 1532 from Fern & Fog Skincare because I no longer need the item.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'd like to cancel my order 1532 from Fern & Fog Skincare because I no longer need the item. Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0093": {
+    "reason": "restore the authenticated user role; preserve the assigned language style",
+    "before": {
+      "opening_message": "Cancel my order 4722 from Wooden Whale Workshop as it's no longer needed.",
+      "followups": [
+        "What's the process for checking cancellation status?",
+        "If cancellation's not possible, what's the next step?"
+      ]
+    },
+    "after": {
+      "opening_message": "Please cancel this customer's order 4722 from Wooden Whale Workshop; the item is no longer needed. Please deal with this now.",
+      "followups": [
+        "How can I check the status of the cancellation request? I need a clear answer.",
+        "What should I do if cancellation is not possible? I need a clear answer."
+      ]
+    }
+  },
+  "support-0096": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you cancel this customer's order 3600 from Harbor Knits because the item is no longer needed?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you cancel this customer's order 3600 from Harbor Knits because the item is no longer needed? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0099": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you pls cancel this custumer's order 3926 from Little Fox Toys; the item is no longer necesary.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Coud yu pls cancel this custumer's order 3926 from Little Fox Toys; teh item is no longer necesary.",
+      "followups": []
+    }
+  },
+  "support-0100": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm not entirely sure what I'm doing, but I believe I might have made a mistake with my recent order from Clover Field Naturals, which is 4592, and I'm not certain how to go about cancelling it, specifically the Slim Hand Cream item, as it's no longer needed.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm not entirely sure what I'm doing, but I believe I might have made a mistake with my recent order from Clover Field Naturals, which is 4592, and I'm not certain how to go about cancelling it, specifically the Slim Hand Cream item, as it's no longer needed.",
+      "followups": []
+    }
+  },
+  "support-0101": {
+    "reason": "restore the authenticated user role; restore the planned timing question; preserve the assigned language style",
+    "before": {
+      "opening_message": "Can you tell me the return policy for my order?",
+      "followups": [
+        "Does an individual store have a different return rule?"
+      ]
+    },
+    "after": {
+      "opening_message": "When does the return period start, and how long does it last? Please deal with this now.",
+      "followups": [
+        "Does an individual store have a different rule? I need a clear answer."
+      ]
+    }
+  },
+  "support-0102": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I've been waiting for a week and I still haven't received my refund, so I need to know where it will be deposited and approximately how long it will take. I really need to get this sorted out asap.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Where do approved refunds go, and how long do they take? Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0104": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "What are the general shipping and delivery times for orders?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "What are the general shipping and delivery times for orders? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0105": {
+    "reason": "restore the planned timing question",
+    "before": {
+      "opening_message": "I'm looking for information about restocking fees.",
+      "followups": [
+        "Does an individual store have a different rule?"
+      ]
+    },
+    "after": {
+      "opening_message": "When can a store charge a restocking fee?",
+      "followups": [
+        "Does an individual store have a different rule?"
+      ]
+    }
+  },
+  "support-0106": {
+    "reason": "restore the planned timing question",
+    "before": {
+      "opening_message": "Can a buyer dispute a charge after delivery?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "How long after delivery can a buyer dispute a charge?",
+      "followups": []
+    }
+  },
+  "support-0107": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Can u tel me when an order can be cancelled?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Cn u tel me when an order cn be cancelled?",
+      "followups": []
+    }
+  },
+  "support-0109": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Refund process taking too long, need to know where approved refunds go and how long it takes.",
+      "followups": [
+        "Store refund rules differ, what's the process for this specific store?"
+      ]
+    },
+    "after": {
+      "opening_message": "Refund process taking too long, need to know where approved refunds go and how long it takes.",
+      "followups": [
+        "Store refund rules differ, what's the process for this specific store? I need a clear answer."
+      ]
+    }
+  },
+  "support-0112": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm looking for general information about restocking fees. When can a store charge a restocking fee?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm looking for general information about restocking fees. When can a store charge a restocking fee? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0114": {
+    "reason": "restore the planned timing question",
+    "before": {
+      "opening_message": "Order cancellation timing is available upon request.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "When can an order be cancelled?",
+      "followups": []
+    }
+  },
+  "support-0115": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "When does the return period starst and how long dos it last on my Cartwheel oder of a pair of shoes from our store?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "When does teh return period starst and how long dos it last on my Cartwheel oder of a pair of shoes from our store?",
+      "followups": []
+    }
+  },
+  "support-0116": {
+    "reason": "restore the planned timing question; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm trying to understand the refund process on Cartwheel, but I'm not sure if it's the same for customer orders and store orders, so I'd appreciate clarification on that.",
+      "followups": [
+        "Does an individual store have a different rule for approved refunds, or is it a standard policy across all stores, and could you explain the process of where these refunds are sent and how long they take to process?",
+        "Where can I find the specific policy used for customer orders on Cartwheel, as I'd like to review it myself and ensure our store's process aligns with it?"
+      ]
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. Where do approved refunds go, and how long do they take?",
+      "followups": [
+        "And I'm not sure about this part either. Does an individual store have a different rule?",
+        "I'm still trying to work out what information is useful. Where can I read the policy you are using?"
+      ]
+    }
+  },
+  "support-0117": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "What's the timeline for merchant payouts and processing?",
+      "followups": [
+        "Does an individual store have a different payout rule?"
+      ]
+    },
+    "after": {
+      "opening_message": "What's the timeline for merchant payouts and processing? Please deal with this now.",
+      "followups": [
+        "Does an individual store have a different payout rule? I need a clear answer."
+      ]
+    }
+  },
+  "support-0119": {
+    "reason": "restore the planned timing question",
+    "before": {
+      "opening_message": "Policy on restocking fee",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "When can a store charge a restocking fee?",
+      "followups": []
+    }
+  },
+  "support-0120": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm looking for information on disputing charges after delivery. Can you tell me how long a buyer can dispute a charge?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm looking for information on disputing charges after delivery. Can you tell me how long a buyer can dispute a charge? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0121": {
+    "reason": "restore the planned timing question",
+    "before": {
+      "opening_message": "I'm trying to determine if I can cancel an order.",
+      "followups": [
+        "Does the cancellation policy vary by store?"
+      ]
+    },
+    "after": {
+      "opening_message": "When can an order be cancelled?",
+      "followups": [
+        "Does an individual store have a different rule?"
+      ]
+    }
+  },
+  "support-0122": {
+    "reason": "restore the planned timing question",
+    "before": {
+      "opening_message": "Return period details",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "When does the return period start, and how long does it last?",
+      "followups": []
+    }
+  },
+  "support-0125": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "What's the return policy for Juniper Home Goods?",
+      "followups": [
+        "Does Juniper Home Goods have a different return policy than other stores on Cartwheel?"
+      ]
+    },
+    "after": {
+      "opening_message": "What's the return policy for Juniper Home Goods? Please deal with this now.",
+      "followups": [
+        "Does Juniper Home Goods have a different return policy than other stores on Cartwheel? I need a clear answer."
+      ]
+    }
+  },
+  "support-0126": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to know the return rule for Northwind Books ASAP because I've been waiting to hear back about a book I returned last week and I really need it for my classes. Can you please hurry with this?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "What is the return rule for Northwind Books? Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0128": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "What is the return policy for Saltbox Pantry?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "What is the return policy for Saltbox Pantry? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0133": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to find the Everyday Planter from Petal & Stem and know what's listed.",
+      "followups": [
+        "What info makes the available listings different?"
+      ]
+    },
+    "after": {
+      "opening_message": "I need to find the Everyday Planter from Petal & Stem and know what's listed.",
+      "followups": [
+        "What info makes the available listings different? I need a clear answer."
+      ]
+    }
+  },
+  "support-0136": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Can you find the Compact Bluetooth Speaker from Bright Socket Electronics and tell me what's listed?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Can you find the Compact Bluetooth Speaker from Bright Socket Electronics and tell me what's listed? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0139": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Can you find the Modern Dry Bag from Trailhead Supply and tell me whats listed? Im looking at diferent prices and cant figger out whats going on.",
+      "followups": [
+        "What information helps distinguish the available listings? I want to make shure I get the rigt one. Can you include shipping estamates or any other info that might be relevent?",
+        "Can you include the names and prices actualy shown? I dont want to make any mistakes or have to contakt customer support again."
+      ]
+    },
+    "after": {
+      "opening_message": "Can you find the Modern Dry Bag from Trailhead Supply and tell me whats listed? Im looking at diferent prices and cant figger out whats going on.",
+      "followups": [
+        "Wht informtion helps distinguish teh available listings? I want to make shure I get teh rigt one. Cn yu include shipping estamates or any other info that might be relevent?",
+        "Cn yu include teh names and prices actualy shown? I dont want to make any mistakes or have to contakt custmer support again."
+      ]
+    }
+  },
+  "support-0141": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need you to find the Modern Plush Fox from Little Fox Toys and list its details",
+      "followups": [
+        "What specific details do you need to distinguish between the available listings?"
+      ]
+    },
+    "after": {
+      "opening_message": "I need you to find the Modern Plush Fox from Little Fox Toys and list its details. Please deal with this now.",
+      "followups": [
+        "What specific details do you need to distinguish between the available listings? I need a clear answer."
+      ]
+    }
+  },
+  "support-0144": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm trying to find the Walnut Tea Sampler from Golden Hour Coffee - can you tell me what it includes?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm trying to find the Walnut Tea Sampler from Golden Hour Coffee - can you tell me what it includes? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0147": {
+    "reason": "restore the supplied product name or description; preserve the assigned language style",
+    "before": {
+      "opening_message": "can you find the Slim Hand Creme from Fern & Fog Skincare and tell me whats listed?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Cn yu find teh Slim Hand Cream from Fern & Fog Skincare and tell me wht's listed?",
+      "followups": []
+    }
+  },
+  "support-0148": {
+    "reason": "restore product search rather than order/refund intent; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm having a bit of trouble locating the Travel Bath Salts from Clover Field Naturals in my, uh, I suppose I'm not even sure if they were actually part of my order, and I was wondering if you could tell me what's listed on the product page, I'm a bit confused about the details.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. Can you find the Travel Bath Salts from Clover Field Naturals and tell me what's listed?",
+      "followups": []
+    }
+  },
+  "support-0149": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Need to find the Signature USB-C Hub from Pocket Arcade. What's available?",
+      "followups": [
+        "What information helps distinguish the available listings?"
+      ]
+    },
+    "after": {
+      "opening_message": "Need to find the Signature USB-C Hub from Pocket Arcade. What's available? Please deal with this now.",
+      "followups": [
+        "What information helps distinguish the available listings? I need a clear answer."
+      ]
+    }
+  },
+  "support-0152": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you investigate a disputed charge on our store order 4163 from Clover Field Naturals, specifically regarding a Walnut Face Serum purchase?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you investigate a disputed charge on our store order 4163 from Clover Field Naturals, specifically regarding a Walnut Face Serum purchase? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0157": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need a person to investigate a disputed charge on my order 850 from Paper Lantern Press.",
+      "followups": [
+        "What information should I provide for the investigation?"
+      ]
+    },
+    "after": {
+      "opening_message": "I need a person to investigate a disputed charge on my order 850 from Paper Lantern Press. Please deal with this now.",
+      "followups": [
+        "What information should I provide for the investigation? I need a clear answer."
+      ]
+    }
+  },
+  "support-0160": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need someone to investigate a disputed charge on my order 3236 from Clover Field Naturals.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I need someone to investigate a disputed charge on my order 3236 from Clover Field Naturals. Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0163": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to change my account phonenumber on my acount it's been chenging lately and I dont want it to be permanintly attached to my acount",
+      "followups": [
+        "What is the next step for making that change? I need to make shure everything is updated properley"
+      ]
+    },
+    "after": {
+      "opening_message": "Plese chnge teh account phone number on my account.",
+      "followups": [
+        "Wht is teh next step for making that chnge?"
+      ]
+    }
+  },
+  "support-0165": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to change my notification contact email ASAP. Please update it.",
+      "followups": [
+        "What is the next step for making that change?"
+      ]
+    },
+    "after": {
+      "opening_message": "I need to change my notification contact email ASAP. Please update it.",
+      "followups": [
+        "What is the next step for making that change? I need a clear answer."
+      ]
+    }
+  },
+  "support-0166": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to change the email address on my account ASAP, please help me with that!",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I need to change the email address on my account ASAP, please help me with that! Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0168": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'd like to update my account phone number.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'd like to update my account phone number. Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0171": {
+    "reason": "restore the out-of-scope topic rather than an invented Cartwheel issue; preserve the assigned language style",
+    "before": {
+      "opening_message": "Im havin a issue with this customer's order from Our Store, i need to know if i can get a refund for a non functional Cartwheel gift card",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Cn yu give me legal advice on ending my lease?",
+      "followups": []
+    }
+  },
+  "support-0173": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need help booking a flight on another website, what's the process?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I need help booking a flight on another website, what's the process? Please deal with this now.",
+      "followups": []
+    }
+  },
+  "support-0176": {
+    "reason": "restore the explicit refund request; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm checking on the return policy for order 8002 from Atlas Stationery. Can you confirm if it's still possible to return and what the return deadline is?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Can I still return order 8002? What is its return deadline? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0177": {
+    "reason": "restore the explicit refund request",
+    "before": {
+      "opening_message": "I need to check the return policy for order 8002 from Atlas Stationery.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "How much time do I have to return order 8002?",
+      "followups": []
+    }
+  },
+  "support-0178": {
+    "reason": "restore the explicit refund request; preserve the assigned language style",
+    "before": {
+      "opening_message": "Check return deadline for order 8002 at Atlas Stationery.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Full refund: my order 8002. No longer wanted.",
+      "followups": []
+    }
+  },
+  "support-0179": {
+    "reason": "restore the explicit refund request; preserve the assigned language style",
+    "before": {
+      "opening_message": "I've checked our store's order records and I'm having trouble finding the return policy for item 8002. Can you please assist me with this?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Is order 8002 still within teh return period?",
+      "followups": []
+    }
+  },
+  "support-0180": {
+    "reason": "restore the explicit refund request; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm trying to understand the return policy for Atlas Stationery, specifically for order 8002. Could you help me figure out when the return would be due, and how it would affect the original purchase?",
+      "followups": [
+        "Where would the money go if a refund is approved, and how long would it take for the refund to actually be processed and credited back to the original payment method?"
+      ]
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I need help figuring out when a return for order 8002 would be due.",
+      "followups": [
+        "And I'm not sure about this part either. Where would the money go if a refund is approved?"
+      ]
+    }
+  },
+  "support-0181": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "What are the shipment and delivery dates on my order 8001 from Harbor Knits?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "What are the shipment and delivery dates on my order 8001 from Harbor Knits? Please deal with this now.",
+      "followups": []
+    }
+  },
+  "support-0182": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "Check the recorded delivery timeline for order 8001 from Harbor Knits - it's been a few days and we need to confirm if it's been processed.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Check the recorded delivery timeline for order 8001. Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0184": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you verify the sequence of events for order 8001 from Harbor Knits?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Could you verify the sequence of events for order 8001 from Harbor Knits? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0187": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Can you please verify the product and store details on order 8003 from Blue Heron Ceramics?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Cn yu plese verify teh product and store details on order 8003 from Blue Heron Ceramics?",
+      "followups": []
+    }
+  },
+  "support-0188": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm having a bit of trouble locating the correct store for one of our orders, and I was wondering if you could help me verify the store that owns the product on order 8003?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm having a bit of trouble locating the correct store for one of our orders, and I was wondering if you could help me verify the store that owns the product on order 8003?",
+      "followups": []
+    }
+  },
+  "support-0189": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Confirm seller for item on order 8003 from Blue Heron Ceramics.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Confirm seller for item on order 8003 from Blue Heron Ceramics. Please deal with this now.",
+      "followups": []
+    }
+  },
+  "support-0190": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Check that order 8003 is linked to the correct seller for its product. I really need to know this ASAP.",
+      "followups": [
+        "Please use the dates actually recorded, rather than estimating them. This is not a trivial mistake and I'm starting to get worried about the seller's authenticity."
+      ]
+    },
+    "after": {
+      "opening_message": "Check that order 8003 is linked to the correct seller for its product. I really need to know this ASAP.",
+      "followups": [
+        "Please use the dates actually recorded, rather than estimating them. This is not a trivial mistake and I'm starting to get worried about the seller's authenticity. I really need to understand this."
+      ]
+    }
+  },
+  "support-0192": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm looking for the Heavy-Duty Vase at Blue Heron Ceramics. Can you show me the available listings?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm looking for the Heavy-Duty Vase at Blue Heron Ceramics. Can you show me the available listings? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0195": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Hi, I'm trying to figger out what makes the Heavy-Duty Vase listings in Blue Heron Ceramics diffrent from each other. Can you help me out?",
+      "followups": [
+        "What information do you need to know about the listings to be able to tell me how they're diffrent?"
+      ]
+    },
+    "after": {
+      "opening_message": "Hi, I'm trying to figger out what makes the Heavy-Duty Vase listings in Blue Heron Ceramics diffrent from each other. Can you help me out?",
+      "followups": [
+        "Wht informtion do yu need to know about teh listings to be able to tell me how they're diffrent?"
+      ]
+    }
+  },
+  "support-0196": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm having some difficulty verifying the price of the Rustic Pitcher from Blue Heron Ceramics, as it seems to be listed differently on Cartwheel compared to their official website, and I was wondering if you could check the listed price for me?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm having some difficulty verifying the price of the Rustic Pitcher from Blue Heron Ceramics, as it seems to be listed differently on Cartwheel compared to their official website, and I was wondering if you could check the listed price for me?",
+      "followups": []
+    }
+  },
+  "support-0197": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm interested in the Rustic Pitcher at Blue Heron Ceramics; is the listed price realistic?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm interested in the Rustic Pitcher at Blue Heron Ceramics; is the listed price realistic? Please deal with this now.",
+      "followups": []
+    }
+  },
+  "support-0200": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need help understanding the price on the Blue Heron Ceramics Rustic Pitcher listing.",
+      "followups": [
+        "What information helps distinguish the available listings?"
+      ]
+    },
+    "after": {
+      "opening_message": "I need help understanding the price on the Blue Heron Ceramics Rustic Pitcher listing. Keep it short and plain.",
+      "followups": [
+        "What information helps distinguish the available listings? Keep it short and plain."
+      ]
+    }
+  },
+  "support-0204": {
+    "reason": "restore the request for the actual displayed title; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm having some trouble understanding the name that was actually listed on the Portable Tray from Blue Heron Ceramics, and I'd greatly appreciate it if you could help me figure this out.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I need the name shown on the Blue Heron Ceramics Portable Tray listing.",
+      "followups": []
+    }
+  },
+  "support-0205": {
+    "reason": "restore the request for the actual displayed title; preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to identify the Portable Tray listing at Blue Heron Ceramics without being given its title",
+      "followups": [
+        "What specific details about the listing can you provide to help me find the right one?"
+      ]
+    },
+    "after": {
+      "opening_message": "Can you identify the listing described as a Portable Tray at Blue Heron Ceramics without guessing its title? Please deal with this now.",
+      "followups": [
+        "What information helps distinguish the available listings? I need a clear answer."
+      ]
+    }
+  },
+  "support-0208": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'd like to request a partial refund of $100.00 from my order 1012 from Fern & Fog Skincare.",
+      "followups": [
+        "Where would the money go if a refund is approved?",
+        "How can I follow up on the request?"
+      ]
+    },
+    "after": {
+      "opening_message": "I'd like to request a partial refund of $100.00 from my order 1012 from Fern & Fog Skincare. Keep it short and plain.",
+      "followups": [
+        "Where would the money go if a refund is approved? Keep it short and plain.",
+        "How can I follow up on the request? Keep it short and plain."
+      ]
+    }
+  },
+  "support-0212": {
+    "reason": "restore the explicit refund request; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm reaching out because I think there might be some confusion regarding our store order 2041, the Travel Bluetooth Speaker from Pocket Arcade, and I'd like to clarify what needs to be done about it, as we've had some issues with returns and refunds lately.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. Please process a full refund for our store order 2041, the Travel Bluetooth Speaker from Pocket Arcade, because the item is no longer wanted.",
+      "followups": []
+    }
+  },
+  "support-0213": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Process refund for customer's order 8834, the Vintage Crewneck from Harbor Knits, since it's no longer wanted.",
+      "followups": [
+        "Where would the refund money go if approved?"
+      ]
+    },
+    "after": {
+      "opening_message": "Process refund for customer's order 8834, the Vintage Crewneck from Harbor Knits, since it's no longer wanted. Please deal with this now.",
+      "followups": [
+        "Where would the refund money go if approved? I need a clear answer."
+      ]
+    }
+  },
+  "support-0214": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I still need a full refund for my order 7852, the Everyday Granola from Saltbox Pantry, because it's no longer wanted. Please process the refund as soon as possible.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I still need a full refund for my order 7852, the Everyday Granola from Saltbox Pantry, because it's no longer wanted. Please process the refund as soon as possible. Please, I need a clear answer.",
+      "followups": []
+    }
+  },
+  "support-0216": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Please process a full refund for this customer's order 2197, the Midnight Hot Sauce from Saltbox Pantry, because the item is no longer wanted.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Please process a full refund for this customer's order 2197, the Midnight Hot Sauce from Saltbox Pantry, because the item is no longer wanted. Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0220": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm having some trouble with my order 4574, I believe it's 4574 that I'm referring to, and I wanted to ask if a full refund could be issued for the Midnight Planner from Atlas Stationery, as it's no longer something I'm interested in, but I'm not entirely sure what the status of my order is or how to proceed.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. I'm having some trouble with my order 4574, I believe it's 4574 that I'm referring to, and I wanted to ask if a full refund could be issued for the Midnight Planner from Atlas Stationery, as it's no longer something I'm interested in, but I'm not entirely sure what the status of my order is or how to proceed.",
+      "followups": []
+    }
+  },
+  "support-0221": {
+    "reason": "keep the shared-receipt authorization edge explicit; preserve the assigned language style",
+    "before": {
+      "opening_message": "Check the status of order 9753 from Trailhead Supply, I need to know what's going on.",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "A friend shared order 9753 with me. Could you tell me its status? Please deal with this now.",
+      "followups": []
+    }
+  },
+  "support-0223": {
+    "reason": "keep the shared-receipt authorization edge explicit",
+    "before": {
+      "opening_message": "Could you check the current status of my order 32 from Juniper Home Goods?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "My order 32: status?",
+      "followups": []
+    }
+  },
+  "support-0224": {
+    "reason": "keep the shared-receipt authorization edge explicit; preserve the assigned language style",
+    "before": {
+      "opening_message": "Could you check the current status of my order 9558 from Copperline Tools?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "A friend shared order 9558 with me. Could you tell me its status? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0227": {
+    "reason": "keep the other-store authorization edge explicit; preserve the assigned language style",
+    "before": {
+      "opening_message": "Can you look up ordor 2360 from Trailhead Supply?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Cn yu look up order 2360 from another merchant's store? I have its receipt number.",
+      "followups": []
+    }
+  },
+  "support-0229": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I misplaced my receipt and I need help checking my order.",
+      "followups": [
+        "I'm getting anxious because it's been a few days and I still haven't received my item yet.",
+        "Can you tell me what information I should be looking for to identify the product?"
+      ]
+    },
+    "after": {
+      "opening_message": "Can you help me check an order? I have misplaced the receipt. Please deal with this now.",
+      "followups": [
+        "I cannot remember the product name either. I need a clear answer.",
+        "What information should I look for to identify it? I need a clear answer."
+      ]
+    }
+  },
+  "support-0230": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to check on our store order asap because I've misplaced the receipt.",
+      "followups": [
+        "I've forgotten the product name too, so can we still help me locate the order?",
+        "I don't remember the product name, so what information should I look for to identify it? I really need to check on our store order right away."
+      ]
+    },
+    "after": {
+      "opening_message": "I need to check on our store order asap because I've misplaced the receipt. Please, I need a clear answer.",
+      "followups": [
+        "I've forgotten the product name too, so can we still help me locate the order? I really need to understand this.",
+        "I don't remember the product name, so what information should I look for to identify it? I really need to check on our store order right away. I really need to understand this."
+      ]
+    }
+  },
+  "support-0231": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Can you help me check an order? I lost the receipt.",
+      "followups": [
+        "I don't remember the product name either.",
+        "What details should I look for to identify the item?"
+      ]
+    },
+    "after": {
+      "opening_message": "Help me check an order? I lost the receipt.",
+      "followups": [
+        "I don't remember the product name either.",
+        "What details should I look for to identify the item?"
+      ]
+    }
+  },
+  "support-0232": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'd like to check an order, but I lost the receipt.",
+      "followups": [
+        "I'm also having trouble remembering the product name.",
+        "Can you tell me what details I can look for to identify the item?"
+      ]
+    },
+    "after": {
+      "opening_message": "I'd like to check an order, but I lost the receipt. Keep it short and plain.",
+      "followups": [
+        "I'm also having trouble remembering the product name. Keep it short and plain.",
+        "Can you tell me what details I can look for to identify the item? Keep it short and plain."
+      ]
+    }
+  },
+  "support-0234": {
+    "reason": "restore the authenticated user role; preserve the assigned language style",
+    "before": {
+      "opening_message": "Can you help me check my order, misplaced my receipt.",
+      "followups": [
+        "I cannot remember the product name either.",
+        "What information should I look for to identify it?"
+      ]
+    },
+    "after": {
+      "opening_message": "Help me check an order? I have misplaced the receipt.",
+      "followups": [
+        "I cannot remember the product name either.",
+        "What information should I look for to identify it?"
+      ]
+    }
+  },
+  "support-0235": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Can you help me check an order? I hav mislaid the receipt.",
+      "followups": [
+        "I cant rember the product name ether, its somthing from Cartwheel.",
+        "I also dont have the ordure number, I cant seem to find it anywhare."
+      ]
+    },
+    "after": {
+      "opening_message": "Cn yu hlep me chek an order? I hav mislaid teh receipt.",
+      "followups": [
+        "I cant rember teh product name ether, its somthing from Cartwheel.",
+        "I also dont have teh ordure number, I cant seem to find it anywhare."
+      ]
+    }
+  },
+  "support-0236": {
+    "reason": "restore the authenticated user role; remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm trying to locate an order, but I've misplaced the receipt and I'm not sure where to begin, as I've been dealing with so many orders lately, and I'm getting a bit concerned because it's been a few days and I still haven't received the items I ordered.",
+      "followups": [
+        "I apologize for the confusion, but I'm having trouble recalling the product name, which is a bit of a problem, as I need that information to, well, locate the order, I suppose, and I'm worried that I might have ordered from the wrong store, which would be a real inconvenience.",
+        "I was wondering if you could help me figure out what information I should look for to identify the order, such as the order date, the product category, or perhaps the quantity ordered, and is there any way to retrieve the order information without the receipt?"
+      ]
+    },
+    "after": {
+      "opening_message": "I'm getting a little lost here, and I'm not quite sure how to ask this. Can you help me check an order? I have misplaced the receipt.",
+      "followups": [
+        "And I'm not sure about this part either. I cannot remember the product name either.",
+        "I'm still trying to work out what information is useful. What information should I look for to identify it?"
+      ]
+    }
+  },
+  "support-0237": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to check the status of my order 8896 from Saltbox Pantry, I'm getting a bit concerned because it's been a few days and I still haven't received my Vintage Jam Trio yet.",
+      "followups": [
+        "Sorry, I copied the wrong receipt, I meant order 162 from Saltbox Pantry, but I think it's related to the Vintage Jam Trio I was supposed to get."
+      ]
+    },
+    "after": {
+      "opening_message": "Check my order 8896. Please deal with this now.",
+      "followups": [
+        "Sorry, I copied the wrong receipt. I meant order 162. I need a clear answer."
+      ]
+    }
+  },
+  "support-0238": {
+    "reason": "remove invented order history or prior actions; preserve the assigned language style",
+    "before": {
+      "opening_message": "Check our store order 7106. It's been over an hour and we need to know if it's going to ship today.",
+      "followups": [
+        "Sorry, I copied the wrong receipt. I meant order 16. We need that one processed ASAP too. It's been over an hour and we can't afford to waste any more time."
+      ]
+    },
+    "after": {
+      "opening_message": "Check our store order 7106. Please, I need a clear answer.",
+      "followups": [
+        "Sorry, I copied the wrong receipt. I meant order 16. I really need to understand this."
+      ]
+    }
+  },
+  "support-0240": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "Check my order 9116 from Bright Socket Electronics.",
+      "followups": [
+        "Sorry, I copied the wrong receipt. I meant order 1073."
+      ]
+    },
+    "after": {
+      "opening_message": "Check my order 9116 from Bright Socket Electronics. Keep it short and plain.",
+      "followups": [
+        "Sorry, I copied the wrong receipt. I meant order 1073. Keep it short and plain."
+      ]
+    }
+  },
+  "support-0243": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need to know if there's a speciel rule for returns from Juniper Home Goods, or if we follw the usual Cartwheel policy.",
+      "followups": [
+        "Does an indivual store have a difrent rule for returns?"
+      ]
+    },
+    "after": {
+      "opening_message": "I need to know if there's a speciel rule for returns from Juniper Home Goods, or if we follw teh usual Cartwheel policy.",
+      "followups": [
+        "Does an indivual store have a difrent rule for returns?"
+      ]
+    }
+  },
+  "support-0244": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm trying to understand the return policy for Northwind Books, and I'm getting a bit confused about which rules to follow.",
+      "followups": [
+        "I was wondering if the store's own return policy might be different from the usual Cartwheel rules, and if so, how I should proceed with my return from Northwind Books."
+      ]
+    },
+    "after": {
+      "opening_message": "I'm trying to understand the return policy for Northwind Books, and I'm getting a bit confused about which rules to follow.",
+      "followups": [
+        "And I'm not sure about this part either. I was wondering if the store's own return policy might be different from the usual Cartwheel rules, and if so, how I should proceed with my return from Northwind Books."
+      ]
+    }
+  },
+  "support-0245": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "How do I handle returns for a specific store on Cartwheel?",
+      "followups": [
+        "What's the usual Cartwheel rule for returns?"
+      ]
+    },
+    "after": {
+      "opening_message": "How do I handle returns for a specific store on Cartwheel? Please deal with this now.",
+      "followups": [
+        "What's the usual Cartwheel rule for returns? I need a clear answer."
+      ]
+    }
+  },
+  "support-0246": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I'm getting a bit concerned about a return from Saltbox Pantry - should I follow their rule or Cartwheel's rule?",
+      "followups": [
+        "Does an individual store have a different rule? I really need to know which rule to follow ASAP."
+      ]
+    },
+    "after": {
+      "opening_message": "I'm getting a bit concerned about a return from Saltbox Pantry - should I follow their rule or Cartwheel's rule? Please, I need a clear answer.",
+      "followups": [
+        "Does an individual store have a different rule? I really need to know which rule to follow ASAP. I really need to understand this."
+      ]
+    }
+  },
+  "support-0247": {
+    "reason": "restore the out-of-scope topic rather than an invented Cartwheel issue; preserve the assigned language style",
+    "before": {
+      "opening_message": "Update payment card on account",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Replace the payment card saved on my account.",
+      "followups": []
+    }
+  },
+  "support-0248": {
+    "reason": "preserve the assigned language style",
+    "before": {
+      "opening_message": "I need legal advice about a contract outside Cartwheel, could you assist me?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "I need legal advice about a contract outside Cartwheel, could you assist me? Keep it short and plain.",
+      "followups": []
+    }
+  },
+  "support-0249": {
+    "reason": "restore the out-of-scope topic rather than an invented Cartwheel issue",
+    "before": {
+      "opening_message": "I need to update my bank account information for future payments on Cartwheel, can you walk me through the process?",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Please tell me how to change my bank payment credentials here.",
+      "followups": []
+    }
+  },
+  "support-0250": {
+    "reason": "identify that the billing dispute is with another company; preserve the assigned language style",
+    "before": {
+      "opening_message": "Mobile phone billing dispute",
+      "followups": []
+    },
+    "after": {
+      "opening_message": "Settle a billing dispute with my mobile phone company?",
+      "followups": []
+    }
+  },
+  "support-0169": {
+    "reason": "student-approved final review: Replace the merchant-specific account address with a mailing address appropriate to the authenticated shopper; preserve escalation.",
+    "before": {
+      "opening_message": "I need to update the merchant business address on my account.",
+      "followups": [
+        "What is the next step for making that change?"
+      ]
+    },
+    "after": {
+      "opening_message": "Please change the mailing address on my account.",
+      "followups": [
+        "What is the next step for making that change?"
+      ]
+    }
+  }
+}

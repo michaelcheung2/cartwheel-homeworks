@@ -1,0 +1,67 @@
+{
+  "required_files": [
+    {
+      "path": "scenarios/pilot_scenarios.jsonl",
+      "exists": true,
+      "bytes": 24459
+    },
+    {
+      "path": "scenarios/pilot-results.jsonl",
+      "exists": true,
+      "bytes": 30134
+    },
+    {
+      "path": "scenarios/pilot_review.jsonl",
+      "exists": true,
+      "bytes": 3697
+    },
+    {
+      "path": "scenarios/support_scenarios.jsonl",
+      "exists": true,
+      "bytes": 407803
+    },
+    {
+      "path": "scenarios/support_review.jsonl",
+      "exists": true,
+      "bytes": 3348
+    },
+    {
+      "path": "scenarios/monitoring_scenarios.jsonl",
+      "exists": true,
+      "bytes": 81506
+    },
+    {
+      "path": "scenarios/final-results.jsonl",
+      "exists": true,
+      "bytes": 258971
+    },
+    {
+      "path": "reports/smoke-output.txt",
+      "exists": true,
+      "bytes": 4503
+    },
+    {
+      "path": "traces/support_traces.json",
+      "exists": true,
+      "bytes": 8786207
+    }
+  ],
+  "all_nine_files_exist": true,
+  "offline_checks": [
+    "pilot validator",
+    "final validator after approved revision",
+    "monitoring validator",
+    "grounded scopes and distinct state-changing orders",
+    "human-review counts and applied revision",
+    "final result/trace alignment and content",
+    "all 250 final scenario IDs in export"
+  ],
+  "live_checks": [
+    "30 completed pilot scenarios using local Ollama",
+    "250 completed final scenarios using local Ollama",
+    "ClickHouse smoke report",
+    "Langfuse export and full trace content verification"
+  ],
+  "video": "pending student recording",
+  "github_upload": "Submission destination: origin/main in michaelcheung2/cartwheel-homeworks; remote status verified after committing."
+}
