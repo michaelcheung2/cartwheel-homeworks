@@ -1,0 +1,721 @@
+{
+  "assignment": "HW4",
+  "dataset": "own_hw3_support",
+  "created_at": "2026-10-10T05:36:57.147330+00:00",
+  "seed": 20261010,
+  "product_dimension": "user_role",
+  "dimension_values": [
+    "shopper",
+    "merchant",
+    "support"
+  ],
+  "dimension_chosen_before_review": true,
+  "optional_workshop": "skipped",
+  "batches": [
+    {
+      "id": "breadth_1",
+      "target": 30,
+      "created_at": "2026-10-10T05:36:59.333953+00:00",
+      "entries": [
+        {
+          "trace_id": "994fdcfc414c364afad04bc9c969df76",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "203ea1d28e9656f9df5f6d7c5bd92a3a",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "925f79492e4d5912800097f1908e490b",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "26288d78507c65183456edb32b03f637",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "71f4f50dc54dc212cb9239f572853741",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "28e0875bc779e97d4d8a2fb9367868e0",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "8fd9a4f6c1245813f06e6c4456a6cb65",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "a4a4e175638d6d46d7a73b3ea5bcaa7f",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "5a75d095d4b67268b038decc4d31bc86",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "1ecc9f6fdb0fd5a5d9522964d33ae83b",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "737e05580f6444e452db7c3c7a9fef7e",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "9d2762ed1737c92fede361a8571a4bf3",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "16455efe68f61b7c1b221a27caabe929",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "04b0285acf627a8fe060138b614ea091",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "1c3e867dba81f17b9292fb2e7e7900d0",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement"
+        },
+        {
+          "trace_id": "1e79fb44ed721a3f30934500464e10ee",
+          "method": "cluster_representative",
+          "cluster": 0,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "e1dd26c8e2efd7e6b2859028ccc4939a",
+          "method": "cluster_representative",
+          "cluster": 1,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "daec5d711d05bba5a4d850df4b9c5676",
+          "method": "cluster_representative",
+          "cluster": 2,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "0c83d4cc7292091f21c06bb79b301e64",
+          "method": "cluster_representative",
+          "cluster": 3,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "11465c3b6b68d19d92ce4920cedce984",
+          "method": "cluster_representative",
+          "cluster": 4,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "30df41a4cb3eec2f2e6bc05afe859561",
+          "method": "cluster_representative",
+          "cluster": 5,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "fea53fbba77e7dcd0dd8f00836695482",
+          "method": "cluster_representative",
+          "cluster": 6,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "1773373a0030fb84dddd757de1fb4f37",
+          "method": "cluster_representative",
+          "cluster": 7,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "eb94c017e9dc6dd76796fe0ace42fccd",
+          "method": "cluster_representative",
+          "cluster": 0,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "2ce3b7799fd364f98ee99eca27291da3",
+          "method": "cluster_representative",
+          "cluster": 1,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "d94420f1b62517685b4a56f852c2a9ad",
+          "method": "cluster_representative",
+          "cluster": 2,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "cbac55eadcc4cf3fdfdfb7b0d1df3649",
+          "method": "cluster_representative",
+          "cluster": 3,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "89ca4c67eb1a6f8315226a4bc725c52b",
+          "method": "cluster_representative",
+          "cluster": 4,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "f2b5ebea02ba0264b438a878ffcf927f",
+          "method": "cluster_representative",
+          "cluster": 5,
+          "reason": "Nearest available member to standardized feature centroid"
+        },
+        {
+          "trace_id": "1fc7eab893c8375fa9adbcfce9abdaa9",
+          "method": "cluster_representative",
+          "cluster": 6,
+          "reason": "Nearest available member to standardized feature centroid"
+        }
+      ],
+      "cluster_features": [
+        "turn_count",
+        "tool_call_count",
+        "distinct_tools",
+        "has_retrieval",
+        "tokens"
+      ],
+      "cluster_count": 8
+    },
+    {
+      "id": "role_2",
+      "target": 30,
+      "created_at": "2026-10-10T06:01:17.035656+00:00",
+      "entries": [
+        {
+          "trace_id": "048310a721348065f7e44dd6f072250c",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "bc947122aa709266e35a95c12cad31ca",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "4c4e044a72a0bb55b4e48dc6b545ccbf",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "0657fe8f3f4bd48136f29756f8898bba",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "75096783639a1d652bec3158cac21877",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "82acd9610cc490654d1f3e091f47377d",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "29aa7c5081501c388e2af9127f447c66",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "fb82c1f99fb1ffd82432dc00e5080319",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "82c0de1c3e983ee6701dd57260f6241f",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "4f48b610824334eeefec244e459602ec",
+          "method": "role_stratified",
+          "role": "shopper",
+          "reason": "Uniform within shopper; dimension chosen before review"
+        },
+        {
+          "trace_id": "2cbc21141452c9b9a016eaa7b8e7dae3",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "a38dc877e1d7d6647fab9620cfa5cdd1",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "51136312aaf023b7941a5660dcdc3f42",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "83106abba176e5ff42c9bd06b472a7da",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "501e879d03da4cf995baf8e051e56efe",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "2e22528c5104b8d615651917a5c5d850",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "07f1f86a468da7d2119a61106fa5a5e2",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "8ce5ef0bfea26a9b4b285b4185a9a36f",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "cd07b80b5977cba0fd0dee9e80c5f315",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "30679ff47de71af838bf90f864c525de",
+          "method": "role_stratified",
+          "role": "merchant",
+          "reason": "Uniform within merchant; dimension chosen before review"
+        },
+        {
+          "trace_id": "dd955e01100b7e6e9b98b8e39472360a",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "490265edd3e8a70404e5e0da819d4e4f",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "392c08613bfc60b1da8d3a5c92699c05",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "ccd9d8c8eafc147a0f441c59db79c51d",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "f34925c67cc748c9d1b70c04ce1721f9",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "46830f4c94320d802a6b528ca8435b8f",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "2048f5783928ef150b52a155bd0ea209",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "970d022f66c48ff70257dc0a5c33557f",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "cc0add31372c9c507799553f32f985b2",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        },
+        {
+          "trace_id": "abd4237ab56f3186888383ce6a1d79b1",
+          "method": "role_stratified",
+          "role": "support",
+          "reason": "Uniform within support; dimension chosen before review"
+        }
+      ]
+    },
+    {
+      "id": "depth_3",
+      "target": 25,
+      "created_at": "2026-10-10T06:35:19.066362+00:00",
+      "selection_basis": "Approved candidate definitions; positive and close-negative retrieval signals across all eight modes; citation version 2 after approved revision",
+      "candidate_versions": {
+        "refund_approval_not_requested": 1,
+        "unsupported_policy_claim": 1,
+        "missing_or_invalid_policy_citation": 2,
+        "invalid_tool_arguments": 1,
+        "invented_record_values": 1,
+        "ignored_record_inconsistency": 1,
+        "required_human_handoff_missing": 1,
+        "unexecuted_tool_request": 1
+      },
+      "entries": [
+        {
+          "trace_id": "9ccf73ef883e51c23c0e919e92cd62d4",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for refund_approval_not_requested; signal is not a label",
+          "search_mode": "refund_approval_not_requested",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-22ad56c6a240312e",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "0cdeae9932d2349fb985c4b619a77969",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for refund_approval_not_requested; signal is not a label",
+          "search_mode": "refund_approval_not_requested",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-e39bfba4c108ab26",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "9c1cbe44ca1f64f42ab6ab60ea27162d",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for unsupported_policy_claim; signal is not a label",
+          "search_mode": "unsupported_policy_claim",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-fd4a883a5dcf7978",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "add1636aad08b6b894ece4a01a31defe",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for unsupported_policy_claim; signal is not a label",
+          "search_mode": "unsupported_policy_claim",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-364e07aaf7fa0854",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "0f852a2d9ec980b0af5f61374cb1b3b5",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for unsupported_policy_claim; signal is not a label",
+          "search_mode": "unsupported_policy_claim",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-51226cf1d6c33110",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "9caf585ae582fca3bcca46102f8fd3c0",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for missing_or_invalid_policy_citation; signal is not a label",
+          "search_mode": "missing_or_invalid_policy_citation",
+          "definition_version": 2,
+          "source_suggestion_id": "hw4-search-v2-605ba9c0d39037b6",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "256ed3a839581e7ca7055e1c6a17bf5b",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for missing_or_invalid_policy_citation; signal is not a label",
+          "search_mode": "missing_or_invalid_policy_citation",
+          "definition_version": 2,
+          "source_suggestion_id": "hw4-search-v2-ec71e828ac40fd3a",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "b80d82fbde747ec3cfcdd257d2303ddd",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for missing_or_invalid_policy_citation; signal is not a label",
+          "search_mode": "missing_or_invalid_policy_citation",
+          "definition_version": 2,
+          "source_suggestion_id": "hw4-search-v2-12043e94897b2f4a",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "01994e8ae186fc97b029be687ae706f6",
+          "method": "depth_search",
+          "reason": "Inspect boundary retrieval signal for missing_or_invalid_policy_citation; signal is not a label",
+          "search_mode": "missing_or_invalid_policy_citation",
+          "definition_version": 2,
+          "source_suggestion_id": "hw4-search-v2-ab4701a69fa37ea6",
+          "retrieval_signal": "boundary"
+        },
+        {
+          "trace_id": "d7b8fd32cdddb3546b182adc8ec759cb",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for invalid_tool_arguments; signal is not a label",
+          "search_mode": "invalid_tool_arguments",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-2841ffb618ee514f",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "a97b2c6351eba2c4a88335df6d528694",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for invalid_tool_arguments; signal is not a label",
+          "search_mode": "invalid_tool_arguments",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-4d1a9f2459f9d263",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "905881f91af44e1851cb264b173986af",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for invalid_tool_arguments; signal is not a label",
+          "search_mode": "invalid_tool_arguments",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-d336c61d4ce1ca9c",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "9027cc4e0fc61543b0503fc723b1b0ca",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for ignored_record_inconsistency; signal is not a label",
+          "search_mode": "ignored_record_inconsistency",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-d9685436995ae091",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "6e18b7bd6bd99cd66dc8f0b34c8876e6",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for invented_record_values; signal is not a label",
+          "search_mode": "invented_record_values",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-45d4ffe9fd123e64",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "5c2c79293cdd53d17559b7e25836dd58",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for invented_record_values; signal is not a label",
+          "search_mode": "invented_record_values",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-4fbd2d9e2cd66b17",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "5e2ad6b12d78fa3e60cbbb6903419ca7",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for invented_record_values; signal is not a label",
+          "search_mode": "invented_record_values",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-de4fdc5728adfc6e",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "9367bda3271226a8f5c5470f7cbfd0d6",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for ignored_record_inconsistency; signal is not a label",
+          "search_mode": "ignored_record_inconsistency",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-c1fc5db36b58f7f8",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "e5dd692974da814a11740262761a71f3",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for ignored_record_inconsistency; signal is not a label",
+          "search_mode": "ignored_record_inconsistency",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-c3161f2513d4eae4",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "43b0cc7de7877ee045a3c7fc94b5861f",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for ignored_record_inconsistency; signal is not a label",
+          "search_mode": "ignored_record_inconsistency",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-ef9fa20e8910e766",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "6db495da213d47128a48d522f265d0e5",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for required_human_handoff_missing; signal is not a label",
+          "search_mode": "required_human_handoff_missing",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-672e36bfe2a12c5d",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "667d9dd5df4202521ea453262fc05092",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for required_human_handoff_missing; signal is not a label",
+          "search_mode": "required_human_handoff_missing",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-c836af63ad0a877f",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "e8aa4b661b01b4866dcbe9336445eb4c",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for unexecuted_tool_request; signal is not a label",
+          "search_mode": "unexecuted_tool_request",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-1c112584bc1a2d2c",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "43143635c9a6c418a45803856852cc8f",
+          "method": "depth_search",
+          "reason": "Inspect positive_candidate retrieval signal for unexecuted_tool_request; signal is not a label",
+          "search_mode": "unexecuted_tool_request",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-2c62e69a9848e9c3",
+          "retrieval_signal": "positive_candidate"
+        },
+        {
+          "trace_id": "18b2f37b5ebeb981b40bb8d811e9952a",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for unexecuted_tool_request; signal is not a label",
+          "search_mode": "unexecuted_tool_request",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-b204682f74e6b86c",
+          "retrieval_signal": "close_negative"
+        },
+        {
+          "trace_id": "14d20ce715d31b19c9ad3e803cadf065",
+          "method": "depth_search",
+          "reason": "Inspect close_negative retrieval signal for unexecuted_tool_request; signal is not a label",
+          "search_mode": "unexecuted_tool_request",
+          "definition_version": 1,
+          "source_suggestion_id": "hw4-search-v1-a82f5f5334be375d",
+          "retrieval_signal": "close_negative"
+        }
+      ]
+    },
+    {
+      "id": "stability_4",
+      "target": 15,
+      "created_at": "2026-10-10T07:27:01.114340+00:00",
+      "seed": 20261013,
+      "selection_basis": "Fresh uniform draw after approved draft taxonomy and all preceding batches confirmed; no outcome or retrieval filtering",
+      "draft_taxonomy_versions": {
+        "refund_approval_not_requested": 1,
+        "unsupported_policy_claim": 1,
+        "missing_or_invalid_policy_citation": 2,
+        "invalid_tool_arguments": 1,
+        "invented_record_values": 1,
+        "ignored_record_inconsistency": 1,
+        "required_human_handoff_missing": 1,
+        "unexecuted_tool_request": 1
+      },
+      "entries": [
+        {
+          "trace_id": "f346d7eac27b6fc466784278c4bee620",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "13e026bde4381624bfe37ad95e2bd0e6",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "9855a5bef623e1d3c1ee3825a8131dfb",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "70651f233f2415a0f5a73463ba0fcec8",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "e51810d9242c84492fe21c9f4186283a",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "7e858c6a2ea0437eb1a3748cc294b460",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "40c7ff081521ce3519871e051609ea3b",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "e55f4fb42689c0e20b4a91846089b979",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "8538b1b0a6f767a444d3382c9c687a40",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "f486c70e7d7f794e38a22f95563599c6",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "c7e90fe2e4f77d7ec750e16bdb8118d0",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "a9dba26c126518b0265df59855339834",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "a0d161b5bfa70e140b33bc2a40d06928",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "4edf4c04d33d7d2a0c04c22b0f1e4867",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        },
+        {
+          "trace_id": "d3fea18ea65ec58e02c2deff997adcf0",
+          "method": "uniform",
+          "reason": "Uniform random draw without replacement from all remaining records after draft taxonomy"
+        }
+      ]
+    }
+  ],
+  "required_distinct_traces": 100
+}

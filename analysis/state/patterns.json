@@ -1,1 +1,659 @@
-{"modes": []}
+{
+  "modes": [
+    {
+      "name": "refund_approval_not_requested",
+      "definition": "A user requests an authorized, eligible refund above the automatic-approval threshold, but the agent neither queues approval through issue_refund nor escalates to a human before the turn ends.",
+      "version": 1,
+      "status": "final",
+      "human_confirmed": true,
+      "evidence_status": "student_confirmed_final_examples",
+      "origin_annotation_ids": [
+        "6ca54f07-30b8-4a82-a8f6-e50a34270db3"
+      ],
+      "positive_trace_ids": [
+        "203ea1d28e9656f9df5f6d7c5bd92a3a",
+        "970d022f66c48ff70257dc0a5c33557f",
+        "9ccf73ef883e51c23c0e919e92cd62d4"
+      ],
+      "close_negative_trace_ids": [
+        "0cdeae9932d2349fb985c4b619a77969",
+        "dd955e01100b7e6e9b98b8e39472360a",
+        "925f79492e4d5912800097f1908e490b"
+      ],
+      "example_quotes": [
+        "I'm going to check the refund eligibility for order 1321"
+      ],
+      "requirement_source": [
+        "ESC-1",
+        "TOOL-7"
+      ],
+      "boundary": "Exclude ineligible refunds, informational questions and requested partial amounts at or below $100. A successful relevant human handoff excludes this omission mode, but does not establish approval or payment. Use the requested refund amount, not the total order price.",
+      "evaluator_type": "code_check",
+      "likely_product_change": "Ensure eligible requested refunds are submitted through the approval-preserving tool path.",
+      "created_at": "2026-10-10T05:56:29.917798+00:00",
+      "confirmed_mode_positive_count": 4,
+      "grouping_review_required": false,
+      "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00",
+      "finalization_proposal": {
+        "status": "accepted",
+        "positive_trace_ids": [
+          "203ea1d28e9656f9df5f6d7c5bd92a3a",
+          "970d022f66c48ff70257dc0a5c33557f",
+          "9ccf73ef883e51c23c0e919e92cd62d4"
+        ],
+        "close_negative_trace_ids": [
+          "0cdeae9932d2349fb985c4b619a77969",
+          "dd955e01100b7e6e9b98b8e39472360a",
+          "925f79492e4d5912800097f1908e490b"
+        ],
+        "boundary": "Exclude ineligible refunds, informational questions and requested partial amounts at or below $100. A successful relevant human handoff excludes this omission mode, but does not establish approval or payment. Use the requested refund amount, not the total order price.",
+        "definition": "A user requests an authorized, eligible refund above the automatic-approval threshold, but the agent neither queues approval through issue_refund nor escalates to a human before the turn ends.",
+        "evaluator_type": "code_check",
+        "created_at": "2026-10-10T07:28:47.541384+00:00",
+        "human_confirmed": true,
+        "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+      },
+      "finalized_at": "2026-10-10T07:44:21.019951+00:00",
+      "confirmed_mode_negative_count": 96,
+      "labeled_trace_count": 100,
+      "sample_fraction": 0.04
+    },
+    {
+      "name": "unsupported_policy_claim",
+      "definition": "The reply states a platform/store policy rule or service promise that contradicts the applicable policy or is not supported by retrieved policy and recorded tool evidence.",
+      "version": 1,
+      "status": "final",
+      "human_confirmed": true,
+      "evidence_status": "student_confirmed_final_examples",
+      "origin_annotation_ids": [
+        "189a7482-d6b8-4e3c-b15e-92d10b9577c4"
+      ],
+      "positive_trace_ids": [
+        "925f79492e4d5912800097f1908e490b",
+        "9c1cbe44ca1f64f42ab6ab60ea27162d",
+        "0f852a2d9ec980b0af5f61374cb1b3b5"
+      ],
+      "close_negative_trace_ids": [
+        "bc947122aa709266e35a95c12cad31ca",
+        "0657fe8f3f4bd48136f29756f8898bba",
+        "256ed3a839581e7ca7055e1c6a17bf5b"
+      ],
+      "example_quotes": [
+        "According to our order policy (cw-refund), a refund is not allowed once the order is delivered."
+      ],
+      "requirement_source": [
+        "PURPOSE-1",
+        "RESP-3"
+      ],
+      "boundary": "A correct rule without a citation belongs to missing_or_invalid_policy_citation. Invented order dates are factual grounding errors rather than policy rules.",
+      "evaluator_type": "llm_judge",
+      "likely_product_change": "Ground every policy rule and service promise in the applicable document/tool result.",
+      "created_at": "2026-10-10T05:56:29.917954+00:00",
+      "confirmed_mode_positive_count": 25,
+      "grouping_review_required": false,
+      "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00",
+      "finalization_proposal": {
+        "status": "accepted",
+        "positive_trace_ids": [
+          "925f79492e4d5912800097f1908e490b",
+          "9c1cbe44ca1f64f42ab6ab60ea27162d",
+          "0f852a2d9ec980b0af5f61374cb1b3b5"
+        ],
+        "close_negative_trace_ids": [
+          "bc947122aa709266e35a95c12cad31ca",
+          "0657fe8f3f4bd48136f29756f8898bba",
+          "256ed3a839581e7ca7055e1c6a17bf5b"
+        ],
+        "boundary": "A correct rule without a citation belongs to missing_or_invalid_policy_citation. Invented order dates are factual grounding errors rather than policy rules.",
+        "definition": "The reply states a platform/store policy rule or service promise that contradicts the applicable policy or is not supported by retrieved policy and recorded tool evidence.",
+        "evaluator_type": "llm_judge",
+        "created_at": "2026-10-10T07:28:47.541384+00:00",
+        "human_confirmed": true,
+        "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+      },
+      "finalized_at": "2026-10-10T07:44:21.019951+00:00",
+      "confirmed_mode_negative_count": 75,
+      "labeled_trace_count": 100,
+      "sample_fraction": 0.25
+    },
+    {
+      "name": "missing_or_invalid_policy_citation",
+      "definition": "A platform or store policy claim lacks a policy identifier whose existing document supports that claim. Missing, nonexistent and wrong-document citations all qualify.",
+      "version": 2,
+      "status": "final",
+      "human_confirmed": true,
+      "evidence_status": "student_confirmed_final_examples",
+      "origin_annotation_ids": [
+        "50ab7caa-709b-400e-9fca-f5cb664d72d7"
+      ],
+      "positive_trace_ids": [
+        "71f4f50dc54dc212cb9239f572853741",
+        "925f79492e4d5912800097f1908e490b",
+        "f34925c67cc748c9d1b70c04ce1721f9"
+      ],
+      "close_negative_trace_ids": [
+        "256ed3a839581e7ca7055e1c6a17bf5b",
+        "b80d82fbde747ec3cfcdd257d2303ddd",
+        "490265edd3e8a70404e5e0da819d4e4f"
+      ],
+      "example_quotes": [
+        "Since your order #2748 has shipped, it's no longer possible to cancel it."
+      ],
+      "requirement_source": [
+        "PURPOSE-1",
+        "RESP-1"
+      ],
+      "boundary": "Exclude concrete facts returned by the current tool, including an actual ticket's SLA, order dates/status and refund eligibility. A generally stated policy rule still needs its supporting policy ID.",
+      "evaluator_type": "llm_judge",
+      "likely_product_change": "Attach the supporting policy identifier to each policy claim.",
+      "created_at": "2026-10-10T05:56:29.917957+00:00",
+      "confirmed_mode_positive_count": 27,
+      "grouping_review_required": false,
+      "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00",
+      "finalization_proposal": {
+        "status": "accepted",
+        "positive_trace_ids": [
+          "71f4f50dc54dc212cb9239f572853741",
+          "925f79492e4d5912800097f1908e490b",
+          "f34925c67cc748c9d1b70c04ce1721f9"
+        ],
+        "close_negative_trace_ids": [
+          "256ed3a839581e7ca7055e1c6a17bf5b",
+          "b80d82fbde747ec3cfcdd257d2303ddd",
+          "490265edd3e8a70404e5e0da819d4e4f"
+        ],
+        "boundary": "Exclude concrete facts returned by the current tool, including an actual ticket's SLA, order dates/status and refund eligibility. A generally stated policy rule still needs its supporting policy ID.",
+        "definition": "A platform or store policy claim lacks a policy identifier whose existing document supports that claim. Missing, nonexistent and wrong-document citations all qualify.",
+        "evaluator_type": "llm_judge",
+        "created_at": "2026-10-10T07:28:47.541384+00:00",
+        "human_confirmed": true,
+        "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+      },
+      "finalized_at": "2026-10-10T07:44:21.019951+00:00",
+      "confirmed_mode_negative_count": 73,
+      "labeled_trace_count": 100,
+      "sample_fraction": 0.27
+    },
+    {
+      "name": "invalid_tool_arguments",
+      "definition": "The agent supplies tool arguments that fail the actual argument schema, with a recorded validation error preventing execution.",
+      "version": 1,
+      "status": "final",
+      "human_confirmed": true,
+      "evidence_status": "student_confirmed_final_examples",
+      "origin_annotation_ids": [
+        "1f1b6094-a948-4c1f-92d4-f7ac0613c86d",
+        "48fcdb74-3e3b-4849-91c5-db4ec42f5b39",
+        "3789292a-1ff4-444b-a8d4-142d118d92d2",
+        "f4d7497f-0bb8-4889-aa9d-5d07db263a48"
+      ],
+      "positive_trace_ids": [
+        "5a75d095d4b67268b038decc4d31bc86",
+        "82c0de1c3e983ee6701dd57260f6241f",
+        "d7b8fd32cdddb3546b182adc8ec759cb"
+      ],
+      "close_negative_trace_ids": [
+        "a97b2c6351eba2c4a88335df6d528694",
+        "905881f91af44e1851cb264b173986af",
+        "43b0cc7de7877ee045a3c7fc94b5861f"
+      ],
+      "requirement_source": "TOOL-3",
+      "boundary": "Exclude valid JSON null and accepted numeric strings. Expected permission_denied, not_found and not_eligible are tool business results, not schema failures.",
+      "evaluator_type": "code_check",
+      "likely_product_change": "Serialize optional values as actual JSON types and validate arguments before dispatch.",
+      "confirmed_mode_positive_count": 9,
+      "grouping_review_required": false,
+      "created_at": "2026-10-10T06:08:25.548709+00:00",
+      "spec_clarification_required": false,
+      "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00",
+      "finalization_proposal": {
+        "status": "accepted",
+        "positive_trace_ids": [
+          "5a75d095d4b67268b038decc4d31bc86",
+          "82c0de1c3e983ee6701dd57260f6241f",
+          "d7b8fd32cdddb3546b182adc8ec759cb"
+        ],
+        "close_negative_trace_ids": [
+          "a97b2c6351eba2c4a88335df6d528694",
+          "905881f91af44e1851cb264b173986af",
+          "43b0cc7de7877ee045a3c7fc94b5861f"
+        ],
+        "boundary": "Exclude valid JSON null and accepted numeric strings. Expected permission_denied, not_found and not_eligible are tool business results, not schema failures.",
+        "definition": "The agent supplies tool arguments that fail the actual argument schema, with a recorded validation error preventing execution.",
+        "evaluator_type": "code_check",
+        "created_at": "2026-10-10T07:28:47.541384+00:00",
+        "human_confirmed": true,
+        "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+      },
+      "finalized_at": "2026-10-10T07:44:21.019951+00:00",
+      "confirmed_mode_negative_count": 91,
+      "labeled_trace_count": 100,
+      "sample_fraction": 0.09
+    },
+    {
+      "name": "invented_record_values",
+      "definition": "The agent asserts an order field or required order identifier that is missing from, or contradicts, authorized user/tool/session evidence.",
+      "version": 1,
+      "status": "final",
+      "human_confirmed": true,
+      "evidence_status": "student_confirmed_final_examples",
+      "origin_annotation_ids": [
+        "fa9a1fe5-5b77-4e5a-8fe7-63618a8b75ed",
+        "b8527fbe-ad84-4807-823d-29f8ff38268c"
+      ],
+      "positive_trace_ids": [
+        "0c83d4cc7292091f21c06bb79b301e64",
+        "6e18b7bd6bd99cd66dc8f0b34c8876e6",
+        "5c2c79293cdd53d17559b7e25836dd58"
+      ],
+      "close_negative_trace_ids": [
+        "5e2ad6b12d78fa3e60cbbb6903419ca7",
+        "18b2f37b5ebeb981b40bb8d811e9952a",
+        "82acd9610cc490654d1f3e091f47377d"
+      ],
+      "requirement_source": "RESP-3",
+      "boundary": "Copying inconsistent dates verbatim without warning belongs to ignored_record_inconsistency. Unsupported platform rules belong to unsupported_policy_claim. A guessed order ID is also ungrounded record information.",
+      "evaluator_type": "llm_judge",
+      "likely_product_change": "Require a source for asserted order facts and identifiers; ask when the necessary value is absent.",
+      "confirmed_mode_positive_count": 6,
+      "grouping_review_required": false,
+      "created_at": "2026-10-10T06:08:25.548906+00:00",
+      "spec_clarification_required": false,
+      "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00",
+      "finalization_proposal": {
+        "status": "accepted",
+        "positive_trace_ids": [
+          "0c83d4cc7292091f21c06bb79b301e64",
+          "6e18b7bd6bd99cd66dc8f0b34c8876e6",
+          "5c2c79293cdd53d17559b7e25836dd58"
+        ],
+        "close_negative_trace_ids": [
+          "5e2ad6b12d78fa3e60cbbb6903419ca7",
+          "18b2f37b5ebeb981b40bb8d811e9952a",
+          "82acd9610cc490654d1f3e091f47377d"
+        ],
+        "boundary": "Copying inconsistent dates verbatim without warning belongs to ignored_record_inconsistency. Unsupported platform rules belong to unsupported_policy_claim. A guessed order ID is also ungrounded record information.",
+        "definition": "The agent asserts an order field or required order identifier that is missing from, or contradicts, authorized user/tool/session evidence.",
+        "evaluator_type": "llm_judge",
+        "created_at": "2026-10-10T07:28:47.541384+00:00",
+        "human_confirmed": true,
+        "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+      },
+      "finalized_at": "2026-10-10T07:44:21.019951+00:00",
+      "confirmed_mode_negative_count": 94,
+      "labeled_trace_count": 100,
+      "sample_fraction": 0.06
+    },
+    {
+      "name": "ignored_record_inconsistency",
+      "definition": "A material contradiction or missing required field is visible in the tool record, and the agent relies on that record without stating the inconsistency or missing information.",
+      "version": 1,
+      "status": "final",
+      "human_confirmed": true,
+      "evidence_status": "student_confirmed_final_examples",
+      "origin_annotation_ids": [
+        "8f96d3ca-6fdc-488d-b439-7c426478a925",
+        "b8527fbe-ad84-4807-823d-29f8ff38268c"
+      ],
+      "positive_trace_ids": [
+        "1e79fb44ed721a3f30934500464e10ee",
+        "16455efe68f61b7c1b221a27caabe929",
+        "e5dd692974da814a11740262761a71f3"
+      ],
+      "close_negative_trace_ids": [
+        "994fdcfc414c364afad04bc9c969df76",
+        "9027cc4e0fc61543b0503fc723b1b0ca",
+        "43b0cc7de7877ee045a3c7fc94b5861f"
+      ],
+      "requirement_source": "RESP-3",
+      "boundary": "Null delivery on a merely shipped order is normal. Reversed shipment/delivery or delivered status with required delivery date absent is materially different. Creating a substitute value can additionally be invented_record_values.",
+      "evaluator_type": "llm_judge",
+      "likely_product_change": "Validate record consistency and report conflicts before drawing conclusions.",
+      "confirmed_mode_positive_count": 4,
+      "grouping_review_required": false,
+      "created_at": "2026-10-10T06:08:25.548909+00:00",
+      "spec_clarification_required": false,
+      "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00",
+      "finalization_proposal": {
+        "status": "accepted",
+        "positive_trace_ids": [
+          "1e79fb44ed721a3f30934500464e10ee",
+          "16455efe68f61b7c1b221a27caabe929",
+          "e5dd692974da814a11740262761a71f3"
+        ],
+        "close_negative_trace_ids": [
+          "994fdcfc414c364afad04bc9c969df76",
+          "9027cc4e0fc61543b0503fc723b1b0ca",
+          "43b0cc7de7877ee045a3c7fc94b5861f"
+        ],
+        "boundary": "Null delivery on a merely shipped order is normal. Reversed shipment/delivery or delivered status with required delivery date absent is materially different. Creating a substitute value can additionally be invented_record_values.",
+        "definition": "A material contradiction or missing required field is visible in the tool record, and the agent relies on that record without stating the inconsistency or missing information.",
+        "evaluator_type": "llm_judge",
+        "created_at": "2026-10-10T07:28:47.541384+00:00",
+        "human_confirmed": true,
+        "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+      },
+      "finalized_at": "2026-10-10T07:44:21.019951+00:00",
+      "confirmed_mode_negative_count": 96,
+      "labeled_trace_count": 100,
+      "sample_fraction": 0.04
+    },
+    {
+      "name": "required_human_handoff_missing",
+      "definition": "An actual account-change, dispute, explicitly unresolved in-scope case, or stated policy uncertainty requires a human under ESC-2/3/4, but no successful relevant human handoff exists by the end of the turn or prior session context.",
+      "version": 1,
+      "status": "final",
+      "human_confirmed": true,
+      "evidence_status": "student_confirmed_final_examples",
+      "origin_annotation_ids": [
+        "1f0813e3-c61e-4e0b-b8a8-b60f56a42d4b",
+        "0c7553c2-533e-44fc-9d66-f77f3a0b8160"
+      ],
+      "positive_trace_ids": [
+        "048310a721348065f7e44dd6f072250c",
+        "abd4237ab56f3186888383ce6a1d79b1",
+        "6db495da213d47128a48d522f265d0e5"
+      ],
+      "close_negative_trace_ids": [
+        "490265edd3e8a70404e5e0da819d4e4f",
+        "667d9dd5df4202521ea453262fc05092",
+        "bc947122aa709266e35a95c12cad31ca"
+      ],
+      "requirement_source": [
+        "ESC-2",
+        "ESC-3",
+        "ESC-4"
+      ],
+      "boundary": "A general policy question does not require a ticket. An existing relevant ticket in the same session can satisfy handoff. Outside-scope refusals are excluded. Above-threshold refund queuing uses a different tool and remains a separate mode.",
+      "evaluator_type": "llm_judge",
+      "likely_product_change": "Route mandatory non-refund handoffs through escalate_to_human and verify ticket success.",
+      "confirmed_mode_positive_count": 10,
+      "grouping_review_required": false,
+      "created_at": "2026-10-10T06:08:25.548911+00:00",
+      "spec_clarification_required": false,
+      "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00",
+      "finalization_proposal": {
+        "status": "accepted",
+        "positive_trace_ids": [
+          "048310a721348065f7e44dd6f072250c",
+          "abd4237ab56f3186888383ce6a1d79b1",
+          "6db495da213d47128a48d522f265d0e5"
+        ],
+        "close_negative_trace_ids": [
+          "490265edd3e8a70404e5e0da819d4e4f",
+          "667d9dd5df4202521ea453262fc05092",
+          "bc947122aa709266e35a95c12cad31ca"
+        ],
+        "boundary": "A general policy question does not require a ticket. An existing relevant ticket in the same session can satisfy handoff. Outside-scope refusals are excluded. Above-threshold refund queuing uses a different tool and remains a separate mode.",
+        "definition": "An actual account-change, dispute, explicitly unresolved in-scope case, or stated policy uncertainty requires a human under ESC-2/3/4, but no successful relevant human handoff exists by the end of the turn or prior session context.",
+        "evaluator_type": "llm_judge",
+        "created_at": "2026-10-10T07:28:47.541384+00:00",
+        "human_confirmed": true,
+        "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+      },
+      "finalized_at": "2026-10-10T07:44:21.019951+00:00",
+      "confirmed_mode_negative_count": 90,
+      "labeled_trace_count": 100,
+      "sample_fraction": 0.1
+    },
+    {
+      "name": "unexecuted_tool_request",
+      "definition": "For a sufficiently specified actionable support request, the reply substitutes a printed or narrated next tool call for an actual necessary tool attempt, without completing the task or explaining a concrete blocker or requesting genuinely missing information.",
+      "version": 1,
+      "status": "final",
+      "human_confirmed": true,
+      "evidence_status": "student_confirmed_final_examples",
+      "origin_annotation_ids": [
+        "1f365a5f-ff9e-4335-bfbd-216d8633cf27",
+        "39483642-2fcc-4b4c-bb31-42ea90359856",
+        "a838ae44-e668-4dfc-893a-878bebb1c72b"
+      ],
+      "positive_trace_ids": [
+        "26288d78507c65183456edb32b03f637",
+        "e8aa4b661b01b4866dcbe9336445eb4c",
+        "43143635c9a6c418a45803856852cc8f"
+      ],
+      "close_negative_trace_ids": [
+        "18b2f37b5ebeb981b40bb8d811e9952a",
+        "14d20ce715d31b19c9ad3e803cadf065",
+        "2cbc21141452c9b9a016eaa7b8e7dae3"
+      ],
+      "requirement_source": [
+        "RESP-6",
+        "PURPOSE-1",
+        "SCOPE-1"
+      ],
+      "boundary": "Exclude illustrative examples, summaries of already executed calls, resolved factual answers, genuine missing information and authorized refusals. RESP-6 is approved; formal labels wait for taxonomy stability and explicit per-trace decisions.",
+      "evaluator_type": "llm_judge",
+      "likely_product_change": "Continue tool execution until the request is resolved, handed off or concretely blocked; do not emit tool-call text as a substitute.",
+      "confirmed_mode_positive_count": 28,
+      "grouping_review_required": false,
+      "created_at": "2026-10-10T06:08:25.548913+00:00",
+      "spec_clarification_required": false,
+      "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00",
+      "spec_revision_motivating_annotation_ids": [
+        "1f365a5f-ff9e-4335-bfbd-216d8633cf27",
+        "39483642-2fcc-4b4c-bb31-42ea90359856",
+        "a838ae44-e668-4dfc-893a-878bebb1c72b"
+      ],
+      "finalization_proposal": {
+        "status": "accepted",
+        "positive_trace_ids": [
+          "26288d78507c65183456edb32b03f637",
+          "e8aa4b661b01b4866dcbe9336445eb4c",
+          "43143635c9a6c418a45803856852cc8f"
+        ],
+        "close_negative_trace_ids": [
+          "18b2f37b5ebeb981b40bb8d811e9952a",
+          "14d20ce715d31b19c9ad3e803cadf065",
+          "2cbc21141452c9b9a016eaa7b8e7dae3"
+        ],
+        "boundary": "Exclude illustrative examples, summaries of already executed calls, resolved factual answers, genuine missing information and authorized refusals. RESP-6 is approved; formal labels wait for taxonomy stability and explicit per-trace decisions.",
+        "definition": "For a sufficiently specified actionable support request, the reply substitutes a printed or narrated next tool call for an actual necessary tool attempt, without completing the task or explaining a concrete blocker or requesting genuinely missing information.",
+        "evaluator_type": "llm_judge",
+        "created_at": "2026-10-10T07:28:47.541384+00:00",
+        "human_confirmed": true,
+        "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+      },
+      "finalized_at": "2026-10-10T07:44:21.019951+00:00",
+      "confirmed_mode_negative_count": 72,
+      "labeled_trace_count": 100,
+      "sample_fraction": 0.28
+    }
+  ],
+  "history": [
+    {
+      "event": "initial_candidate_grouping",
+      "source": "ai_organization_of_five_human_confirmed_notes",
+      "mode_names": [
+        "refund_approval_not_requested",
+        "unsupported_policy_claim",
+        "missing_policy_citation"
+      ],
+      "human_confirmed": false,
+      "timestamp": "2026-10-10T05:56:29.917959+00:00",
+      "unassigned_annotation_ids": [
+        "1f365a5f-ff9e-4335-bfbd-216d8633cf27"
+      ],
+      "note": "Printed tool request remains an observation; requirement interpretation needs confirmation before a formal mode."
+    },
+    {
+      "event": "student_confirmed_initial_groupings",
+      "timestamp": "2026-10-10T06:01:37.382948+00:00",
+      "human_confirmed": true,
+      "mode_names": [
+        "refund_approval_not_requested",
+        "unsupported_policy_claim",
+        "missing_policy_citation"
+      ],
+      "note": "Student confirmed the displayed review package and candidate groupings. These remain candidates until examples, boundaries and final taxonomy are complete."
+    },
+    {
+      "event": "five_additional_grouping_proposals_after_initial_batch",
+      "mode_names": [
+        "invalid_tool_arguments",
+        "invented_record_values",
+        "ignored_record_inconsistency",
+        "required_human_handoff_missing",
+        "unexecuted_tool_request"
+      ],
+      "human_confirmed": false,
+      "timestamp": "2026-10-10T06:08:25.548919+00:00",
+      "note": "New groups derive from accepted notes; definitions and supporting mode applicability remain proposed."
+    },
+    {
+      "event": "human_confirmed_taxonomy_revision",
+      "timestamp": "2026-10-10T06:30:07.829713+00:00",
+      "human_confirmed": true,
+      "old_mode": {
+        "name": "missing_policy_citation",
+        "definition": "The reply asserts a platform or store policy rule without an identifiable policy identifier supporting that claim.",
+        "version": 1,
+        "status": "candidate",
+        "human_confirmed": true,
+        "evidence_status": "proposed_grouping_from_confirmed_observations",
+        "origin_annotation_ids": [
+          "50ab7caa-709b-400e-9fca-f5cb664d72d7"
+        ],
+        "positive_trace_ids": [
+          "71f4f50dc54dc212cb9239f572853741"
+        ],
+        "close_negative_trace_ids": [],
+        "example_quotes": [
+          "Since your order #2748 has shipped, it's no longer possible to cancel it."
+        ],
+        "requirement_source": [
+          "PURPOSE-1",
+          "RESP-1"
+        ],
+        "boundary": "Order status and dates alone need no policy citation. Correctly cited store-* documents count. Unsupported content may also require a separate mode. Resolve tool-derived SLA versus policy-derived SLA in boundary review.",
+        "evaluator_type": "code_check_or_llm_judge",
+        "likely_product_change": "Attach the supporting policy identifier to each policy claim.",
+        "created_at": "2026-10-10T05:56:29.917957+00:00",
+        "confirmed_mode_positive_count": 1,
+        "grouping_review_required": false,
+        "grouping_confirmed_at": "2026-10-10T06:30:07.829713+00:00"
+      },
+      "new_name": "missing_or_invalid_policy_citation",
+      "new_version": 2,
+      "new_definition": "A platform or store policy claim lacks a policy identifier whose existing document supports that claim. Missing, nonexistent and wrong-document citations all qualify.",
+      "new_boundary": "Exclude concrete facts returned by the current tool, including an actual ticket's SLA, order dates/status and refund eligibility. A generally stated policy rule still needs its supporting policy ID.",
+      "reason": "The earlier lack-of-ID description can misflag ticket SLA facts and miss wrong-document citations. Review support-0162 and support-0075 in the role batch.",
+      "supporting_trace_ids": [
+        "490265edd3e8a70404e5e0da819d4e4f",
+        "f34925c67cc748c9d1b70c04ce1721f9"
+      ],
+      "required_followup": "Repeat citation search under version2 and recheck earlier traces."
+    },
+    {
+      "event": "student_confirmed_additional_groupings_and_RESP_6",
+      "timestamp": "2026-10-10T06:30:07.829713+00:00",
+      "human_confirmed": true,
+      "mode_names": [
+        "refund_approval_not_requested",
+        "unsupported_policy_claim",
+        "missing_or_invalid_policy_citation",
+        "invalid_tool_arguments",
+        "invented_record_values",
+        "ignored_record_inconsistency",
+        "required_human_handoff_missing",
+        "unexecuted_tool_request"
+      ],
+      "note": "Eight approved candidates remain unfrozen pending depth/stability reviews and final structured judgments."
+    },
+    {
+      "event": "post_revision_search_completed",
+      "mode": "missing_or_invalid_policy_citation",
+      "version": 2,
+      "at": "2026-10-10T06:35:19.066362+00:00",
+      "records_scanned": 344,
+      "candidate_count": 15,
+      "decisions": "All hypotheses pending human review; no rejection or labels inferred"
+    },
+    {
+      "event": "student_confirmed_final_taxonomy_examples_and_stability",
+      "at": "2026-10-10T07:44:21.019951+00:00",
+      "mode_versions": {
+        "refund_approval_not_requested": 1,
+        "unsupported_policy_claim": 1,
+        "missing_or_invalid_policy_citation": 2,
+        "invalid_tool_arguments": 1,
+        "invented_record_values": 1,
+        "ignored_record_inconsistency": 1,
+        "required_human_handoff_missing": 1,
+        "unexecuted_tool_request": 1
+      },
+      "new_consequential_modes": 0,
+      "reviewed_traces": 100,
+      "binary_label_pass": "pending; no inferred labels"
+    },
+    {
+      "event": "student_confirmed_complete_label_and_search_packages",
+      "at": "2026-10-10T08:28:05.995903+00:00",
+      "trace_count": 100,
+      "binary_judgments": 800,
+      "boundary_recommendations_confirmed": 23,
+      "search_accepted": 129,
+      "search_rejected": 7,
+      "verified_langfuse_scores": 900,
+      "remaining_label_sync": 0
+    }
+  ],
+  "status": "final_taxonomy_labeled",
+  "stability_proposal": {
+    "batch_id": "stability_4",
+    "status": "accepted",
+    "proposed_new_consequential_mode_count": 0,
+    "new_mode_names": [],
+    "reason": "All final-batch observations map to existing candidates: schema validation, unsupported/citation claims, stalled tool requests and invented identifiers. Correct tool-backed answers remain negatives. A future handoff promise is a boundary question within existing promise/handoff candidates, not a proposed new category.",
+    "pending_trace_ids": [
+      "f346d7eac27b6fc466784278c4bee620",
+      "13e026bde4381624bfe37ad95e2bd0e6",
+      "9855a5bef623e1d3c1ee3825a8131dfb",
+      "70651f233f2415a0f5a73463ba0fcec8",
+      "e51810d9242c84492fe21c9f4186283a",
+      "7e858c6a2ea0437eb1a3748cc294b460",
+      "40c7ff081521ce3519871e051609ea3b",
+      "e55f4fb42689c0e20b4a91846089b979",
+      "8538b1b0a6f767a444d3382c9c687a40",
+      "f486c70e7d7f794e38a22f95563599c6",
+      "c7e90fe2e4f77d7ec750e16bdb8118d0",
+      "a9dba26c126518b0265df59855339834",
+      "a0d161b5bfa70e140b33bc2a40d06928",
+      "4edf4c04d33d7d2a0c04c22b0f1e4867",
+      "d3fea18ea65ec58e02c2deff997adcf0"
+    ],
+    "created_at": "2026-10-10T07:28:47.541384+00:00",
+    "human_confirmed": true,
+    "confirmed_at": "2026-10-10T07:44:21.019951+00:00"
+  },
+  "stability": {
+    "batch_id": "stability_4",
+    "status": "accepted",
+    "proposed_new_consequential_mode_count": 0,
+    "new_mode_names": [],
+    "reason": "All final-batch observations map to existing candidates: schema validation, unsupported/citation claims, stalled tool requests and invented identifiers. Correct tool-backed answers remain negatives. A future handoff promise is a boundary question within existing promise/handoff candidates, not a proposed new category.",
+    "pending_trace_ids": [
+      "f346d7eac27b6fc466784278c4bee620",
+      "13e026bde4381624bfe37ad95e2bd0e6",
+      "9855a5bef623e1d3c1ee3825a8131dfb",
+      "70651f233f2415a0f5a73463ba0fcec8",
+      "e51810d9242c84492fe21c9f4186283a",
+      "7e858c6a2ea0437eb1a3748cc294b460",
+      "40c7ff081521ce3519871e051609ea3b",
+      "e55f4fb42689c0e20b4a91846089b979",
+      "8538b1b0a6f767a444d3382c9c687a40",
+      "f486c70e7d7f794e38a22f95563599c6",
+      "c7e90fe2e4f77d7ec750e16bdb8118d0",
+      "a9dba26c126518b0265df59855339834",
+      "a0d161b5bfa70e140b33bc2a40d06928",
+      "4edf4c04d33d7d2a0c04c22b0f1e4867",
+      "d3fea18ea65ec58e02c2deff997adcf0"
+    ],
+    "created_at": "2026-10-10T07:28:47.541384+00:00",
+    "human_confirmed": true,
+    "confirmed_at": "2026-10-10T07:44:21.019951+00:00",
+    "new_consequential_mode_count": 0,
+    "reviewed_trace_count": 15
+  }
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "mode": "refund_approval_not_requested",
+    "summary": {
+      "mode": "refund_approval_not_requested",
+      "source": "All 344 records from live-Langfuse-fetched analysis/review_app/.cache/traces.json; source provenance supplied and verified by parent. This scan reads the local cache and makes no new model calls.",
+      "counts": {
+        "records_scanned": 344,
+        "issue_refund_executions": 0,
+        "refund_return_language_records": 93,
+        "refund_language_eligible_order_total_above_100": 18,
+        "exact_100_partial_refund_boundaries": 5
+      },
+      "all_positive_retrieval_hypotheses": [
+        {
+          "trace_id": "9ccf73ef883e51c23c0e919e92cd62d4",
+          "scenario_id": "support-0056"
+        },
+        {
+          "trace_id": "234a151c68857e4790286acd4ca451f7",
+          "scenario_id": "support-0057"
+        },
+        {
+          "trace_id": "1690a6444ce6bff03e727aac0d9c7886",
+          "scenario_id": "support-0058"
+        },
+        {
+          "trace_id": "a94ec2e3aa3ca95a6c33f8b8878bb683",
+          "scenario_id": "support-0059"
+        },
+        {
+          "trace_id": "022af3f40fe205bb616b01f54b2691bf",
+          "scenario_id": "support-0061"
+        },
+        {
+          "trace_id": "3ed25339804dad38c42a2794f3117785",
+          "scenario_id": "support-0062"
+        },
+        {
+          "trace_id": "970d022f66c48ff70257dc0a5c33557f",
+          "scenario_id": "support-0063"
+        },
+        {
+          "trace_id": "875a1bc958d8c149a0475421bd60eb57",
+          "scenario_id": "support-0064"
+        },
+        {
+          "trace_id": "203ea1d28e9656f9df5f6d7c5bd92a3a",
+          "scenario_id": "support-0065"
+        },
+        {
+          "trace_id": "8a25f07ce068ea9ebbe6bdc5935fc227",
+          "scenario_id": "support-0211"
+        },
+        {
+          "trace_id": "c1a187944ef79608fcbb0f2962d5d1a2",
+          "scenario_id": "support-0213"
+        },
+        {
+          "trace_id": "c587e88e58747defc2a772f7173d82ca",
+          "scenario_id": "support-0214"
+        },
+        {
+          "trace_id": "501e879d03da4cf995baf8e051e56efe",
+          "scenario_id": "support-0215"
+        }
+      ],
+      "shortlist_positive_candidates": 10,
+      "shortlist_close_negative_candidates": 5,
+      "properly_queued_close_negatives_found": 0,
+      "method": "Parsed every record; structural nominations from selected user refund language, get_order eligibility/amount, and executed tool names; inspected nominated turns and selected generation/tool observations; grouped same-session context separately. No review-status exclusion.",
+      "limits": "The 13 nominations are hypotheses, not labels or prevalence. Missing return-condition justification and ambiguous full-amount wording need human review. No queued_for_approval issue_refund result exists in this corpus, so none was fabricated as a close negative."
+    },
+    "candidate_count": 15,
+    "phase": "exploratory_candidate_search",
+    "all_are_hypotheses": true
+  },
+  {
+    "mode": "unsupported_policy_claim",
+    "summary": {
+      "source": "analysis/review_app/.cache/traces.json; parent verified records fetched from live Langfuse",
+      "trace_records_scanned": 344,
+      "distinct_trace_ids_scanned": 344,
+      "scenario_count": 250,
+      "shortlist_count": 16,
+      "positive_candidate_count": 10,
+      "close_negative_candidate_count": 6,
+      "human_confirmed_seed_trace_id": "925f79492e4d5912800097f1908e490b",
+      "method": "Inspected all recorded final replies and tool-output inventories across 344 records; read full retrieved policies and detailed tool results for every shortlisted record. Compared policy rules, conditions, clocks, store precedence and service promises. A retrieved document identifier or keyword was only a search signal; every shortlisted reply was inspected against evidence.",
+      "boundary": "Invented or contradicted policy rule or policy-derived service promise. Missing citations alone, fabricated product/order facts and failure to perform an action do not establish this mode. Correct action outcome can coexist with a false policy rationale. A close negative applies only to this mode, not overall trace quality.",
+      "status": "Search hypotheses only. Human must inspect every returned trace; no labels or additional reviewed-trace counts were applied. Session followups remain distinct traces and were not automatically counted as reviewed.",
+      "verification": "Offline analysis of the live-fetched cache; no new live model calls, tool actions or conversations generated."
+    },
+    "candidate_count": 16,
+    "phase": "exploratory_candidate_search",
+    "all_are_hypotheses": true
+  },
+  {
+    "mode": "missing_policy_citation",
+    "summary": {
+      "source": "analysis/review_app/.cache/traces.json (344 previously live-fetched records; current scan offline)",
+      "mode": "missing_policy_citation",
+      "method": "Scanned final replies and observation metadata for all records; keyword and cw-/store-policy identifier retrieval filters only. Manually inspected quotes and actual tool observations/results for shortlisted records, including earlier tool messages retained in continuation traces.",
+      "scan_counts": {
+        "records_scanned": 344,
+        "records_with_final_text": 344,
+        "policy_or_order_keyword_hits": 248,
+        "keyword_hits_without_identifier": 153,
+        "unreviewed_records": 339,
+        "keyword_hits_with_identifier": 95,
+        "reviewed_records": 5,
+        "fixed_24_hour_reply_hits": 19
+      },
+      "shortlist_counts": {
+        "positive_candidate": 9,
+        "close_negative_candidate": 6
+      },
+      "shortlist_review_counts": {
+        "already_reviewed": 2,
+        "unreviewed": 13
+      },
+      "limitations": [
+        "Counts are retrieval signals, never labels or prevalence estimates. Policy/order keywords intentionally include factual order reports.",
+        "Escalation SLA copied from tool result needs a human boundary decision; marked uncertain.",
+        "Identifiers can be store-* as well as cw-*; a cw-only filter would incorrectly flag cited store policies, e.g. trace 8fd9a4f6c1245813f06e6c4456a6cb65.",
+        "Wrong or unsupported policy IDs are a neighboring failure mode; presence of an ID alone is insufficient to prove any mode absent.",
+        "All candidate decisions remain for human review; canonical annotations, patterns, labels, and application code were not changed."
+      ]
+    },
+    "candidate_count": 15,
+    "phase": "exploratory_candidate_search",
+    "all_are_hypotheses": true
+  },
+  {
+    "mode": "invalid_tool_arguments",
+    "summary": {
+      "mode": "invalid_tool_arguments",
+      "status": "hypotheses_only",
+      "source": "analysis/review_app/.cache/traces.json",
+      "source_records": 344,
+      "records_read": 344,
+      "tool_steps_scanned": 337,
+      "schema_validation_error_traces": 27,
+      "schema_validation_error_steps": 27,
+      "all_schema_error_tools": [
+        "search_products"
+      ],
+      "all_schema_error_fields": [
+        "max_price_usd"
+      ],
+      "valid_json_null_product_search_steps": 13,
+      "structured_invalid_argument_steps": 0,
+      "candidate_counts": {
+        "positive_candidate": 10,
+        "close_negative_candidate": 5
+      },
+      "method": "Loaded every record and inspected every tool step for recorded Invalid JSON input plus validation error, invalid_argument results, and JSON-null searches. Then read full steps of all shortlisted traces. Read actual SDK-generated params_json_schema from tool objects without invoking tools.",
+      "definition": "Agent supplies arguments rejected by the actual argument validator before tool execution, evidenced by a recorded validation error. Distinguish JSON null from the string null.",
+      "boundaries": [
+        "Expected permission_denied, not_found, not_eligible and paused structured results are not schema validation failures.",
+        "Numeric strings such as order_id \"3584\" or limit \"10\" can be coerced by the runtime; emitted-schema type mismatch alone is insufficient for this narrow definition when the recorded tool executes successfully.",
+        "store \"null\", \"none\", or numeric-looking names are strings allowed by schema; failed store resolution is semantic not_found, not pre-execution validation.",
+        "Structured ok false invalid_argument may support a broader semantic-argument mode but is not automatically included; none observed in the 337 tool steps.",
+        "Assistant text containing JSON is not a recorded tool invocation and is not a successful retry."
+      ],
+      "checks": "Offline cached-trace search and schema inspection only; no live model calls or application tool executions.",
+      "requirement_gap": "SPEC TOOL-3 names optional price/store inputs; the precise number-or-null type comes from actual function-tool schema. Human should retain this implementation-contract source in the mode definition."
+    },
+    "candidate_count": 15,
+    "phase": "exploratory_candidate_search",
+    "all_are_hypotheses": true
+  },
+  {
+    "mode": "invented_record_values",
+    "summary": {
+      "records_scanned": 344,
+      "strong_positive_candidates": 5,
+      "boundary_positive_candidates": 1,
+      "close_negative_candidates": 9,
+      "method": "Offline retrieval across all cached live-fetched records; inspected selected full records, generation inputs, tool results, and same-session prior turns. Quotes come only from selected trace output. Signals are hypotheses, not labels.",
+      "definition": "Reply asserts an order field/date/value that disagrees with authorized recorded tool evidence or fills a missing field as if known.",
+      "boundary": "Verbatim repetition of internally inconsistent record values is a neighboring inconsistency-handling mode. Wrong policy numbers are policy failures. Derived deadline example overlaps policy error and requires human definition review.",
+      "uncertainty": "No explicit acknowledgement of missing delivered_at found among missing-delivery-date scenarios support-0176 through support-0180. Missing-information acknowledgement close negatives use product details and one placed-order absence case. Cancellation timestamps are unavailable; no actual cancellation date is assumed. No data from other sessions is used as evidence for a selected reply.",
+      "checks": "Offline cache analysis only; no live model calls, no canonical state/code writes, no labels accepted."
+    },
+    "candidate_count": 15,
+    "phase": "exploratory_candidate_search",
+    "all_are_hypotheses": true
+  },
+  {
+    "mode": "ignored_record_inconsistency",
+    "summary": {
+      "records_scanned": 344,
+      "distinct_records_with_order_anomaly": 10,
+      "delivered_before_shipped_records": 6,
+      "delivered_missing_delivery_date_records": 4,
+      "acknowledged_order_date_anomaly_records_found": 0,
+      "positive_candidates": 11,
+      "close_negative_candidates": 4,
+      "positive_candidates_within_date_status_definition": 10,
+      "low_confidence_boundary_candidates": 1,
+      "catalog_scope_extension_positive_candidates": 1,
+      "strictest_date_status_candidates": 9,
+      "selected_records_inspected": 15,
+      "methods": "Inspected all TOOL order records structurally for reversed dates, status/date conflicts and explicit null required values; searched all final replies for anomaly/missing-information acknowledgments; inspected all shortlisted user requests, generation outputs, calls, results and final replies. Catalog negative-price pair included as a boundary hypothesis.",
+      "checks": "Offline inspection of already live-fetched records; no new model calls, labels, scores, canonical state or application code changes."
+    },
+    "candidate_count": 15,
+    "phase": "exploratory_candidate_search",
+    "all_are_hypotheses": true
+  },
+  {
+    "mode": "required_human_handoff_missing",
+    "summary": {
+      "source": "live-fetched Langfuse cache; analysis/state/corpus_source.json",
+      "scanned_trace_count": 344,
+      "retrieval_nominee_count": 111,
+      "inspected_shortlist_count": 15,
+      "positive_candidate_count": 7,
+      "close_negative_candidate_count": 8,
+      "status": "Search hypotheses only; no human judgments or canonical state writes.",
+      "definition_candidate": "A non-refund Cartwheel case requires human handling under ESC-2, ESC-3, or ESC-4, and no relevant successful escalate_to_human exists by end of current turn, including earlier same-session turns.",
+      "boundary": "Actual account changes/disputes and explicitly unresolved in-scope requests require tickets. Informational general policy questions do not. SCOPE-2 refusals do not. ESC-1 above-threshold refund queueing belongs to separate issue_refund mode.",
+      "findings": "Four actual-dispute positive candidates; two explicitly unresolved product comparison candidates; one weaker lost-order candidate. All nine account-change opening scenarios support-0161 through support-0169 successfully escalated. No strong ESC-4 action-policy uncertainty candidate selected."
+    },
+    "candidate_count": 15,
+    "phase": "exploratory_candidate_search",
+    "all_are_hypotheses": true
+  },
+  {
+    "mode": "unexecuted_tool_request",
+    "summary": {
+      "candidate_positive": 68,
+      "boundary_requires_review": 9,
+      "overlap_fabricated_tool_result": 1,
+      "ambiguous_future_intent": 27,
+      "close_negative": 6
+    },
+    "candidate_count": 15,
+    "phase": "exploratory_candidate_search",
+    "all_are_hypotheses": true
+  },
+  {
+    "source": "344 live-fetched cached traces; current rescan offline",
+    "mode": "missing_or_invalid_policy_citation",
+    "version": 2,
+    "definition": "A platform/store policy claim lacks an identifier whose existing document supports it; missing, nonexistent and wrong-document IDs qualify.",
+    "excluded": "Concrete current-tool facts: actual ticket SLA, order status/dates, and refund eligibility flag.",
+    "requirement_sources": [
+      "PURPOSE-1",
+      "RESP-1"
+    ],
+    "policy_documents_read": 18,
+    "scan_counts": {
+      "records_scanned": 344,
+      "unreviewed_records": 284,
+      "policy_or_order_keyword_hits": 248,
+      "reviewed_records": 60,
+      "records_with_any_identifier_string": 95,
+      "records_with_nonexistent_identifier_string": 21,
+      "records_with_existing_identifier_string": 76,
+      "fixed_24_hour_reply_surface_hits": 19,
+      "fixed_24_hour_hits_with_current_successful_ticket_24h": 16
+    },
+    "shortlist_counts": {
+      "positive_candidate": 9,
+      "close_negative_candidate": 6
+    },
+    "shortlist_review_counts": {
+      "already_reviewed": 5,
+      "unreviewed": 10
+    },
+    "borderline_positive_hypotheses": 1,
+    "method": "Read revised SPEC including RESP-6 and human-confirmed pattern history; reread all final replies/metadata using retrieval filters; inspected actual cited documents and shortlisted tool activity, including retained session tool messages.",
+    "limits": [
+      "Search signals and candidate kinds are hypotheses, never formal labels or prevalence estimates.",
+      "Existing-ID counts do not measure support: semantic document-claim comparison is necessary.",
+      "Nonexistent-ID counts include failed lookups and exempt factual statements.",
+      "Borderline SLA hypothesis contains strong exemption counterevidence and is left pending for explicit human review.",
+      "RESP-6 applies to separate task-completion mode; citation source remains PURPOSE-1/RESP-1."
+    ],
+    "phase": "post_revision_search",
+    "created_at": "2026-10-10T06:35:19.066362+00:00",
+    "previous_suggestions_requiring_recheck": [
+      {
+        "trace_id": "71f4f50dc54dc212cb9239f572853741",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "213f1dad14ffc4f741ce69bc6c8a2145",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "4e96c9f762fc4e0adc26ac4ce8de666b",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "9caf585ae582fca3bcca46102f8fd3c0",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "46039265d671ad8bf5b2482cfe674182",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "add1636aad08b6b894ece4a01a31defe",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "74757559768540febc0aa847f9b5845d",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "e31e953c82206110f9cd221962b7bbb6",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "01994e8ae186fc97b029be687ae706f6",
+        "previous_kind": "positive_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Actual ticket SLA was previously uncertain; apply new tool-fact exemption and inspect any additional general claim.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "b80d82fbde747ec3cfcdd257d2303ddd",
+        "previous_kind": "close_negative_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "256ed3a839581e7ca7055e1c6a17bf5b",
+        "previous_kind": "close_negative_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "2c845b3dde602d53c4dd7ae26c24e3c3",
+        "previous_kind": "close_negative_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "994fdcfc414c364afad04bc9c969df76",
+        "previous_kind": "close_negative_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "08b1339ccff088291a8a4d46b4b90dd8",
+        "previous_kind": "close_negative_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      },
+      {
+        "trace_id": "53bf258fc315bb6b2b7909716f235ede",
+        "previous_kind": "close_negative_candidate",
+        "recheck_reason": "Version 2 requires existing document support for every policy claim and exempts concrete tool facts.",
+        "specific_change": "Recheck cited-document support and whether quoted statement is a general rule or concrete tool fact.",
+        "human_decision": "pending"
+      }
+    ]
+  }
+]

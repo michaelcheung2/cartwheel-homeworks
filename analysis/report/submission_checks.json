@@ -1,0 +1,80 @@
+{
+  "assignment": "HW4",
+  "checked_at": "2026-10-10T08:29:51.147717+00:00",
+  "technical_checks": "passed",
+  "reviewed_distinct_traces": 100,
+  "complete_label_pairs": 800,
+  "langfuse_verified_text_scores": 100,
+  "langfuse_verified_label_scores": 800,
+  "pending_sync": 0,
+  "search_accepted": 129,
+  "search_rejected": 7,
+  "modes": [
+    {
+      "mode": "refund_approval_not_requested",
+      "current_labels": 100,
+      "fail": 4,
+      "pass": 96,
+      "file": "analysis/state/labels/refund_approval_not_requested.jsonl"
+    },
+    {
+      "mode": "unsupported_policy_claim",
+      "current_labels": 100,
+      "fail": 25,
+      "pass": 75,
+      "file": "analysis/state/labels/unsupported_policy_claim.jsonl"
+    },
+    {
+      "mode": "missing_or_invalid_policy_citation",
+      "current_labels": 100,
+      "fail": 27,
+      "pass": 73,
+      "file": "analysis/state/labels/missing_or_invalid_policy_citation.jsonl"
+    },
+    {
+      "mode": "invalid_tool_arguments",
+      "current_labels": 100,
+      "fail": 9,
+      "pass": 91,
+      "file": "analysis/state/labels/invalid_tool_arguments.jsonl"
+    },
+    {
+      "mode": "invented_record_values",
+      "current_labels": 100,
+      "fail": 6,
+      "pass": 94,
+      "file": "analysis/state/labels/invented_record_values.jsonl"
+    },
+    {
+      "mode": "ignored_record_inconsistency",
+      "current_labels": 100,
+      "fail": 4,
+      "pass": 96,
+      "file": "analysis/state/labels/ignored_record_inconsistency.jsonl"
+    },
+    {
+      "mode": "required_human_handoff_missing",
+      "current_labels": 100,
+      "fail": 10,
+      "pass": 90,
+      "file": "analysis/state/labels/required_human_handoff_missing.jsonl"
+    },
+    {
+      "mode": "unexecuted_tool_request",
+      "current_labels": 100,
+      "fail": 28,
+      "pass": 72,
+      "file": "analysis/state/labels/unexecuted_tool_request.jsonl"
+    }
+  ],
+  "starter_files_preserved_byte_for_byte": 12,
+  "offline_app_tests_passed": 14,
+  "ui_check": "QuickJS syntax and DOM-stub rendering with live API state",
+  "real_browser_visual_check": "pending: Chrome headless startup denied by macOS",
+  "new_live_cartwheel_model_calls": 0,
+  "student_items_pending": [
+    "Preliminary standard-Langfuse review feedback",
+    "Continuous video <=5 minutes"
+  ],
+  "workshop": "skipped"
+}
