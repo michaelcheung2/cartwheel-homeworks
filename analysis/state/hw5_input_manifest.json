@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-12T04:18:22.442077+00:00",
+  "source": "analysis/review_app/.cache/traces.json",
+  "source_sha256": "f11985c0aef024ab04d3b3b6d8edf6afb8f74c65b40407b790035f795b6f9dee",
+  "source_details": {
+    "store": "live_langfuse",
+    "fetched_at": "2026-10-10T07:54:22.006723+00:00",
+    "project": "cartwheel-dev",
+    "trace_count": 344,
+    "scenario_count": 250
+  },
+  "inputs_sha256": "c2bdd9fc04c1f87b278afc6a6433c6e7136f07fbcc92b44fa1d673ba37172d93",
+  "records": 95,
+  "mode": "unsupported_policy_claim",
+  "policy": "Observed earlier turns through selected reply; actual tool results/retrieval passages. No labels, annotations, expected outcomes or scenario metadata in judge input.",
+  "splits_sha256": "c463d38b5a78212f40399ed17f7fb5ca5765cc6bbe3ea710e80194e138053402"
+}

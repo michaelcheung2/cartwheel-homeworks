@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-10-12T04:52:54.071301+00:00",
+  "technical_artifacts_verified": [
+    "analysis/state/hw5_labels/unsupported_policy_claim.jsonl",
+    "analysis/state/splits.json",
+    "analysis/state/hw5_trace_inputs.json",
+    "analysis/run_judges.py",
+    "analysis/prompts/unsupported_policy_claim-v0.txt",
+    "analysis/state/judges/unsupported_policy_claim-v0.json",
+    "analysis/report/dev-unsupported_policy_claim-v0.json",
+    "analysis/prompts/unsupported_policy_claim-v1.txt",
+    "analysis/state/judges/unsupported_policy_claim-v1.json",
+    "analysis/report/dev-unsupported_policy_claim-v1.json",
+    "analysis/prompts/unsupported_policy_claim-v2.txt",
+    "analysis/state/judges/unsupported_policy_claim-v2.json",
+    "analysis/report/dev-unsupported_policy_claim-v2.json",
+    "analysis/report/test-unsupported_policy_claim-v2.json"
+  ],
+  "confirmed_labels": 106,
+  "eligible_inputs": 95,
+  "split_counts": {
+    "train": {
+      "Pass": 13,
+      "Fail": 6
+    },
+    "dev": {
+      "Pass": 26,
+      "Fail": 12
+    },
+    "test": {
+      "Pass": 26,
+      "Fail": 12
+    }
+  },
+  "prompt_versions": 3,
+  "confirmed_version_specific_reviews": 44,
+  "primary_model": "ollama_chat/llama3.1:8b",
+  "frozen_judge": "unsupported_policy_claim-v2",
+  "test_prediction_count": 38,
+  "comparison_dev_prediction_count": 38,
+  "fixed_inputs_sha256": "c2bdd9fc04c1f87b278afc6a6433c6e7136f07fbcc92b44fa1d673ba37172d93",
+  "splits_sha256": "c463d38b5a78212f40399ed17f7fb5ca5765cc6bbe3ea710e80194e138053402",
+  "all_cached_metrics_recalculated_offline": true,
+  "original_hw4_label_files_unchanged": true,
+  "offline_tests": {
+    "command": "uv run pytest -q analysis/test_run_judges.py analysis/review_app/test_server.py tests/test_normalization_metadata.py",
+    "observed_pass_count": 27
+  },
+  "javascript_syntax_check": "QuickJS passed; visual browser verification not performed",
+  "live_model_calls": "Local Ollama only; no paid API model calls",
+  "handout_departure": "Student chose Llama instead of required gpt-4o-mini",
+  "audit_note": "Development helper recalculation appends log entries. Initial audit expected whole-file immutability and failed; metrics matched. Subsequent audit checked cached verdicts directly with shared Wilson statistics, without adding more development log entries. Frozen test judge was unchanged by recalculation.",
+  "pending": [
+    "Student continuous recording, at most five minutes"
+  ],
+  "student_use_assessment_confirmed": true
+}

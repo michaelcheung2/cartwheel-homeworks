@@ -1,0 +1,35 @@
+{
+  "mode": "unsupported_policy_claim",
+  "versions": [
+    {
+      "mode": "unsupported_policy_claim",
+      "version": 0,
+      "training_example_trace_ids": [
+        "0657fe8f3f4bd48136f29756f8898bba",
+        "88bd075cb70e95dc14ec6832d0b70e43",
+        "490265edd3e8a70404e5e0da819d4e4f"
+      ],
+      "source": "fixed hw5_trace_inputs.json, saved training split only"
+    },
+    {
+      "version": 1,
+      "training_example_trace_ids": [
+        "0657fe8f3f4bd48136f29756f8898bba",
+        "88bd075cb70e95dc14ec6832d0b70e43",
+        "490265edd3e8a70404e5e0da819d4e4f",
+        "30df41a4cb3eec2f2e6bc05afe859561"
+      ],
+      "source": "fixed inputs and unchanged training split only"
+    },
+    {
+      "version": 2,
+      "training_example_trace_ids": [
+        "0657fe8f3f4bd48136f29756f8898bba",
+        "30df41a4cb3eec2f2e6bc05afe859561",
+        "30679ff47de71af838bf90f864c525de",
+        "f486c70e7d7f794e38a22f95563599c6"
+      ],
+      "source": "fixed inputs and unchanged training split only"
+    }
+  ]
+}

@@ -198,8 +198,11 @@ def _classify_docetl(
     return _run_docetl_map(prompt_text, trace_ids, model)
 
 
-def _run_docetl_map(  # pragma: no cover - requires the docetl extra + a live key
-    prompt_text: str, trace_ids: list[str], model: str
+def _run_docetl_map(  # pragma: no cover - executes live models
+    prompt_text: str, trace_ids: list[str], model: str, *,
+    completion_kwargs: dict[str, Any] | None = None,
+    max_threads: int | None = None,
+    output_mode: str | None = None,
 ) -> dict[str, int]:
     """One DocETL ``map`` operation classifying each trace as 0/1.
 
@@ -241,11 +244,13 @@ def _run_docetl_map(  # pragma: no cover - requires the docetl extra + a live ke
             "as exactly Pass when the named failure is absent, or Fail when present."
         ),
         output={
+            **({"mode": output_mode} if output_mode is not None else {}),
             "schema": {
                 "critique": "string",
                 "result": "string",
             }
         },
+        litellm_completion_kwargs=completion_kwargs or {},
     )
     pipeline = Pipeline(
         name="cartwheel_judge_batch",
@@ -256,7 +261,10 @@ def _run_docetl_map(  # pragma: no cover - requires the docetl extra + a live ke
         ],
         output=PipelineOutput(type="file", path=str(out_path), intermediate_dir=str(tmpdir)),
     )
-    pipeline.run()
+    if max_threads is None:
+        pipeline.run()
+    else:
+        pipeline.run(max_threads=max_threads)
 
     produced = json.loads(out_path.read_text(encoding="utf-8"))
     # HW5 labels and public predictions use Pass=1, Fail=0.

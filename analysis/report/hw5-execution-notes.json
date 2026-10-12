@@ -1,0 +1,12 @@
+{
+  "observations": [
+    {
+      "observed_at": "2026-10-12T04:23:46.946462+00:00",
+      "output_mode": "tools",
+      "max_threads": "default (worker limit was not passed to Pipeline.run)",
+      "outcome": "InvalidOutputError: No tool calls in LLM response",
+      "saved_predictions": 0
+    }
+  ],
+  "fix": "Use DocETL structured_output schema for local Ollama and pass max_threads=1 to Pipeline.run. Same registered prompt/model/input/split; no completed prediction batch was lost."
+}

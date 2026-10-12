@@ -1,0 +1,20 @@
+{
+  "judge_id": "unsupported_policy_claim-v2",
+  "human_confirmed": true,
+  "confirmed_at": "2026-10-12T04:47:24.414946+00:00",
+  "source": "student_confirmed_final_choice_proposal",
+  "source_proposal": "analysis/report/hw5-v2-review-and-final-choice.md",
+  "selection_reason": "Highest observed development TPR and tied highest TNR; all 13 v2 disagreement decisions confirmed.",
+  "stop_reason": "Both allowed revisions completed. v2 has best observed dev TPR and ties best TNR; uncertainty and false alarms remain. No score target required.",
+  "test_results_seen_before_selection": false,
+  "deployment_decision": "Do not use for automatic decisions; use only to suggest cases for human review.",
+  "deployment_assessment": {
+    "human_confirmed": true,
+    "confirmed_at": "2026-10-12T06:29:50.345796+00:00",
+    "source": "student_chat_response",
+    "student_response": "Both 1 and 2 matches my view",
+    "automatic_decisions": false,
+    "human_review_suggestions": true,
+    "reason": "Too many false alarms: 15 of 26 passing test replies were flagged. Human review is required for every suggested case; the judge also missed 2 of 12 failures."
+  }
+}

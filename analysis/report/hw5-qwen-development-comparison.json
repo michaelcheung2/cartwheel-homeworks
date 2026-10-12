@@ -1,0 +1,39 @@
+{
+  "judge_id": "unsupported_policy_claim-v0",
+  "split": "dev",
+  "tpr": 0.8077,
+  "tnr": 0.75,
+  "tpr_interval": [
+    0.6212,
+    0.9149
+  ],
+  "tnr_interval": [
+    0.4677,
+    0.9111
+  ],
+  "agreement": 0.7895,
+  "tp": 21,
+  "fn": 5,
+  "tn": 9,
+  "fp": 3,
+  "n": 38,
+  "disagreements": [
+    "4edf4c04d33d7d2a0c04c22b0f1e4867",
+    "70651f233f2415a0f5a73463ba0fcec8",
+    "71f4f50dc54dc212cb9239f572853741",
+    "737e05580f6444e452db7c3c7a9fef7e",
+    "83106abba176e5ff42c9bd06b472a7da",
+    "a9dba26c126518b0265df59855339834",
+    "abd4237ab56f3186888383ce6a1d79b1",
+    "e1dd26c8e2efd7e6b2859028ccc4939a"
+  ],
+  "model": "ollama_chat/qwen3:8b",
+  "source_judge_id": "unsupported_policy_claim-v2",
+  "comparison_scope": "development_only",
+  "inputs_sha256": "c2bdd9fc04c1f87b278afc6a6433c6e7136f07fbcc92b44fa1d673ba37172d93",
+  "prompt_text_sha256": "dec7405bb2bbe7ada27962e91e6795e108c18e4f93e59dab42532117bb007c73",
+  "class_counts": {
+    "Pass": 26,
+    "Fail": 12
+  }
+}

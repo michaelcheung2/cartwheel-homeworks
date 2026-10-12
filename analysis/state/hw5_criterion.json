@@ -1,0 +1,14 @@
+{
+  "mode": "unsupported_policy_claim",
+  "source_definition_version": 1,
+  "definition": "The selected final reply states a platform/store policy rule or service promise that contradicts applicable policy or is not supported by retrieved policy and recorded tool evidence.",
+  "boundary_clarifications": [
+    {
+      "text": "Generic hypothetical advice that a policy may change and should be verified is not itself a concrete new policy rule or service promise. It does not negate the quoted supported window/fee. Retain current Pass label unless the student chooses another scope.",
+      "human_confirmed": true,
+      "source": "hw5-v0-disagreement-review case 15",
+      "confirmed_at": "2026-10-12T04:30:07.169356+00:00"
+    }
+  ],
+  "human_labels_changed": false
+}

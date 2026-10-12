@@ -1,0 +1,946 @@
+{
+  "mode": "unsupported_policy_claim",
+  "status": "ready",
+  "created_at": "2026-10-12T04:18:22.441040+00:00",
+  "selection_rule": "One per scenario; collapse same-order/same-intent and documented data-quality-case variants. Prefer confirmed Fail, then earliest timestamp/ID. Curated validation sample, not prevalence. No predictions used.",
+  "all_confirmed_labels": 106,
+  "eligible_counts": {
+    "Pass": 65,
+    "Fail": 30
+  },
+  "eligible_trace_ids": [
+    "01994e8ae186fc97b029be687ae706f6",
+    "048310a721348065f7e44dd6f072250c",
+    "04b0285acf627a8fe060138b614ea091",
+    "0657fe8f3f4bd48136f29756f8898bba",
+    "0c83d4cc7292091f21c06bb79b301e64",
+    "0cdeae9932d2349fb985c4b619a77969",
+    "0f852a2d9ec980b0af5f61374cb1b3b5",
+    "11465c3b6b68d19d92ce4920cedce984",
+    "13e026bde4381624bfe37ad95e2bd0e6",
+    "14d20ce715d31b19c9ad3e803cadf065",
+    "1773373a0030fb84dddd757de1fb4f37",
+    "18b2f37b5ebeb981b40bb8d811e9952a",
+    "1c3e867dba81f17b9292fb2e7e7900d0",
+    "1ecc9f6fdb0fd5a5d9522964d33ae83b",
+    "1f8736c3a48d2c1bbe3fbce733936cda",
+    "1fc7eab893c8375fa9adbcfce9abdaa9",
+    "203ea1d28e9656f9df5f6d7c5bd92a3a",
+    "2048f5783928ef150b52a155bd0ea209",
+    "256ed3a839581e7ca7055e1c6a17bf5b",
+    "26288d78507c65183456edb32b03f637",
+    "28e0875bc779e97d4d8a2fb9367868e0",
+    "29aa7c5081501c388e2af9127f447c66",
+    "2cbc21141452c9b9a016eaa7b8e7dae3",
+    "2e22528c5104b8d615651917a5c5d850",
+    "30679ff47de71af838bf90f864c525de",
+    "30df41a4cb3eec2f2e6bc05afe859561",
+    "392c08613bfc60b1da8d3a5c92699c05",
+    "40c7ff081521ce3519871e051609ea3b",
+    "43143635c9a6c418a45803856852cc8f",
+    "46830f4c94320d802a6b528ca8435b8f",
+    "490265edd3e8a70404e5e0da819d4e4f",
+    "4c4e044a72a0bb55b4e48dc6b545ccbf",
+    "4edf4c04d33d7d2a0c04c22b0f1e4867",
+    "4f48b610824334eeefec244e459602ec",
+    "501e879d03da4cf995baf8e051e56efe",
+    "51136312aaf023b7941a5660dcdc3f42",
+    "5a75d095d4b67268b038decc4d31bc86",
+    "5c2c79293cdd53d17559b7e25836dd58",
+    "667d9dd5df4202521ea453262fc05092",
+    "6db495da213d47128a48d522f265d0e5",
+    "6e18b7bd6bd99cd66dc8f0b34c8876e6",
+    "70651f233f2415a0f5a73463ba0fcec8",
+    "71f4f50dc54dc212cb9239f572853741",
+    "737e05580f6444e452db7c3c7a9fef7e",
+    "75096783639a1d652bec3158cac21877",
+    "7e858c6a2ea0437eb1a3748cc294b460",
+    "82c0de1c3e983ee6701dd57260f6241f",
+    "83106abba176e5ff42c9bd06b472a7da",
+    "8538b1b0a6f767a444d3382c9c687a40",
+    "86c39b64458b4c0bd8466a6aab997e92",
+    "88bd075cb70e95dc14ec6832d0b70e43",
+    "8ce5ef0bfea26a9b4b285b4185a9a36f",
+    "8fd9a4f6c1245813f06e6c4456a6cb65",
+    "9027cc4e0fc61543b0503fc723b1b0ca",
+    "905881f91af44e1851cb264b173986af",
+    "925f79492e4d5912800097f1908e490b",
+    "929f48ec1adaaaa49007bd22eb50737a",
+    "970d022f66c48ff70257dc0a5c33557f",
+    "994fdcfc414c364afad04bc9c969df76",
+    "9c1cbe44ca1f64f42ab6ab60ea27162d",
+    "9caf585ae582fca3bcca46102f8fd3c0",
+    "9ccf73ef883e51c23c0e919e92cd62d4",
+    "9d2762ed1737c92fede361a8571a4bf3",
+    "a0d161b5bfa70e140b33bc2a40d06928",
+    "a2eb40520bea917e94b350b2226a3d48",
+    "a38dc877e1d7d6647fab9620cfa5cdd1",
+    "a4a4e175638d6d46d7a73b3ea5bcaa7f",
+    "a97b2c6351eba2c4a88335df6d528694",
+    "a9dba26c126518b0265df59855339834",
+    "abd4237ab56f3186888383ce6a1d79b1",
+    "add1636aad08b6b894ece4a01a31defe",
+    "b80d82fbde747ec3cfcdd257d2303ddd",
+    "bc947122aa709266e35a95c12cad31ca",
+    "c7e90fe2e4f77d7ec750e16bdb8118d0",
+    "cbac55eadcc4cf3fdfdfb7b0d1df3649",
+    "cc0add31372c9c507799553f32f985b2",
+    "ccd9d8c8eafc147a0f441c59db79c51d",
+    "cd07b80b5977cba0fd0dee9e80c5f315",
+    "d3fea18ea65ec58e02c2deff997adcf0",
+    "d7b8fd32cdddb3546b182adc8ec759cb",
+    "daec5d711d05bba5a4d850df4b9c5676",
+    "dd955e01100b7e6e9b98b8e39472360a",
+    "e1dd26c8e2efd7e6b2859028ccc4939a",
+    "e51810d9242c84492fe21c9f4186283a",
+    "e55f4fb42689c0e20b4a91846089b979",
+    "e5dd692974da814a11740262761a71f3",
+    "e8aa4b661b01b4866dcbe9336445eb4c",
+    "eb94c017e9dc6dd76796fe0ace42fccd",
+    "ecc32ba020398fbe6dbb8b22fa3bf2cf",
+    "f2b5ebea02ba0264b438a878ffcf927f",
+    "f346d7eac27b6fc466784278c4bee620",
+    "f34925c67cc748c9d1b70c04ce1721f9",
+    "f486c70e7d7f794e38a22f95563599c6",
+    "fb82c1f99fb1ffd82432dc00e5080319",
+    "fea53fbba77e7dcd0dd8f00836695482"
+  ],
+  "groups": [
+    {
+      "group": [
+        "data_quality_case",
+        "dq-order-missing-delivery-date"
+      ],
+      "selected_trace_id": "929f48ec1adaaaa49007bd22eb50737a",
+      "excluded_trace_ids": [
+        "16455efe68f61b7c1b221a27caabe929",
+        "9367bda3271226a8f5c5470f7cbfd0d6",
+        "9855a5bef623e1d3c1ee3825a8131dfb"
+      ]
+    },
+    {
+      "group": [
+        "data_quality_case",
+        "dq-order-reversed-dates"
+      ],
+      "selected_trace_id": "e5dd692974da814a11740262761a71f3",
+      "excluded_trace_ids": [
+        "1e79fb44ed721a3f30934500464e10ee"
+      ]
+    },
+    {
+      "group": [
+        "data_quality_case",
+        "dq-product-duplicate-title"
+      ],
+      "selected_trace_id": "cbac55eadcc4cf3fdfdfb7b0d1df3649",
+      "excluded_trace_ids": [
+        "89ca4c67eb1a6f8315226a4bc725c52b"
+      ]
+    },
+    {
+      "group": [
+        "data_quality_case",
+        "dq-product-invalid-price"
+      ],
+      "selected_trace_id": "cd07b80b5977cba0fd0dee9e80c5f315",
+      "excluded_trace_ids": [
+        "43b0cc7de7877ee045a3c7fc94b5861f"
+      ]
+    },
+    {
+      "group": [
+        "order_intent",
+        105,
+        "cancellation"
+      ],
+      "selected_trace_id": "0f852a2d9ec980b0af5f61374cb1b3b5",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        111,
+        "refund"
+      ],
+      "selected_trace_id": "4edf4c04d33d7d2a0c04c22b0f1e4867",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        1321,
+        "refund"
+      ],
+      "selected_trace_id": "203ea1d28e9656f9df5f6d7c5bd92a3a",
+      "excluded_trace_ids": [
+        "07f1f86a468da7d2119a61106fa5a5e2"
+      ]
+    },
+    {
+      "group": [
+        "order_intent",
+        1429,
+        "order_lookup"
+      ],
+      "selected_trace_id": "a38dc877e1d7d6647fab9620cfa5cdd1",
+      "excluded_trace_ids": [
+        "5e2ad6b12d78fa3e60cbbb6903419ca7"
+      ]
+    },
+    {
+      "group": [
+        "order_intent",
+        1617,
+        "order_lookup"
+      ],
+      "selected_trace_id": "29aa7c5081501c388e2af9127f447c66",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        1862,
+        "refund"
+      ],
+      "selected_trace_id": "8538b1b0a6f767a444d3382c9c687a40",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        1897,
+        "refund"
+      ],
+      "selected_trace_id": "01994e8ae186fc97b029be687ae706f6",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        1935,
+        "cancellation"
+      ],
+      "selected_trace_id": "75096783639a1d652bec3158cac21877",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        2041,
+        "refund"
+      ],
+      "selected_trace_id": "8ce5ef0bfea26a9b4b285b4185a9a36f",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        2285,
+        "dispute"
+      ],
+      "selected_trace_id": "9d2762ed1737c92fede361a8571a4bf3",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        2488,
+        "dispute"
+      ],
+      "selected_trace_id": "abd4237ab56f3186888383ce6a1d79b1",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        2563,
+        "order_lookup"
+      ],
+      "selected_trace_id": "ccd9d8c8eafc147a0f441c59db79c51d",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        2748,
+        "cancellation"
+      ],
+      "selected_trace_id": "71f4f50dc54dc212cb9239f572853741",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        2917,
+        "order_lookup"
+      ],
+      "selected_trace_id": "392c08613bfc60b1da8d3a5c92699c05",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        32,
+        "order_lookup"
+      ],
+      "selected_trace_id": "7e858c6a2ea0437eb1a3748cc294b460",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        3405,
+        "refund"
+      ],
+      "selected_trace_id": "925f79492e4d5912800097f1908e490b",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        356,
+        "refund"
+      ],
+      "selected_trace_id": "9c1cbe44ca1f64f42ab6ab60ea27162d",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        3584,
+        "order_lookup"
+      ],
+      "selected_trace_id": "9027cc4e0fc61543b0503fc723b1b0ca",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        3631,
+        "order_lookup"
+      ],
+      "selected_trace_id": "0c83d4cc7292091f21c06bb79b301e64",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        3856,
+        "cancellation"
+      ],
+      "selected_trace_id": "26288d78507c65183456edb32b03f637",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        3926,
+        "cancellation"
+      ],
+      "selected_trace_id": "28e0875bc779e97d4d8a2fb9367868e0",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        4163,
+        "dispute"
+      ],
+      "selected_trace_id": "737e05580f6444e452db7c3c7a9fef7e",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        4301,
+        "refund"
+      ],
+      "selected_trace_id": "2048f5783928ef150b52a155bd0ea209",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        4443,
+        "refund"
+      ],
+      "selected_trace_id": "a9dba26c126518b0265df59855339834",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        4453,
+        "cancellation"
+      ],
+      "selected_trace_id": "43143635c9a6c418a45803856852cc8f",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        4489,
+        "order_lookup"
+      ],
+      "selected_trace_id": "51136312aaf023b7941a5660dcdc3f42",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        4795,
+        "order_lookup"
+      ],
+      "selected_trace_id": "f486c70e7d7f794e38a22f95563599c6",
+      "excluded_trace_ids": [
+        "82acd9610cc490654d1f3e091f47377d"
+      ]
+    },
+    {
+      "group": [
+        "order_intent",
+        5348,
+        "order_lookup"
+      ],
+      "selected_trace_id": "6e18b7bd6bd99cd66dc8f0b34c8876e6",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        5375,
+        "cancellation"
+      ],
+      "selected_trace_id": "46830f4c94320d802a6b528ca8435b8f",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        5473,
+        "cancellation"
+      ],
+      "selected_trace_id": "88bd075cb70e95dc14ec6832d0b70e43",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        5567,
+        "order_lookup"
+      ],
+      "selected_trace_id": "1fc7eab893c8375fa9adbcfce9abdaa9",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        5627,
+        "order_lookup"
+      ],
+      "selected_trace_id": "2cbc21141452c9b9a016eaa7b8e7dae3",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        5767,
+        "refund"
+      ],
+      "selected_trace_id": "f34925c67cc748c9d1b70c04ce1721f9",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        6039,
+        "cancellation"
+      ],
+      "selected_trace_id": "e1dd26c8e2efd7e6b2859028ccc4939a",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        6200,
+        "refund"
+      ],
+      "selected_trace_id": "1773373a0030fb84dddd757de1fb4f37",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        6266,
+        "order_lookup"
+      ],
+      "selected_trace_id": "40c7ff081521ce3519871e051609ea3b",
+      "excluded_trace_ids": [
+        "2ce3b7799fd364f98ee99eca27291da3"
+      ]
+    },
+    {
+      "group": [
+        "order_intent",
+        6324,
+        "refund"
+      ],
+      "selected_trace_id": "e51810d9242c84492fe21c9f4186283a",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        7005,
+        "order_lookup"
+      ],
+      "selected_trace_id": "994fdcfc414c364afad04bc9c969df76",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        7505,
+        "order_lookup"
+      ],
+      "selected_trace_id": "5c2c79293cdd53d17559b7e25836dd58",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        7521,
+        "dispute"
+      ],
+      "selected_trace_id": "4c4e044a72a0bb55b4e48dc6b545ccbf",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        7711,
+        "refund"
+      ],
+      "selected_trace_id": "14d20ce715d31b19c9ad3e803cadf065",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        7732,
+        "cancellation"
+      ],
+      "selected_trace_id": "30df41a4cb3eec2f2e6bc05afe859561",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        7812,
+        "refund"
+      ],
+      "selected_trace_id": "9ccf73ef883e51c23c0e919e92cd62d4",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8045,
+        "refund"
+      ],
+      "selected_trace_id": "0cdeae9932d2349fb985c4b619a77969",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8299,
+        "order_lookup"
+      ],
+      "selected_trace_id": "70651f233f2415a0f5a73463ba0fcec8",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8367,
+        "order_lookup"
+      ],
+      "selected_trace_id": "18b2f37b5ebeb981b40bb8d811e9952a",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        850,
+        "dispute"
+      ],
+      "selected_trace_id": "86c39b64458b4c0bd8466a6aab997e92",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8588,
+        "order_lookup"
+      ],
+      "selected_trace_id": "4f48b610824334eeefec244e459602ec",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8596,
+        "refund"
+      ],
+      "selected_trace_id": "501e879d03da4cf995baf8e051e56efe",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8720,
+        "refund"
+      ],
+      "selected_trace_id": "970d022f66c48ff70257dc0a5c33557f",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8736,
+        "refund"
+      ],
+      "selected_trace_id": "dd955e01100b7e6e9b98b8e39472360a",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8745,
+        "order_lookup"
+      ],
+      "selected_trace_id": "fea53fbba77e7dcd0dd8f00836695482",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8896,
+        "order_lookup"
+      ],
+      "selected_trace_id": "04b0285acf627a8fe060138b614ea091",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        8915,
+        "order_lookup"
+      ],
+      "selected_trace_id": "e8aa4b661b01b4866dcbe9336445eb4c",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        9045,
+        "dispute"
+      ],
+      "selected_trace_id": "6db495da213d47128a48d522f265d0e5",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "order_intent",
+        9963,
+        "dispute"
+      ],
+      "selected_trace_id": "048310a721348065f7e44dd6f072250c",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0102"
+      ],
+      "selected_trace_id": "256ed3a839581e7ca7055e1c6a17bf5b",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0103"
+      ],
+      "selected_trace_id": "0657fe8f3f4bd48136f29756f8898bba",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0105"
+      ],
+      "selected_trace_id": "13e026bde4381624bfe37ad95e2bd0e6",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0106"
+      ],
+      "selected_trace_id": "bc947122aa709266e35a95c12cad31ca",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0107"
+      ],
+      "selected_trace_id": "b80d82fbde747ec3cfcdd257d2303ddd",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0109"
+      ],
+      "selected_trace_id": "fb82c1f99fb1ffd82432dc00e5080319",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0110"
+      ],
+      "selected_trace_id": "add1636aad08b6b894ece4a01a31defe",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0111"
+      ],
+      "selected_trace_id": "d3fea18ea65ec58e02c2deff997adcf0",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0113"
+      ],
+      "selected_trace_id": "2e22528c5104b8d615651917a5c5d850",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0116"
+      ],
+      "selected_trace_id": "9caf585ae582fca3bcca46102f8fd3c0",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0120"
+      ],
+      "selected_trace_id": "c7e90fe2e4f77d7ec750e16bdb8118d0",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0123"
+      ],
+      "selected_trace_id": "cc0add31372c9c507799553f32f985b2",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0126"
+      ],
+      "selected_trace_id": "8fd9a4f6c1245813f06e6c4456a6cb65",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0127"
+      ],
+      "selected_trace_id": "a4a4e175638d6d46d7a73b3ea5bcaa7f",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0129"
+      ],
+      "selected_trace_id": "e55f4fb42689c0e20b4a91846089b979",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0131"
+      ],
+      "selected_trace_id": "d7b8fd32cdddb3546b182adc8ec759cb",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0133"
+      ],
+      "selected_trace_id": "a97b2c6351eba2c4a88335df6d528694",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0135"
+      ],
+      "selected_trace_id": "a0d161b5bfa70e140b33bc2a40d06928",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0136"
+      ],
+      "selected_trace_id": "5a75d095d4b67268b038decc4d31bc86",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0138"
+      ],
+      "selected_trace_id": "1ecc9f6fdb0fd5a5d9522964d33ae83b",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0139"
+      ],
+      "selected_trace_id": "11465c3b6b68d19d92ce4920cedce984",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0141"
+      ],
+      "selected_trace_id": "eb94c017e9dc6dd76796fe0ace42fccd",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0142"
+      ],
+      "selected_trace_id": "905881f91af44e1851cb264b173986af",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0148"
+      ],
+      "selected_trace_id": "82c0de1c3e983ee6701dd57260f6241f",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0161"
+      ],
+      "selected_trace_id": "667d9dd5df4202521ea453262fc05092",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0162"
+      ],
+      "selected_trace_id": "490265edd3e8a70404e5e0da819d4e4f",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0163"
+      ],
+      "selected_trace_id": "a2eb40520bea917e94b350b2226a3d48",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0165"
+      ],
+      "selected_trace_id": "1f8736c3a48d2c1bbe3fbce733936cda",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0167"
+      ],
+      "selected_trace_id": "30679ff47de71af838bf90f864c525de",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0169"
+      ],
+      "selected_trace_id": "ecc32ba020398fbe6dbb8b22fa3bf2cf",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0174"
+      ],
+      "selected_trace_id": "f2b5ebea02ba0264b438a878ffcf927f",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0234"
+      ],
+      "selected_trace_id": "83106abba176e5ff42c9bd06b472a7da",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0235"
+      ],
+      "selected_trace_id": "f346d7eac27b6fc466784278c4bee620",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0243"
+      ],
+      "selected_trace_id": "daec5d711d05bba5a4d850df4b9c5676",
+      "excluded_trace_ids": []
+    },
+    {
+      "group": [
+        "scenario",
+        "support-0246"
+      ],
+      "selected_trace_id": "1c3e867dba81f17b9292fb2e7e7900d0",
+      "excluded_trace_ids": [
+        "d94420f1b62517685b4a56f852c2a9ad"
+      ]
+    }
+  ]
+}

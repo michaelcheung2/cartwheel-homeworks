@@ -1,0 +1,16 @@
+{
+  "versions": [
+    {
+      "judge_id": "unsupported_policy_claim-v0",
+      "prompt_hash": "fd53845c615d"
+    },
+    {
+      "judge_id": "unsupported_policy_claim-v1",
+      "prompt_hash": "05b649b00ce1"
+    },
+    {
+      "judge_id": "unsupported_policy_claim-v2",
+      "prompt_hash": "dc4afa6d2a1e"
+    }
+  ]
+}

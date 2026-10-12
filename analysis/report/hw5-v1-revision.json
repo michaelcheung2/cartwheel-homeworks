@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-10-12T04:30:07.170925+00:00",
+  "previous_judge": "unsupported_policy_claim-v0",
+  "human_confirmed_disagreements": 15,
+  "labels_changed": 0,
+  "revision_number": 1,
+  "changes": [
+    "Require an actual quoted claim in the selected reply; avoid invented implications.",
+    "Check all substantive claims and relevant tool evidence; accept supported paraphrases.",
+    "Keep factual grounding, unexecuted actions and generic verification advice outside this criterion.",
+    "Add a printed future-tool-call Pass example from training; no dev/test examples used."
+  ],
+  "training_example_trace_ids": [
+    "0657fe8f3f4bd48136f29756f8898bba",
+    "88bd075cb70e95dc14ec6832d0b70e43",
+    "490265edd3e8a70404e5e0da819d4e4f",
+    "30df41a4cb3eec2f2e6bc05afe859561"
+  ]
+}

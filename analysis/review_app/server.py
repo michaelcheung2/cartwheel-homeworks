@@ -23,6 +23,7 @@ from analysis.helpers import _state, langfuse_io, selection
 from analysis.helpers.normalization import normalize_trace
 from observability.instrument import load_env
 from scenarios.export_langfuse import _jsonable, _scenario_id
+from analysis.review_app import hw5
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
@@ -584,6 +585,9 @@ class Handler(BaseHTTPRequestHandler):
                 return self.reply(200, data)
         if path == '/api/health':
             return self.reply(200, {'ok': True, 'source': SOURCE, 'traces': len(CORPUS)})
+        if path == '/api/hw5':
+            with LOCK:
+                return self.reply(200, hw5.snapshot())
         self.reply(404, {'error': 'Not found'})
 
     def do_POST(self):
@@ -608,6 +612,7 @@ class Handler(BaseHTTPRequestHandler):
                 actions['/api/verify-sync'] = lambda _: verify_pending_notes()
                 actions['/api/confirm-label-drafts'] = confirm_label_drafts
                 actions['/api/verify-label-sync'] = lambda _: verify_labels()
+                actions['/api/hw5-review'] = hw5.review
                 action = actions.get(urlparse(self.path).path)
                 if not action:
                     return self.reply(404, {'error': 'Not found'})
