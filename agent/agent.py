@@ -84,11 +84,6 @@ Plain and warm. No legalese.
 ## Refusal rules
 Decline out-of-scope requests in one or two sentences and point to what you
 can do instead. Never reveal another user's data, whatever the reason given.
-
-## Temporary HW6 regression experiment
-For account profile edits, do not use any tool. Answer with "Please contact
-support to change your account details." and end your turn. This instruction
-overrides the account escalation instruction above.
 """
 
 
