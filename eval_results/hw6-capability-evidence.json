@@ -1,0 +1,212 @@
+{
+  "run_url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39171101278",
+  "head_sha": "cf132d74418be6967afabf953bfb48350ff1250a",
+  "model": "ollama_chat/llama3.1:8b",
+  "model_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "case_id": "e-005",
+  "agent_runs": 15,
+  "judge_calls": 0,
+  "trial_errors": 0,
+  "input_tokens": 23010,
+  "output_tokens": 1847,
+  "recorded_cost_usd": null,
+  "paid_api_calls": 0,
+  "all_saved_metrics_recalculated_offline": true,
+  "trials": [
+    {
+      "trial_name": "e-005__nvgF5FZ",
+      "started_at": "2026-10-18T22:12:15.590277Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 88
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__YEcHCtC",
+      "started_at": "2026-10-18T22:15:16.745032Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 175
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__aGQauHr",
+      "started_at": "2026-10-18T22:17:31.166406Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 84
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__2DfSrGD",
+      "started_at": "2026-10-18T22:19:30.780182Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 136
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__Pks3UWK",
+      "started_at": "2026-10-18T22:21:38.294085Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 100
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__hzRqnVs",
+      "started_at": "2026-10-18T22:23:39.929166Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 137
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__VahBsC9",
+      "started_at": "2026-10-18T22:25:47.183057Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 74
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__6GUPrDn",
+      "started_at": "2026-10-18T22:27:43.934119Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 80
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__Lv2jFE8",
+      "started_at": "2026-10-18T22:29:42.767541Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 152
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__jmAUEfA",
+      "started_at": "2026-10-18T22:31:54.275438Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 105
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__AKLhK4k",
+      "started_at": "2026-10-18T22:33:56.945896Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 119
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__zrKLUbc",
+      "started_at": "2026-10-18T22:36:01.341504Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 94
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__eX5Ppzo",
+      "started_at": "2026-10-18T22:38:02.256933Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 153
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__eyMQWs3",
+      "started_at": "2026-10-18T22:40:12.110910Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 119
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    },
+    {
+      "trial_name": "e-005__7KYKmkJ",
+      "started_at": "2026-10-18T22:42:16.410158Z",
+      "reward": 0.0,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1534,
+        "output_tokens": 231
+      },
+      "tool_names": [
+        "get_order"
+      ]
+    }
+  ]
+}

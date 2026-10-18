@@ -9,6 +9,7 @@ from typing import Any
 from tests.eval.passk import pass_at_k
 
 from harbor_adapter.summary import _reward
+from harbor_adapter.results import load_job_result
 
 
 def analyze_capability_job(
@@ -21,7 +22,7 @@ def analyze_capability_job(
     result_path = job_dir / "result.json"
     if not result_path.exists():
         raise FileNotFoundError(f"Harbor result not found: {result_path}")
-    result = json.loads(result_path.read_text())
+    result = load_job_result(job_dir)
     trials = [
         trial
         for trial in result.get("trial_results", [])
@@ -83,6 +84,7 @@ def analyze_capability_job(
         "case_id": case_id,
         "model": next(iter(models)),
         "trial_order": "result.json trial_results order",
+        "trial_order_source": result.get("cartwheel_trial_order", "Harbor inline trial_results"),
         "trials": trial_records,
         "rewards": rewards,
         "n": len(rewards),

@@ -1,0 +1,969 @@
+{
+  "run_url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39171132968",
+  "head_sha": "0a22a59a00eb9994eac3030dfd75cda777ffee9b",
+  "event": "pull_request",
+  "pull_request": 1,
+  "workflow_conclusion": "failure",
+  "model": "ollama_chat/llama3.1:8b",
+  "model_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "agent_runs": 50,
+  "judge_calls": 0,
+  "paid_api_calls": 0,
+  "trial_errors": 0,
+  "input_tokens": 76741,
+  "output_tokens": 4653,
+  "recorded_cost_usd": null,
+  "case_file_sha256": "11e55c6400e547a06784bcfad384ede89c2c83d60dfdba7315c546920ca640db",
+  "trial_order_source": "per-trial started_at, then trial_name; indexed in result.json",
+  "cases": [
+    {
+      "case_id": "e-001",
+      "kind": "capability",
+      "passes": 0,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-001__Yd28qq4",
+          "started_at": "2026-10-18T22:23:24.589403Z",
+          "finished_at": "2026-10-18T22:25:55.765190Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1674,
+            "output_tokens": 59
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-001__dKex9nB",
+          "started_at": "2026-10-18T22:42:00.828059Z",
+          "finished_at": "2026-10-18T22:42:52.232608Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1674,
+            "output_tokens": 67
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-001__LADZhN2",
+          "started_at": "2026-10-18T22:53:04.393336Z",
+          "finished_at": "2026-10-18T22:53:57.089549Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1674,
+            "output_tokens": 80
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-001__zyrr328",
+          "started_at": "2026-10-18T23:01:46.994420Z",
+          "finished_at": "2026-10-18T23:02:37.936070Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1674,
+            "output_tokens": 70
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-001__bjokWgt",
+          "started_at": "2026-10-18T23:11:06.291227Z",
+          "finished_at": "2026-10-18T23:11:54.378814Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1674,
+            "output_tokens": 53
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-002",
+      "kind": "capability",
+      "passes": 0,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-002__VE5VXx4",
+          "started_at": "2026-10-18T22:33:25.256036Z",
+          "finished_at": "2026-10-18T22:36:01.775053Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1638,
+            "output_tokens": 95
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-002__nTSwJJC",
+          "started_at": "2026-10-18T22:46:32.116713Z",
+          "finished_at": "2026-10-18T22:47:46.386432Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1638,
+            "output_tokens": 198
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-002__Dj69cQQ",
+          "started_at": "2026-10-18T22:56:19.354754Z",
+          "finished_at": "2026-10-18T22:57:04.146827Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1041,
+            "output_tokens": 36
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-002__MyT9wmp",
+          "started_at": "2026-10-18T23:05:22.558299Z",
+          "finished_at": "2026-10-18T23:06:12.529869Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1041,
+            "output_tokens": 64
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-002__2sm3vFo",
+          "started_at": "2026-10-18T23:14:53.320378Z",
+          "finished_at": "2026-10-18T23:15:47.921174Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1638,
+            "output_tokens": 102
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-003",
+      "kind": "capability",
+      "passes": 0,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-003__5dJrTzQ",
+          "started_at": "2026-10-18T22:28:27.371497Z",
+          "finished_at": "2026-10-18T22:30:41.978067Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1052,
+            "output_tokens": 44
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-003__22cBZgY",
+          "started_at": "2026-10-18T22:43:49.469749Z",
+          "finished_at": "2026-10-18T22:45:20.114533Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1668,
+            "output_tokens": 199
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-003__AJmbAsF",
+          "started_at": "2026-10-18T22:54:44.695975Z",
+          "finished_at": "2026-10-18T22:55:29.700565Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1052,
+            "output_tokens": 37
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-003__UEBTrA9",
+          "started_at": "2026-10-18T23:03:36.529080Z",
+          "finished_at": "2026-10-18T23:04:17.925760Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1052,
+            "output_tokens": 21
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-003__4oN9kne",
+          "started_at": "2026-10-18T23:12:51.781425Z",
+          "finished_at": "2026-10-18T23:13:48.497675Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1668,
+            "output_tokens": 109
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-004",
+      "kind": "capability",
+      "passes": 0,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-004__f4vAcHW",
+          "started_at": "2026-10-18T22:30:41.998072Z",
+          "finished_at": "2026-10-18T22:33:25.234743Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1640,
+            "output_tokens": 138
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-004__WZeAi97",
+          "started_at": "2026-10-18T22:45:20.134422Z",
+          "finished_at": "2026-10-18T22:46:32.097018Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1640,
+            "output_tokens": 126
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-004__qdoiaCt",
+          "started_at": "2026-10-18T22:55:29.720491Z",
+          "finished_at": "2026-10-18T22:56:19.334840Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1040,
+            "output_tokens": 58
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-004__3aCzABR",
+          "started_at": "2026-10-18T23:04:17.946030Z",
+          "finished_at": "2026-10-18T23:05:22.538054Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1640,
+            "output_tokens": 152
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-004__U2LFUvX",
+          "started_at": "2026-10-18T23:13:48.517747Z",
+          "finished_at": "2026-10-18T23:14:53.300566Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1640,
+            "output_tokens": 152
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-005",
+      "kind": "capability",
+      "passes": 0,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-005__7P7VaGi",
+          "started_at": "2026-10-18T22:12:35.515671Z",
+          "finished_at": "2026-10-18T22:15:45.105430Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1626,
+            "output_tokens": 109
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-005__oDDMncR",
+          "started_at": "2026-10-18T22:38:19.444276Z",
+          "finished_at": "2026-10-18T22:39:22.390646Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1626,
+            "output_tokens": 127
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-005__bZqq5AH",
+          "started_at": "2026-10-18T22:49:18.357139Z",
+          "finished_at": "2026-10-18T22:50:28.005520Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1626,
+            "output_tokens": 167
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-005__9mrVtKB",
+          "started_at": "2026-10-18T22:57:57.330123Z",
+          "finished_at": "2026-10-18T22:58:56.698970Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1626,
+            "output_tokens": 114
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-005__DZgFFfi",
+          "started_at": "2026-10-18T23:07:25.869752Z",
+          "finished_at": "2026-10-18T23:08:18.226883Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1626,
+            "output_tokens": 83
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-006",
+      "kind": "capability",
+      "passes": 0,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-006__CDNgrEY",
+          "started_at": "2026-10-18T22:18:11.256564Z",
+          "finished_at": "2026-10-18T22:21:02.708551Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1669,
+            "output_tokens": 164
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-006__F4gaWtm",
+          "started_at": "2026-10-18T22:40:16.308133Z",
+          "finished_at": "2026-10-18T22:41:10.885591Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1669,
+            "output_tokens": 85
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-006__oaZMm6P",
+          "started_at": "2026-10-18T22:51:23.369195Z",
+          "finished_at": "2026-10-18T22:52:24.053694Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1669,
+            "output_tokens": 122
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-006__FpwDk4D",
+          "started_at": "2026-10-18T22:59:54.494921Z",
+          "finished_at": "2026-10-18T23:00:51.372740Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1669,
+            "output_tokens": 102
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-006__7PnsWjm",
+          "started_at": "2026-10-18T23:09:14.755228Z",
+          "finished_at": "2026-10-18T23:10:12.572443Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1669,
+            "output_tokens": 114
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-007",
+      "kind": "capability",
+      "passes": 0,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-007__iVK9Y56",
+          "started_at": "2026-10-18T22:36:01.795027Z",
+          "finished_at": "2026-10-18T22:38:19.424337Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1089,
+            "output_tokens": 52
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-007__bFcDBF9",
+          "started_at": "2026-10-18T22:47:46.406436Z",
+          "finished_at": "2026-10-18T22:49:18.337418Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1920,
+            "output_tokens": 108
+          },
+          "tool_names": [
+            "search_help_center"
+          ]
+        },
+        {
+          "trial_name": "e-007__CYCurkZ",
+          "started_at": "2026-10-18T22:57:04.167034Z",
+          "finished_at": "2026-10-18T22:57:57.310190Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1089,
+            "output_tokens": 80
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-007__ePf34uJ",
+          "started_at": "2026-10-18T23:06:12.550084Z",
+          "finished_at": "2026-10-18T23:07:25.849484Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1735,
+            "output_tokens": 134
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-007__B66rjHE",
+          "started_at": "2026-10-18T23:15:47.941380Z",
+          "finished_at": "2026-10-18T23:17:22.889527Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1918,
+            "output_tokens": 170
+          },
+          "tool_names": [
+            "search_help_center"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-008",
+      "kind": "capability",
+      "passes": 0,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-008__mdx2HGg",
+          "started_at": "2026-10-18T22:25:55.785326Z",
+          "finished_at": "2026-10-18T22:28:27.351501Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1630,
+            "output_tokens": 75
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-008__aXPZocU",
+          "started_at": "2026-10-18T22:42:52.252629Z",
+          "finished_at": "2026-10-18T22:43:49.450024Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1630,
+            "output_tokens": 102
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-008__ye3FrBs",
+          "started_at": "2026-10-18T22:53:57.109921Z",
+          "finished_at": "2026-10-18T22:54:44.675709Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1630,
+            "output_tokens": 53
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-008__uTA5Fbv",
+          "started_at": "2026-10-18T23:02:37.956448Z",
+          "finished_at": "2026-10-18T23:03:36.508169Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1630,
+            "output_tokens": 113
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-008__5braFyC",
+          "started_at": "2026-10-18T23:11:54.398973Z",
+          "finished_at": "2026-10-18T23:12:51.761562Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1630,
+            "output_tokens": 109
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-009",
+      "kind": "regression",
+      "passes": 5,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-009__rP97r67",
+          "started_at": "2026-10-18T22:15:45.125982Z",
+          "finished_at": "2026-10-18T22:18:11.236495Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1548,
+            "output_tokens": 72
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "A human will follow up to assist with changing your display name on your account. They'll be in touch within 24 hours to help with the change.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "context": "user wants to change display name on account",
+                "summary": "User 9502 wants to change display name"
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        },
+        {
+          "trial_name": "e-009__33a85KU",
+          "started_at": "2026-10-18T22:39:22.411050Z",
+          "finished_at": "2026-10-18T22:40:16.288317Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1544,
+            "output_tokens": 55
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "A human support agent will follow up with you to change your display name on your account.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "summary": "User wants to change their display name on their account",
+                "context": "Account profile edit"
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        },
+        {
+          "trial_name": "e-009__YGzJtEw",
+          "started_at": "2026-10-18T22:50:28.025255Z",
+          "finished_at": "2026-10-18T22:51:23.348610Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1550,
+            "output_tokens": 69
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "Please contact support to change your account details. A human will follow up with you on your ticket 151 to complete the change.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "context": "User 9502 is requesting a change to their display name on their account",
+                "summary": "Account profile edit requested"
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        },
+        {
+          "trial_name": "e-009__rwnG2pC",
+          "started_at": "2026-10-18T22:58:56.718737Z",
+          "finished_at": "2026-10-18T22:59:54.474945Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1547,
+            "output_tokens": 79
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "A human will follow up with you to change your display name on your Cartwheel account. Please check your email for the ticket number 151 and expect a response within the next 24 hours.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "summary": "User 9502 wants to change display name on their account",
+                "context": "Account profile edit request"
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        },
+        {
+          "trial_name": "e-009__Bg6Pjr6",
+          "started_at": "2026-10-18T23:08:18.247070Z",
+          "finished_at": "2026-10-18T23:09:14.734657Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1545,
+            "output_tokens": 81
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "A human support agent will follow up with you to assist with changing your display name on your account. Please check your email for a confirmation of this request and the ticket number (151) for any future reference.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "summary": "Account profile edit",
+                "context": "User 9502 needs to change display name on account."
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-010",
+      "kind": "regression",
+      "passes": 4,
+      "n": 5,
+      "trials": [
+        {
+          "trial_name": "e-010__xVcoMwo",
+          "started_at": "2026-10-18T22:21:02.728733Z",
+          "finished_at": "2026-10-18T22:23:24.568706Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1541,
+            "output_tokens": 64
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "Please contact support regarding the ticket with ID 151, and a human will follow up to assist with changing your display name.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "summary": "User 9001 wants to change display name on their account",
+                "context": "Account profile edit"
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        },
+        {
+          "trial_name": "e-010__9vJix2C",
+          "started_at": "2026-10-18T22:41:10.905763Z",
+          "finished_at": "2026-10-18T22:42:00.807699Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1534,
+            "output_tokens": 44
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "A human will follow up to change your account display name.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "summary": "Change display name on account",
+                "context": "Account profile edit"
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        },
+        {
+          "trial_name": "e-010__pNLhduf",
+          "started_at": "2026-10-18T22:52:24.073494Z",
+          "finished_at": "2026-10-18T22:53:04.373700Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1026,
+            "output_tokens": 10
+          },
+          "tool_names": [],
+          "final_reply": "Please contact support to change your account details.",
+          "tool_calls": []
+        },
+        {
+          "trial_name": "e-010__Ld4qmeg",
+          "started_at": "2026-10-18T23:00:51.392918Z",
+          "finished_at": "2026-10-18T23:01:46.974078Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1536,
+            "output_tokens": 73
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "I'm going to escalate this to a human as a display name change on your account is a change to your account details. A human will follow up with you shortly to assist with the change.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "summary": "Request to change display name on account",
+                "context": "Account profile edit"
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        },
+        {
+          "trial_name": "e-010__Dx3RM9T",
+          "started_at": "2026-10-18T23:10:12.592377Z",
+          "finished_at": "2026-10-18T23:11:06.270809Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1536,
+            "output_tokens": 63
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ],
+          "final_reply": "A human will follow up to assist you with changing your display name. Please check your email for the ticket details and response from the support team.",
+          "tool_calls": [
+            {
+              "name": "escalate_to_human",
+              "args": {
+                "summary": "Request to change display name on account",
+                "context": "account profile edits"
+              },
+              "result": {
+                "ok": true,
+                "ticket_id": 151,
+                "sla_hours": 24
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

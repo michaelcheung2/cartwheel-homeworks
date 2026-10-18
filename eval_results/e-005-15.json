@@ -1,0 +1,118 @@
+{
+  "case_id": "e-005",
+  "model": "ollama_chat/llama3.1:8b",
+  "trial_order": "result.json trial_results order",
+  "trial_order_source": "per-trial started_at, then trial_name; indexed in result.json",
+  "trials": [
+    {
+      "trial_name": "e-005__nvgF5FZ",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__YEcHCtC",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__aGQauHr",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__2DfSrGD",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__Pks3UWK",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__hzRqnVs",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__VahBsC9",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__6GUPrDn",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__Lv2jFE8",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__jmAUEfA",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__AKLhK4k",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__zrKLUbc",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__eX5Ppzo",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__eyMQWs3",
+      "passed": 0
+    },
+    {
+      "trial_name": "e-005__7KYKmkJ",
+      "passed": 0
+    }
+  ],
+  "rewards": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "n": 15,
+  "successes": 0,
+  "comparisons": [
+    {
+      "n": 5,
+      "successes": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0
+      }
+    },
+    {
+      "n": 10,
+      "successes": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0
+      }
+    },
+    {
+      "n": 15,
+      "successes": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "10": 0.0,
+        "15": 0.0
+      }
+    }
+  ]
+}

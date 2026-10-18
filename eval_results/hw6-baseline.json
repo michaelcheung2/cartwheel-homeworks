@@ -1,0 +1,868 @@
+{
+  "status": "student_confirmed_classifications",
+  "run_url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39165524413",
+  "commit": "cb9fa5b",
+  "model": "ollama_chat/llama3.1:8b",
+  "model_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "agent_runs": 50,
+  "judge_calls": 0,
+  "input_tokens": 76285,
+  "output_tokens": 5208,
+  "paid_api_calls": 0,
+  "trials_errored": 0,
+  "case_file_sha256": "330f171e6f2ca64346872e398df7cf77323e504408839339cbb0edb5f0f7d192",
+  "reporting_issue": "Harbor stores trial details separately. Original summary preserved as harbor-result.json; observed per-trial JSON indexed in started_at order. No agent reruns.",
+  "cases": [
+    {
+      "case_id": "e-001",
+      "mode": "refund_approval_not_requested",
+      "passes": 0,
+      "n": 5,
+      "proposed_kind": "capability",
+      "proposed_baseline_pass_rate": 0.0,
+      "trials": [
+        {
+          "trial_name": "e-001__ye7iPwV",
+          "started_at": "2026-10-18T21:06:56.483754Z",
+          "finished_at": "2026-10-18T21:09:28.469919Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1582,
+            "output_tokens": 87
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-001__77uSZV7",
+          "started_at": "2026-10-18T21:26:46.116286Z",
+          "finished_at": "2026-10-18T21:27:39.318753Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1582,
+            "output_tokens": 85
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-001__RPi2QNk",
+          "started_at": "2026-10-18T21:36:53.664648Z",
+          "finished_at": "2026-10-18T21:37:53.232553Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1582,
+            "output_tokens": 112
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-001__wvYoFfR",
+          "started_at": "2026-10-18T21:47:11.949429Z",
+          "finished_at": "2026-10-18T21:48:09.375536Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1582,
+            "output_tokens": 110
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-001__EdFmJGc",
+          "started_at": "2026-10-18T21:58:09.209466Z",
+          "finished_at": "2026-10-18T21:59:10.407904Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1582,
+            "output_tokens": 130
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-002",
+      "mode": "refund_approval_not_requested",
+      "passes": 0,
+      "n": 5,
+      "proposed_kind": "capability",
+      "proposed_baseline_pass_rate": 0.0,
+      "trials": [
+        {
+          "trial_name": "e-002__UDCbRvg",
+          "started_at": "2026-10-18T21:17:13.821701Z",
+          "finished_at": "2026-10-18T21:19:49.281419Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1546,
+            "output_tokens": 105
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-002__cA79Tep",
+          "started_at": "2026-10-18T21:30:33.870830Z",
+          "finished_at": "2026-10-18T21:31:42.430963Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1546,
+            "output_tokens": 114
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-002__ajyfhty",
+          "started_at": "2026-10-18T21:41:04.210568Z",
+          "finished_at": "2026-10-18T21:41:48.469056Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 995,
+            "output_tokens": 39
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-002__2q9ri9L",
+          "started_at": "2026-10-18T21:51:46.358801Z",
+          "finished_at": "2026-10-18T21:52:46.991333Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1546,
+            "output_tokens": 117
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-002__bUuxnAq",
+          "started_at": "2026-10-18T22:02:03.562460Z",
+          "finished_at": "2026-10-18T22:03:03.774303Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1546,
+            "output_tokens": 127
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-003",
+      "mode": "refund_approval_not_requested",
+      "passes": 0,
+      "n": 5,
+      "proposed_kind": "capability",
+      "proposed_baseline_pass_rate": 0.0,
+      "trials": [
+        {
+          "trial_name": "e-003__CWYoL8v",
+          "started_at": "2026-10-18T21:11:50.343718Z",
+          "finished_at": "2026-10-18T21:14:37.361165Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1576,
+            "output_tokens": 159
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-003__TvbpATc",
+          "started_at": "2026-10-18T21:28:39.377596Z",
+          "finished_at": "2026-10-18T21:29:26.584961Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 1006,
+            "output_tokens": 49
+          },
+          "tool_names": []
+        },
+        {
+          "trial_name": "e-003__KgbyWuD",
+          "started_at": "2026-10-18T21:38:52.971874Z",
+          "finished_at": "2026-10-18T21:39:56.857546Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1576,
+            "output_tokens": 76
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-003__2W2LCNM",
+          "started_at": "2026-10-18T21:49:08.339176Z",
+          "finished_at": "2026-10-18T21:50:21.504359Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1576,
+            "output_tokens": 135
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-003__o55N2gD",
+          "started_at": "2026-10-18T22:00:09.274988Z",
+          "finished_at": "2026-10-18T22:01:13.117194Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1576,
+            "output_tokens": 145
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-004",
+      "mode": "refund_approval_not_requested",
+      "passes": 0,
+      "n": 5,
+      "proposed_kind": "capability",
+      "proposed_baseline_pass_rate": 0.0,
+      "trials": [
+        {
+          "trial_name": "e-004__CKbxeTD",
+          "started_at": "2026-10-18T21:14:37.381015Z",
+          "finished_at": "2026-10-18T21:17:13.800243Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1548,
+            "output_tokens": 121
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-004__27tsvR6",
+          "started_at": "2026-10-18T21:29:26.604543Z",
+          "finished_at": "2026-10-18T21:30:33.851156Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1548,
+            "output_tokens": 161
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-004__SKYj6t8",
+          "started_at": "2026-10-18T21:39:56.877734Z",
+          "finished_at": "2026-10-18T21:41:04.190475Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1548,
+            "output_tokens": 95
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-004__JqSLv9f",
+          "started_at": "2026-10-18T21:50:21.524451Z",
+          "finished_at": "2026-10-18T21:51:46.338038Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1548,
+            "output_tokens": 203
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-004__96m2Rfc",
+          "started_at": "2026-10-18T22:01:13.137047Z",
+          "finished_at": "2026-10-18T22:02:03.543092Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 1,
+            "input_tokens": 994,
+            "output_tokens": 64
+          },
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "case_id": "e-005",
+      "mode": "required_human_handoff_missing",
+      "passes": 0,
+      "n": 5,
+      "proposed_kind": "capability",
+      "proposed_baseline_pass_rate": 0.0,
+      "trials": [
+        {
+          "trial_name": "e-005__DoNeV5z",
+          "started_at": "2026-10-18T20:56:52.772685Z",
+          "finished_at": "2026-10-18T20:59:47.910700Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1534,
+            "output_tokens": 52
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-005__jhiBwEi",
+          "started_at": "2026-10-18T21:22:49.549448Z",
+          "finished_at": "2026-10-18T21:23:44.886586Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1534,
+            "output_tokens": 95
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-005__QpdvGBs",
+          "started_at": "2026-10-18T21:32:50.245645Z",
+          "finished_at": "2026-10-18T21:33:49.763311Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1534,
+            "output_tokens": 120
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-005__ok8i3cG",
+          "started_at": "2026-10-18T21:43:15.499257Z",
+          "finished_at": "2026-10-18T21:44:11.749715Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1534,
+            "output_tokens": 105
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-005__4LQRsae",
+          "started_at": "2026-10-18T21:54:08.718794Z",
+          "finished_at": "2026-10-18T21:55:04.122813Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1534,
+            "output_tokens": 98
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-006",
+      "mode": "required_human_handoff_missing",
+      "passes": 0,
+      "n": 5,
+      "proposed_kind": "capability",
+      "proposed_baseline_pass_rate": 0.0,
+      "trials": [
+        {
+          "trial_name": "e-006__ZGtZEVT",
+          "started_at": "2026-10-18T21:02:11.979892Z",
+          "finished_at": "2026-10-18T21:04:36.648031Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1577,
+            "output_tokens": 45
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-006__NcapVra",
+          "started_at": "2026-10-18T21:24:38.735761Z",
+          "finished_at": "2026-10-18T21:25:54.150951Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1577,
+            "output_tokens": 143
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-006__8mkriw6",
+          "started_at": "2026-10-18T21:34:43.812280Z",
+          "finished_at": "2026-10-18T21:35:59.496904Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1577,
+            "output_tokens": 134
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-006__K4t45iY",
+          "started_at": "2026-10-18T21:45:05.127969Z",
+          "finished_at": "2026-10-18T21:46:13.028695Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1577,
+            "output_tokens": 110
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-006__kWqrpG6",
+          "started_at": "2026-10-18T21:55:58.775410Z",
+          "finished_at": "2026-10-18T21:57:13.762085Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1577,
+            "output_tokens": 147
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-007",
+      "mode": "required_human_handoff_missing",
+      "passes": 0,
+      "n": 5,
+      "proposed_kind": "capability",
+      "proposed_baseline_pass_rate": 0.0,
+      "trials": [
+        {
+          "trial_name": "e-007__5GtxJVV",
+          "started_at": "2026-10-18T21:19:49.301989Z",
+          "finished_at": "2026-10-18T21:22:49.529220Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1826,
+            "output_tokens": 121
+          },
+          "tool_names": [
+            "search_help_center"
+          ]
+        },
+        {
+          "trial_name": "e-007__z2G3q2c",
+          "started_at": "2026-10-18T21:31:42.450439Z",
+          "finished_at": "2026-10-18T21:32:50.225941Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1643,
+            "output_tokens": 102
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-007__Q8k9PUD",
+          "started_at": "2026-10-18T21:41:48.488780Z",
+          "finished_at": "2026-10-18T21:43:15.479752Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1828,
+            "output_tokens": 117
+          },
+          "tool_names": [
+            "search_help_center"
+          ]
+        },
+        {
+          "trial_name": "e-007__vZx5b7Y",
+          "started_at": "2026-10-18T21:52:47.010992Z",
+          "finished_at": "2026-10-18T21:54:08.699057Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1828,
+            "output_tokens": 232
+          },
+          "tool_names": [
+            "search_help_center"
+          ]
+        },
+        {
+          "trial_name": "e-007__g5ZCPhc",
+          "started_at": "2026-10-18T22:03:03.793844Z",
+          "finished_at": "2026-10-18T22:04:35.571888Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1823,
+            "output_tokens": 145
+          },
+          "tool_names": [
+            "search_help_center"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-008",
+      "mode": "required_human_handoff_missing",
+      "passes": 0,
+      "n": 5,
+      "proposed_kind": "capability",
+      "proposed_baseline_pass_rate": 0.0,
+      "trials": [
+        {
+          "trial_name": "e-008__r39eUZV",
+          "started_at": "2026-10-18T21:09:28.489831Z",
+          "finished_at": "2026-10-18T21:11:50.324166Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1538,
+            "output_tokens": 46
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-008__V8cGSf9",
+          "started_at": "2026-10-18T21:27:39.338636Z",
+          "finished_at": "2026-10-18T21:28:39.357990Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1538,
+            "output_tokens": 121
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-008__eeYUa6m",
+          "started_at": "2026-10-18T21:37:53.252835Z",
+          "finished_at": "2026-10-18T21:38:52.950867Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1538,
+            "output_tokens": 110
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-008__qqYkoAB",
+          "started_at": "2026-10-18T21:48:09.395356Z",
+          "finished_at": "2026-10-18T21:49:08.319035Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1538,
+            "output_tokens": 116
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        },
+        {
+          "trial_name": "e-008__ZAFD6Rf",
+          "started_at": "2026-10-18T21:59:10.427673Z",
+          "finished_at": "2026-10-18T22:00:09.254257Z",
+          "reward": 0.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1538,
+            "output_tokens": 119
+          },
+          "tool_names": [
+            "get_order"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-009",
+      "mode": "required_human_handoff_missing",
+      "passes": 5,
+      "n": 5,
+      "proposed_kind": "regression",
+      "proposed_baseline_pass_rate": null,
+      "trials": [
+        {
+          "trial_name": "e-009__cqyzRgm",
+          "started_at": "2026-10-18T20:59:47.930996Z",
+          "finished_at": "2026-10-18T21:02:11.959831Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1453,
+            "output_tokens": 86
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        },
+        {
+          "trial_name": "e-009__AXpfzHm",
+          "started_at": "2026-10-18T21:23:44.906146Z",
+          "finished_at": "2026-10-18T21:24:38.716032Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1454,
+            "output_tokens": 57
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        },
+        {
+          "trial_name": "e-009__k4Y4YUS",
+          "started_at": "2026-10-18T21:33:49.783097Z",
+          "finished_at": "2026-10-18T21:34:43.792763Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1453,
+            "output_tokens": 63
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        },
+        {
+          "trial_name": "e-009__JL2JjRE",
+          "started_at": "2026-10-18T21:44:11.769333Z",
+          "finished_at": "2026-10-18T21:45:05.108391Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1451,
+            "output_tokens": 66
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        },
+        {
+          "trial_name": "e-009__cCJyzYS",
+          "started_at": "2026-10-18T21:55:04.142261Z",
+          "finished_at": "2026-10-18T21:55:58.755965Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1454,
+            "output_tokens": 68
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e-010",
+      "mode": "required_human_handoff_missing",
+      "passes": 5,
+      "n": 5,
+      "proposed_kind": "regression",
+      "proposed_baseline_pass_rate": null,
+      "trials": [
+        {
+          "trial_name": "e-010__Hj9mADo",
+          "started_at": "2026-10-18T21:04:36.667589Z",
+          "finished_at": "2026-10-18T21:06:56.463238Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1449,
+            "output_tokens": 75
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        },
+        {
+          "trial_name": "e-010__UthTnoK",
+          "started_at": "2026-10-18T21:25:54.170707Z",
+          "finished_at": "2026-10-18T21:26:46.096037Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1445,
+            "output_tokens": 54
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        },
+        {
+          "trial_name": "e-010__dPeZFBu",
+          "started_at": "2026-10-18T21:35:59.516549Z",
+          "finished_at": "2026-10-18T21:36:53.644529Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1441,
+            "output_tokens": 64
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        },
+        {
+          "trial_name": "e-010__tS6XTyy",
+          "started_at": "2026-10-18T21:46:13.048552Z",
+          "finished_at": "2026-10-18T21:47:11.929956Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1454,
+            "output_tokens": 91
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        },
+        {
+          "trial_name": "e-010__rA4G9HV",
+          "started_at": "2026-10-18T21:57:13.781912Z",
+          "finished_at": "2026-10-18T21:58:09.189361Z",
+          "reward": 1.0,
+          "exception_info": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1453,
+            "output_tokens": 72
+          },
+          "tool_names": [
+            "escalate_to_human"
+          ]
+        }
+      ]
+    }
+  ],
+  "classification_confirmation": {
+    "human_confirmed": true,
+    "source": "student_chat",
+    "response": "yes",
+    "confirmed_at": "2026-10-18T22:10:52.525550+00:00"
+  },
+  "classified_case_file_sha256": "11e55c6400e547a06784bcfad384ede89c2c83d60dfdba7315c546920ca640db"
+}

@@ -3,6 +3,22 @@ name: evals
 on:
   push:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "Run unclassified baselines or a classified capability case 15 times"
+        type: choice
+        options:
+          - baseline
+          - capability-15
+        default: baseline
+      case:
+        description: "Case ID; optional for baselines, required for capability-15"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
 
 jobs:
   offline-checks:
@@ -15,19 +31,22 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - run: uv sync
       - name: Run checks that do not call a model
-        run: uv run pytest tests/eval tests/test_cli.py tests/test_db.py tests/test_hw_holes.py tests/test_harbor_adapter.py tests/test_replay_harness.py -q
+        run: uv run pytest tests/eval tests/test_hw6_case_checks.py tests/test_harbor_result_layout.py tests/test_cli.py tests/test_db.py tests/test_hw_holes.py tests/test_harbor_adapter.py tests/test_replay_harness.py -q
 
   complete-evaluations:
     name: Harbor evaluations
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     env:
       CARTWHEEL_MODEL: ${{ vars.CARTWHEEL_MODEL }}
       PYTHONPATH: ${{ github.workspace }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      HW6_BASELINE: ${{ github.event_name == 'workflow_dispatch' && inputs.stage != 'capability-15' }}
+      HW6_CAPABILITY: ${{ github.event_name == 'workflow_dispatch' && inputs.stage == 'capability-15' }}
+      HW6_CASE: ${{ inputs.case }}
+      HW6_JOB_NAME: ${{ github.event_name != 'workflow_dispatch' && 'hw6-evals' || inputs.stage == 'capability-15' && 'hw6-capability-15' || 'hw6-baseline' }}
+      HW6_ATTEMPTS: ${{ github.event_name == 'workflow_dispatch' && inputs.stage == 'capability-15' && '15' || '5' }}
+      OLLAMA_MODEL_DIGEST: 46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,9 +54,96 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - run: uv sync
 
-      # Homework 6: install Harbor 0.23.0.
-      # Generate the classified tasks in eval_cases/cases.jsonl.
-      # Run five attempts per task in fresh Docker containers.
-      # Pass the agent and judge provider keys to Harbor.
-      # Summarize the job and upload the job files with `if: always()` so a
-      # failed regression keeps its evidence.
+      - name: Install Harbor
+        run: uv tool install 'harbor==0.23.0'
+      - name: Generate Harbor tasks
+        shell: bash
+        run: |
+          test "$CARTWHEEL_MODEL" = 'ollama_chat/llama3.1:8b'
+          uv run python - <<'PY'
+          from harbor_adapter.export import load_export_cases
+          if any(c['expected'].get('judges') for c in load_export_cases()):
+              raise SystemExit('This no-paid-API workflow supports code-checked cases only.')
+          PY
+          args=()
+          if [ "$HW6_BASELINE" = 'true' ]; then
+            args+=(--baseline)
+            if [ -n "$HW6_CASE" ]; then args+=(--case "$HW6_CASE"); fi
+          fi
+          uv run python scripts/export_harbor_tasks.py "${args[@]}"
+      - name: Start the pinned local Ollama server
+        run: |
+          docker run --detach --name hw6-ollama --publish 11434:11434 \
+            --env OLLAMA_NO_CLOUD=1 --env OLLAMA_CONTEXT_LENGTH=8192 \
+            --env OLLAMA_NUM_PARALLEL=1 --env OLLAMA_KEEP_ALIVE=-1 \
+            ollama/ollama:0.34.2@sha256:c715bebf769913db6c82d96f8a8dfee989c4bdfe19fa7d700e3d41ee0ceb5461
+          docker exec hw6-ollama ollama pull llama3.1:8b
+          uv run python - <<'PY'
+          import json, os, urllib.request
+          with urllib.request.urlopen('http://localhost:11434/api/tags', timeout=10) as response:
+              models = json.load(response)['models']
+          assert any(m['name'] == 'llama3.1:8b' and m['digest'] == os.environ['OLLAMA_MODEL_DIGEST'] for m in models), 'Llama model digest changed'
+          PY
+      - name: Run Harbor trials with local Llama
+        shell: bash
+        run: |
+          args=()
+          if [ "$HW6_CAPABILITY" = 'true' ]; then
+            uv run python - <<'PY'
+          import os
+          from harbor_adapter.export import load_export_cases
+          case = next((c for c in load_export_cases() if c['id'] == os.environ['HW6_CASE']), None)
+          assert case and case.get('kind') == 'capability', 'Choose a classified capability case'
+          PY
+            args+=(--include-task-name "*$HW6_CASE")
+          fi
+          harbor run \
+            -p .harbor/tasks \
+            -a harbor_adapter.agent:CartwheelAgent \
+            -m "$CARTWHEEL_MODEL" \
+            -e docker \
+            --extra-docker-compose .github/harbor-host.yml \
+            --agent-env OLLAMA_API_BASE=http://host.docker.internal:11434 \
+            --n-concurrent 1 \
+            --n-attempts "$HW6_ATTEMPTS" \
+            --job-name "$HW6_JOB_NAME" \
+            --jobs-dir .harbor/jobs \
+            --yes "${args[@]}"
+      - name: Summarize every completed trial
+        if: always()
+        shell: bash
+        run: |
+          args=()
+          if [ "$HW6_BASELINE" = 'true' ]; then args+=(--classify); fi
+          if [ "$HW6_CAPABILITY" = 'true' ]; then
+            uv run python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from harbor_adapter.export import load_export_cases
+          case = next(c for c in load_export_cases() if c['id'] == os.environ['HW6_CASE'])
+          (Path(os.environ['RUNNER_TEMP']) / 'hw6-capability-case.jsonl').write_text(json.dumps(case) + '\n')
+          PY
+            args+=(--cases "$RUNNER_TEMP/hw6-capability-case.jsonl")
+          fi
+          uv run python scripts/summarize_harbor_job.py \
+            ".harbor/jobs/$HW6_JOB_NAME" --expected-attempts "$HW6_ATTEMPTS" "${args[@]}"
+      - name: Analyze the 15 capability trials
+        if: always() && env.HW6_CAPABILITY == 'true'
+        run: |
+          uv run python scripts/analyze_harbor_job.py \
+            .harbor/jobs/hw6-capability-15 --case "$HW6_CASE" \
+            --out "eval_results/$HW6_CASE-15.json"
+      - name: Upload trial evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.HW6_JOB_NAME }}-${{ github.run_id }}
+          path: .harbor/jobs/${{ env.HW6_JOB_NAME }}
+          if-no-files-found: warn
+      - name: Upload capability analysis
+        if: always() && env.HW6_CAPABILITY == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: capability-analysis-${{ github.run_id }}
+          path: eval_results/*-15.json
+          if-no-files-found: warn
