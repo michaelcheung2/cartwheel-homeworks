@@ -5,8 +5,15 @@ on:
   pull_request:
   workflow_dispatch:
     inputs:
+      stage:
+        description: "Run unclassified baselines or a classified capability case 15 times"
+        type: choice
+        options:
+          - baseline
+          - capability-15
+        default: baseline
       case:
-        description: "Baseline case ID; leave empty for all unclassified cases"
+        description: "Case ID; optional for baselines, required for capability-15"
         required: false
         default: ""
 
@@ -34,9 +41,11 @@ jobs:
     env:
       CARTWHEEL_MODEL: ${{ vars.CARTWHEEL_MODEL }}
       PYTHONPATH: ${{ github.workspace }}
-      HW6_BASELINE: ${{ github.event_name == 'workflow_dispatch' }}
+      HW6_BASELINE: ${{ github.event_name == 'workflow_dispatch' && inputs.stage != 'capability-15' }}
+      HW6_CAPABILITY: ${{ github.event_name == 'workflow_dispatch' && inputs.stage == 'capability-15' }}
       HW6_CASE: ${{ inputs.case }}
-      HW6_JOB_NAME: ${{ github.event_name == 'workflow_dispatch' && 'hw6-baseline' || 'hw6-evals' }}
+      HW6_JOB_NAME: ${{ github.event_name != 'workflow_dispatch' && 'hw6-evals' || inputs.stage == 'capability-15' && 'hw6-capability-15' || 'hw6-baseline' }}
+      HW6_ATTEMPTS: ${{ github.event_name == 'workflow_dispatch' && inputs.stage == 'capability-15' && '15' || '5' }}
       OLLAMA_MODEL_DIGEST: 46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e
     steps:
       - uses: actions/checkout@v4
@@ -75,8 +84,19 @@ jobs:
               models = json.load(response)['models']
           assert any(m['name'] == 'llama3.1:8b' and m['digest'] == os.environ['OLLAMA_MODEL_DIGEST'] for m in models), 'Llama model digest changed'
           PY
-      - name: Run five trials per case with local Llama
+      - name: Run Harbor trials with local Llama
+        shell: bash
         run: |
+          args=()
+          if [ "$HW6_CAPABILITY" = 'true' ]; then
+            uv run python - <<'PY'
+          import os
+          from harbor_adapter.export import load_export_cases
+          case = next((c for c in load_export_cases() if c['id'] == os.environ['HW6_CASE']), None)
+          assert case and case.get('kind') == 'capability', 'Choose a classified capability case'
+          PY
+            args+=(--include-task-name "*$HW6_CASE")
+          fi
           harbor run \
             -p .harbor/tasks \
             -a harbor_adapter.agent:CartwheelAgent \
@@ -85,22 +105,45 @@ jobs:
             --extra-docker-compose .github/harbor-host.yml \
             --agent-env OLLAMA_API_BASE=http://host.docker.internal:11434 \
             --n-concurrent 1 \
-            --n-attempts 5 \
+            --n-attempts "$HW6_ATTEMPTS" \
             --job-name "$HW6_JOB_NAME" \
             --jobs-dir .harbor/jobs \
-            --yes
+            --yes "${args[@]}"
       - name: Summarize every completed trial
         if: always()
         shell: bash
         run: |
           args=()
           if [ "$HW6_BASELINE" = 'true' ]; then args+=(--classify); fi
+          if [ "$HW6_CAPABILITY" = 'true' ]; then
+            uv run python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from harbor_adapter.export import load_export_cases
+          case = next(c for c in load_export_cases() if c['id'] == os.environ['HW6_CASE'])
+          (Path(os.environ['RUNNER_TEMP']) / 'hw6-capability-case.jsonl').write_text(json.dumps(case) + '\n')
+          PY
+            args+=(--cases "$RUNNER_TEMP/hw6-capability-case.jsonl")
+          fi
           uv run python scripts/summarize_harbor_job.py \
-            ".harbor/jobs/$HW6_JOB_NAME" --expected-attempts 5 "${args[@]}"
+            ".harbor/jobs/$HW6_JOB_NAME" --expected-attempts "$HW6_ATTEMPTS" "${args[@]}"
+      - name: Analyze the 15 capability trials
+        if: always() && env.HW6_CAPABILITY == 'true'
+        run: |
+          uv run python scripts/analyze_harbor_job.py \
+            .harbor/jobs/hw6-capability-15 --case "$HW6_CASE" \
+            --out "eval_results/$HW6_CASE-15.json"
       - name: Upload trial evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.HW6_JOB_NAME }}-${{ github.run_id }}
           path: .harbor/jobs/${{ env.HW6_JOB_NAME }}
+          if-no-files-found: warn
+      - name: Upload capability analysis
+        if: always() && env.HW6_CAPABILITY == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: capability-analysis-${{ github.run_id }}
+          path: eval_results/*-15.json
           if-no-files-found: warn
