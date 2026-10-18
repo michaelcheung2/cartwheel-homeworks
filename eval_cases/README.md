@@ -55,3 +55,12 @@ Two check details support these cases:
   as an exact numeric identifier in that ticket's summary or context.
 
 Keep classifications absent until five Harbor trials finish with valid rewards.
+
+## Harbor result layout
+
+Harbor 0.23 writes an aggregate job summary plus separate trial result files.
+The course reporting reader preserves that raw summary as `harbor-result.json`
+and indexes each observed trial in `result.json`, ordered by `started_at` and
+then trial name. The capability analysis records this ordering provenance.
+Existing inline trial lists keep their original order. No rewards are inferred
+from aggregate means, and completed failures are never rerun by this reader.

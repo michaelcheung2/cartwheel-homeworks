@@ -69,16 +69,43 @@ exercise their in-memory exporters. With that process-only override the
 configured offline CI selection reports **88 passed, 4 skipped, 4 xfailed,
 12 xpassed**. The unfinished markers concern other homework functions.
 
+## Observed baseline run
+
+[Baseline Actions run](https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39165524413)
+used commit `cb9fa5b`. All **50 agent trials reached the verifier**, with
+zero trial exceptions, zero retries, and zero judge calls. Recorded usage:
+76,285 input tokens and 5,208 output tokens through local Ollama. No paid
+model API calls were made. GitHub's separate offline job passed.
+
+Each of e-001 through e-008 passed 0/5; e-009 and e-010 each passed 5/5.
+These support eight capability cases (baseline 0.0) and two regression cases.
+The student's final classification confirmation is pending. The full review
+is in `reports/hw6-baseline-review.md`; all trial names, rewards, model, usage,
+and observed tool names are in `eval_results/hw6-baseline.json`.
+
+The workflow failed only after the agent trials, in the supplied summarizer:
+Harbor 0.23 stores trial results separately rather than embedding them in its
+aggregate `result.json`. Added a compatibility reader that preserves the raw
+summary as `harbor-result.json` and indexes the exact per-trial records in
+start-time order in `result.json`. It retains failures, exceptions, and rewards,
+checks trial counts, and does not rerun agents. Trial ordering provenance is
+explicit in the index and the Part E analysis. The corrected local summary
+reports all ten cases successfully. The latest offline CI selection reports
+**91 passed, 4 skipped, 4 xfailed, 12 xpassed**, including result-layout tests.
+
+Prepared a manual `capability-15` workflow stage. Proposed case: e-005.
+Its baseline is zero passes; the comparison will report the actual outcomes,
+including zero estimates if all 15 new observations also fail.
+
 ## Pending
 
-1. Execute the baseline workflow using local Llama on the GitHub runner.
-2. Five valid Harbor baseline trials per case: **50 agent runs, 0 judge calls**.
-   Before a paid batch, show the chosen model and counts and obtain approval.
-3. Student review and final classification from observed baseline rewards.
+1. Student review and final classification from observed baseline rewards.
    No case has `kind` or `baseline_pass_rate` yet; add cases if needed to
    obtain at least one regression and one capability.
-4. Verify Part C in Actions, complete Part D two observed CI runs on one PR,
+2. Verify Part C in Actions, complete Part D two observed CI runs on one PR,
    Part E capability analysis, and the student's video.
 
-No live agent runs, judge calls, paid batches, CI runs, or observed baseline
-classifications have been performed during this preparation.
+The baseline was run live with local Llama on GitHub's runner. Offline checks
+and evidence recalculation used saved results. No hosted model API calls or
+LLM judge calls were made. Required intentional-regression and reverted CI
+runs and the 15-run capability experiment have not been performed yet.

@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from harbor_adapter.export import load_export_cases
+from harbor_adapter.results import load_job_result
 from replay.rollout import load_cases
 
 
@@ -46,7 +47,7 @@ def summarize_job(
     result_path = job_dir / "result.json"
     if not result_path.exists():
         raise FileNotFoundError(f"Harbor result not found: {result_path}")
-    result = json.loads(result_path.read_text())
+    result = load_job_result(job_dir)
     trials: dict[str, list[dict[str, Any]]] = defaultdict(list)
     unknown: list[str] = []
     for trial in result.get("trial_results", []):
