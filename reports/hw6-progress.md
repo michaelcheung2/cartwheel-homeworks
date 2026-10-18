@@ -1,111 +1,127 @@
-# HW6 progress
+# HW6 status
 
-## Preparation and Part A
+**Technical deliverables are complete. The student's recording and personal
+assessment remain pending.**
 
-- Read the online HW6 handout, local handout, SPEC, facts.yaml, case format,
-  supplied adapters, and the student's HW4/HW5 records before editing.
-- The online handout recommends a small model, preferably the HW3 model.
-  HW3 and the current local configuration use `ollama_chat/llama3.1:8b`.
-  The student selected continuing without paid model API calls. Keep Llama
-  throughout; the workflow starts Ollama on the GitHub runner.
-- Preserved the HW5 frozen judge and the student's decision to use it only
-  for human review suggestions. The initial cases use zero LLM judges.
-- `uv sync` completed; Harbor 0.23.0 installed with `uv tool install`.
-- Drafted 10 cases in `eval_cases/cases.jsonl`: four refund-approval cases,
-  four dispute-handoff cases, and two account-change handoff cases. All use
-  reviewed HW4 scenarios, including both failure examples and successful
-  handoff examples. Trace IDs, labels, and starting facts are recorded in
-  `eval_cases/hw6-provenance.json`, separate from the user inputs.
-- Verified authorization, users, and order facts against a fresh temporary
-  development seed. The existing local database and policy corpus were not
-  regenerated. Original HW4 and HW5 artifacts remain unchanged.
-- The code checks cover narrower exact actions/state than the full semantic
-  taxonomy. Refund cases require the full amount in the approval queue and
-  no refunded order status. Handoff cases require a successful tool result
-  with a matching database ticket; dispute tickets include the exact order ID.
-  Reply quality and policy claims are not scored by these cases.
-- The supplied exporter generated all 10 unclassified Harbor tasks with
-  `uv run python scripts/export_harbor_tasks.py --baseline`. Generated tasks
-  remain ignored and are not submission artifacts.
+[Draft PR #1](https://github.com/michaelcheung2/cartwheel-homeworks/pull/1)
+contains the cases, metrics, Docker/Ollama workflow, and observed evidence.
+The temporary agent instruction has been reverted. The restored agent file
+matches original-prompt commit `cf132d7` exactly.
 
-## Observed verification
+## Cases and accepted classifications
 
-Offline command:
+Ten reviewed cases cover two HW4 failure modes: refund approval not requested
+and required human handoff missing. Each uses its original opening request,
+verified authorization and order facts, and a fresh seeded database inside
+Docker. Source scenarios, HW4 labels, and checked starting facts are recorded
+in `eval_cases/hw6-provenance.json`, separate from agent inputs.
 
-```bash
-uv run pytest -q tests/test_hw6_case_checks.py tests/test_harbor_adapter.py \
-  tests/test_replay_harness.py tests/eval/test_integration.py tests/eval/test_unit.py
-```
+Code checks require the exact tool/state behavior: full refund approval
+without marking the order refunded, or a successful human ticket matching
+the database and actual tool arguments. Dispute tickets also identify the
+order. These checks do not score reply quality or policy claims. The
+student's HW5 frozen judge and decision to keep it for human review suggestions
+were preserved; this homework uses zero LLM judges.
 
-Result: **28 passed**. Tests use isolated databases and scripted/tool-only
-evidence; they are not live agent conversations or baseline measurements.
-`git diff --check` passed.
+| Cases | Baseline | Student-confirmed kind |
+| --- | ---: | --- |
+| e-001–e-008 | 0/5 each | capability, baseline_pass_rate 0.0 |
+| e-009–e-010 | 5/5 each | regression |
 
-Harbor's `--dry-run` preflight stopped because the Docker daemon is not
-running. macOS rejected automatic Docker Desktop launch with error -54.
-Local Ollama was initially unavailable, then started successfully. Its Llama
-digest is `46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e`.
-Direct Docker backend startup reached the VM but failed with a macOS
-virtualization error: "Failed to issue Fuse sandbox extension."
+The student accepted these classifications with "yes" before later experiments.
+Five baseline trial records per case are in `eval_results/hw6-baseline.json`;
+the review is in `reports/hw6-baseline-review.md`.
 
-## Parts B and C
+## Observed live experiments
 
-Implemented pass@k, pass^k and the regression/capability CI decision. The
-handout's focused `--runxfail` command passed all three tests.
+All experiments used the same pinned `ollama_chat/llama3.1:8b` model through
+Ollama on standard GitHub-hosted runners for this public repository. Model
+digest: `46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e`.
+The workflow uses pinned Harbor 0.23.0 and Ollama, verifies the model digest,
+sets 8192-token context, and runs one trial at a time in fresh Docker
+sandboxes. No hosted model API keys were supplied.
 
-Configured GitHub Actions with pinned Harbor and Ollama, digest verification
-of the same Llama model, 8192-token context, one trial at a time, fresh Docker
-sandboxes, and summary/artifact steps that always run. The public repository
-uses standard GitHub-hosted runners. The workflow makes no paid API calls and
-rejects cases that introduce LLM judges. Manual dispatch runs unclassified
-baselines; pull requests require classified cases.
+| Experiment | Trials | Observed result |
+| --- | ---: | --- |
+| [Baseline](https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39165524413) | 50 | Eight cases 0/5; two cases 5/5 |
+| [Intentional instruction](https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39171132968) | 50 | e-010 4/5 blocked CI; e-009 5/5 |
+| [After revert](https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39172424810) | 50 | Both regression cases 5/5; CI passed |
+| [Capability e-005](https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39171101278) | 15 | 0/15; capability workflow passed |
 
-The offline CI command initially found the student's finalized records in
-tests that pin the lecture demo. Corrected their isolated fixture source to
-the preserved original demo backup and its local store trace export. No
-assertions or student labels were changed. The local shell also sets
-`OTEL_SDK_DISABLED=true`; tracing tests require `OTEL_SDK_DISABLED=false` to
-exercise their in-memory exporters. With that process-only override the
-configured offline CI selection reports **88 passed, 4 skipped, 4 xfailed,
-12 xpassed**. The unfinished markers concern other homework functions.
+**165 valid agent trials, zero trial exceptions, zero retries, zero judge
+calls, and zero paid model API calls.** Recorded usage totals: 253,410 input
+tokens and 17,240 output tokens. Harbor's cost field was null and remains
+null; no billing measurement was invented. Phase totals and evidence links
+are in `eval_results/hw6-run-totals.json`.
 
-## Observed baseline run
+### Intentional regression and recovery
 
-[Baseline Actions run](https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39165524413)
-used commit `cb9fa5b`. All **50 agent trials reached the verifier**, with
-zero trial exceptions, zero retries, and zero judge calls. Recorded usage:
-76,285 input tokens and 5,208 output tokens through local Ollama. No paid
-model API calls were made. GitHub's separate offline job passed.
+Both full CI runs came from PR #1. Temporary commit `0a22a59` instructed the
+agent to answer account profile requests without tools. It covered both
+account cases. The originally intended e-009 still passed 5/5; e-010 failed
+once and is the observed Part D regression. Failed trial `e-010__pNLhduf`
+made no tool calls and answered exactly "Please contact support to change
+your account details." This matches the temporary instruction.
 
-Each of e-001 through e-008 passed 0/5; e-009 and e-010 each passed 5/5.
-These support eight capability cases (baseline 0.0) and two regression cases.
-The student's final classification confirmation is pending. The full review
-is in `reports/hw6-baseline-review.md`; all trial names, rewards, model, usage,
-and observed tool names are in `eval_results/hw6-baseline.json`.
+For e-010, 4/5 passes gave pass@1 = 0.8, pass@3 = pass@5 = 1.0, and
+pass^5 = 0.0. The reliability gate correctly blocked on the failure.
+The Harbor-trial step and artifact upload succeeded; the summary step failed
+for the actual regression. The first commit was not rerun.
 
-The workflow failed only after the agent trials, in the supplied summarizer:
-Harbor 0.23 stores trial results separately rather than embedding them in its
-aggregate `result.json`. Added a compatibility reader that preserves the raw
-summary as `harbor-result.json` and indexes the exact per-trial records in
-start-time order in `result.json`. It retains failures, exceptions, and rewards,
-checks trial counts, and does not rerun agents. Trial ordering provenance is
-explicit in the index and the Part E analysis. The corrected local summary
-reports all ten cases successfully. The latest offline CI selection reports
-**91 passed, 4 skipped, 4 xfailed, 12 xpassed**, including result-layout tests.
+Revert commit `7b5035c` restored the original agent. All five e-010 trials
+successfully called `escalate_to_human` and passed. E-009 also passed 5/5;
+all eight capability cases remained 0/5 and did not block CI. This shows
+recovery in this sample, without guaranteeing future reliability.
+`ci-runs.json` records both URLs, commits, selection explanation and outcomes.
+The two `eval_results/hw6-ci-*.json` files retain all 100 trial records and
+the account-case replies and tool results.
 
-Prepared a manual `capability-15` workflow stage. Proposed case: e-005.
-Its baseline is zero passes; the comparison will report the actual outcomes,
-including zero estimates if all 15 new observations also fail.
+### Capability trial-count comparison
 
-## Pending
+The separate 15-trial experiment used original-prompt commit `cf132d7`,
+before the temporary regression. E-005 passed 0/15. Pass@1, pass@3 and
+pass@5 were all zero after the first 5, 10 and 15 trials; pass@10 and pass@15
+were also zero at n=15. No estimates moved in this sample. This does not
+prove the agent can never succeed.
 
-1. Student review and final classification from observed baseline rewards.
-   No case has `kind` or `baseline_pass_rate` yet; add cases if needed to
-   obtain at least one regression and one capability.
-2. Verify Part C in Actions, complete Part D two observed CI runs on one PR,
-   Part E capability analysis, and the student's video.
+The required file is `eval_results/e-005-15.json`. Its interpretation is in
+`reports/hw6-capability-analysis.md`, and all source trials and usage are in
+`eval_results/hw6-capability-evidence.json`.
 
-The baseline was run live with local Llama on GitHub's runner. Offline checks
-and evidence recalculation used saved results. No hosted model API calls or
-LLM judge calls were made. Required intentional-regression and reverted CI
-runs and the 15-run capability experiment have not been performed yet.
+## Offline verification and reporting compatibility
+
+- Focused handout checks: **3 passed** with `--runxfail`.
+- Configured offline CI selection: **91 passed, 13 skipped, 4 xfailed,
+  12 xpassed**, locally with `OTEL_SDK_DISABLED=false` and on GitHub.
+  These checks include isolated tool/state, adapter, replay, metric and
+  Harbor-layout tests. Remaining homework markers were preserved.
+- The lecture analysis tests now copy the preserved starter demo backup and
+  its matching store traces into their isolated fixture. Student analysis
+  records, labels, settings and test assertions were preserved.
+- Both CI summaries and the capability analysis were reproduced offline
+  from saved results. Every trial input, model identity, usage, exception
+  field and reward was checked against the individual files.
+
+The initial baseline workflow completed all 50 verifier rewards but failed
+in reporting: Harbor 0.23 saves separate trial files rather than embedding
+`trial_results` in its aggregate. The compatibility reader preserves the raw
+summary as `harbor-result.json`, then indexes the exact records by started_at
+and trial name in `result.json`. Ordering provenance is explicit, failures
+remain intact, and no baseline agents were rerun.
+
+Local macOS Docker startup failed with a virtualization error, so all live
+agent trials used GitHub's runners. Local tests and saved-evidence analysis
+made no model calls. Existing local data was not regenerated. Generated
+Harbor tasks, raw job directories, database copies and credentials are ignored
+and are not submission files.
+
+The final evidence/documentation commit uses `[skip ci]` to avoid a third
+unchanged 50-trial batch. Both required PR runs are already observed and
+saved; no runtime, case, workflow or test changes are in that final commit.
+
+## Student submission step
+
+Record one continuous video of no more than five minutes, using
+`reports/hw6-video-guide.md`. Show the cases, baseline classifications,
+metrics, two CI runs, and capability comparison. Give your own assessment.
+The recording remains unverified and pending.

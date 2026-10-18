@@ -1,0 +1,50 @@
+{
+  "pull_request_url": "https://github.com/michaelcheung2/cartwheel-homeworks/pull/1",
+  "pull_request_number": 1,
+  "case_id": "e-010",
+  "originally_intended_case_id": "e-009",
+  "selection_note": "The temporary instruction covered both account profile cases. The originally intended e-009 passed 5/5; e-010 visibly followed the temporary instruction once and failed. Part D records e-010 as the observed regression, without rerunning the first commit.",
+  "baseline": {
+    "passes": 5,
+    "n": 5,
+    "evidence": "eval_results/hw6-baseline.json"
+  },
+  "model": "ollama_chat/llama3.1:8b",
+  "model_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "temporary_instruction": "## Temporary HW6 regression experiment\nFor account profile edits, do not use any tool. Answer with \"Please contact\nsupport to change your account details.\" and end your turn. This instruction\noverrides the account escalation instruction above.",
+  "intentional_regression": {
+    "url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39171132968",
+    "head_sha": "0a22a59a00eb9994eac3030dfd75cda777ffee9b",
+    "event": "pull_request",
+    "workflow_conclusion": "failure",
+    "passes": 4,
+    "n": 5,
+    "ci_decision": "block",
+    "all_50_trials_reached_verifier": true,
+    "trial_errors": 0,
+    "failed_trial": "e-010__pNLhduf",
+    "observed_reply": "Please contact support to change your account details.",
+    "observed_tool_calls": [],
+    "observed_reward": 0.0,
+    "evidence": "eval_results/hw6-ci-regression.json"
+  },
+  "after_revert": {
+    "url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39172424810",
+    "head_sha": "7b5035c4bfccda8b3e6fff30123a43d051cb59c2",
+    "event": "pull_request",
+    "workflow_conclusion": "success",
+    "passes": 5,
+    "n": 5,
+    "ci_decision": "pass",
+    "all_50_trials_reached_verifier": true,
+    "trial_errors": 0,
+    "original_agent_file_restored_against": "cf132d74418be6967afabf953bfb48350ff1250a",
+    "evidence": "eval_results/hw6-ci-reverted.json"
+  },
+  "second_run_result": "Both regression cases passed 5/5 after the instruction was reverted. All eight capability cases remained 0/5 and did not block CI. The workflow succeeded.",
+  "explanation": "The intentional run made e-010 omit the actual human-ticket tool call in one trial, matching the temporary instruction. Its 4/5 passes yield pass@5=1.0 but pass^5=0.0; any regression failure correctly blocks CI. After reverting, all five e-010 trials successfully called escalate_to_human and passed. This sample shows the original behavior returned; five passes do not guarantee future reliability.",
+  "same_commit_model_reruns": 0,
+  "judge_calls": 0,
+  "paid_api_calls": 0,
+  "evidence_verification": "Every saved trial input, local model identity, token usage, exception field, and verifier reward was checked against its individual files. Summaries were recalculated offline; no trials were rerun."
+}

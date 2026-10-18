@@ -1,0 +1,42 @@
+{
+  "model": "ollama_chat/llama3.1:8b",
+  "model_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "agent_runs": 165,
+  "input_tokens": 253410,
+  "output_tokens": 17240,
+  "judge_calls": 0,
+  "paid_api_calls": 0,
+  "trial_errors": 0,
+  "recorded_cost_usd": null,
+  "cost_note": "Ollama ran locally on standard GitHub-hosted runners for this public repository. No paid model API was called. Harbor recorded cost_usd=null, which is preserved rather than replaced with an invented billing measurement.",
+  "runs": [
+    {
+      "evidence": "eval_results/hw6-baseline.json",
+      "url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39165524413",
+      "agent_runs": 50,
+      "input_tokens": 76285,
+      "output_tokens": 5208
+    },
+    {
+      "evidence": "eval_results/hw6-ci-regression.json",
+      "url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39171132968",
+      "agent_runs": 50,
+      "input_tokens": 76741,
+      "output_tokens": 4653
+    },
+    {
+      "evidence": "eval_results/hw6-ci-reverted.json",
+      "url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39172424810",
+      "agent_runs": 50,
+      "input_tokens": 77374,
+      "output_tokens": 5532
+    },
+    {
+      "evidence": "eval_results/hw6-capability-evidence.json",
+      "url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39171101278",
+      "agent_runs": 15,
+      "input_tokens": 23010,
+      "output_tokens": 1847
+    }
+  ]
+}
