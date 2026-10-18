@@ -269,11 +269,53 @@ def _one_check(
 
     if kind == "refund_status":
         rows = conn.execute(
-            "SELECT status FROM refunds WHERE order_id = ?", (check["order_id"],)
+            "SELECT status, amount_cents FROM refunds WHERE order_id = ?", (check["order_id"],)
         ).fetchall()
         statuses = [r[0] for r in rows]
-        ok = check["status"] in statuses
+        ok = any(
+            status == check["status"]
+            and ("amount_cents" not in check or amount == check["amount_cents"])
+            for status, amount in rows
+        )
         return (ok, f"refund for #{check['order_id']} is {check['status']} (saw {statuses})")
+
+    if kind == "escalation_created":
+        for call in _all_tool_calls(transcript, check.get("turn")):
+            if call["name"] != "escalate_to_human":
+                continue
+            result = call.get("result")
+            if isinstance(result, str):
+                try:
+                    result = json.loads(result)
+                except json.JSONDecodeError:
+                    continue
+            if not isinstance(result, dict) or result.get("ok") is not True:
+                continue
+            ticket_id = result.get("ticket_id")
+            if type(ticket_id) is not int:
+                continue
+            row = conn.execute(
+                "SELECT user_id, store_id, summary, context FROM escalations WHERE id = ?",
+                (ticket_id,),
+            ).fetchone()
+            if row is None or row[0] != check["user_id"] or row[1] != check.get("store_id"):
+                continue
+            args = call.get("args", {})
+            if row[2] != args.get("summary"):
+                continue
+            try:
+                context = json.loads(row[3])
+            except (json.JSONDecodeError, TypeError):
+                continue
+            if not isinstance(context, dict) or context.get("context") != args.get("context"):
+                continue
+            if "order_id" in check and not re.search(
+                rf"(?<!\d){re.escape(str(check['order_id']))}(?!\d)",
+                row[2] + " " + str(context.get("context", "")),
+            ):
+                continue
+            return (True, f"ticket {ticket_id} created for user {check['user_id']}")
+        return (False, f"no matching successful ticket for user {check['user_id']}")
 
     if kind == "order_not_status":
         row = conn.execute(

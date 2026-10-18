@@ -50,10 +50,17 @@ def analysis_state(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     mutating the checked-in fixture, exactly as ``world_copy`` does for the
     database. Everything here is offline: no keys, no LLM calls.
     """
-    src = Path(__file__).resolve().parent.parent / "analysis" / "state"
+    state = Path(__file__).resolve().parent.parent / "analysis" / "state"
+    # The Module 2 contract tests pin the supplied lecture demo (including v3
+    # and its 20/50/50 split), rather than the student's later HW4/HW5 work.
+    # That original demo is preserved here; never recreate or alter the
+    # student's accepted labels/judges to satisfy demo assertions.
+    demo = state / "starter_demo_backup"
+    src = demo if demo.is_dir() else state
     dst = tmp_path / "state"
     shutil.copytree(src, dst)
     monkeypatch.setenv("CARTWHEEL_ANALYSIS_STATE", str(dst))
+    monkeypatch.setenv("CARTWHEEL_JUDGE_TRACE_SOURCE", str(dst / "store_traces.json"))
     return dst
 
 

@@ -1,0 +1,304 @@
+{
+  "status": "draft_unclassified",
+  "seed": "dev deterministic seed; verified only in a temporary directory",
+  "cases": [
+    {
+      "case_id": "e-001",
+      "mode": "refund_approval_not_requested",
+      "source_scenario_id": "support-0056",
+      "source_trace_ids": [
+        "9ccf73ef883e51c23c0e919e92cd62d4"
+      ],
+      "hw4_failure_flags": {
+        "9ccf73ef883e51c23c0e919e92cd62d4": 1
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9016,
+        "name": "Rosa Park",
+        "role": "merchant",
+        "store_id": 16
+      },
+      "order": {
+        "id": 7812,
+        "user_id": 435,
+        "store_id": 16,
+        "product_id": 634,
+        "quantity": 1,
+        "total_cents": 29500,
+        "status": "delivered",
+        "ordered_at": "2026-06-11",
+        "shipped_at": "2026-06-12",
+        "delivered_at": "2026-06-14",
+        "refund_eligible": 1
+      }
+    },
+    {
+      "case_id": "e-002",
+      "mode": "refund_approval_not_requested",
+      "source_scenario_id": "support-0063",
+      "source_trace_ids": [
+        "970d022f66c48ff70257dc0a5c33557f"
+      ],
+      "hw4_failure_flags": {
+        "970d022f66c48ff70257dc0a5c33557f": 1
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9503,
+        "name": "Carmen Ito",
+        "role": "support",
+        "store_id": null
+      },
+      "order": {
+        "id": 8720,
+        "user_id": 127,
+        "store_id": 6,
+        "product_id": 228,
+        "quantity": 2,
+        "total_cents": 48800,
+        "status": "delivered",
+        "ordered_at": "2026-06-21",
+        "shipped_at": "2026-06-23",
+        "delivered_at": "2026-06-27",
+        "refund_eligible": 1
+      }
+    },
+    {
+      "case_id": "e-003",
+      "mode": "refund_approval_not_requested",
+      "source_scenario_id": "support-0065",
+      "source_trace_ids": [
+        "07f1f86a468da7d2119a61106fa5a5e2",
+        "203ea1d28e9656f9df5f6d7c5bd92a3a"
+      ],
+      "hw4_failure_flags": {
+        "07f1f86a468da7d2119a61106fa5a5e2": 0,
+        "203ea1d28e9656f9df5f6d7c5bd92a3a": 1
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9017,
+        "name": "Jonas Okafor",
+        "role": "merchant",
+        "store_id": 17
+      },
+      "order": {
+        "id": 1321,
+        "user_id": 10,
+        "store_id": 17,
+        "product_id": 648,
+        "quantity": 1,
+        "total_cents": 25450,
+        "status": "delivered",
+        "ordered_at": "2026-06-01",
+        "shipped_at": "2026-06-03",
+        "delivered_at": "2026-06-10",
+        "refund_eligible": 1
+      }
+    },
+    {
+      "case_id": "e-004",
+      "mode": "refund_approval_not_requested",
+      "source_scenario_id": "support-0215",
+      "source_trace_ids": [
+        "501e879d03da4cf995baf8e051e56efe"
+      ],
+      "hw4_failure_flags": {
+        "501e879d03da4cf995baf8e051e56efe": 1
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9005,
+        "name": "Quinn Hassan",
+        "role": "merchant",
+        "store_id": 5
+      },
+      "order": {
+        "id": 8596,
+        "user_id": 394,
+        "store_id": 5,
+        "product_id": 191,
+        "quantity": 1,
+        "total_cents": 28975,
+        "status": "delivered",
+        "ordered_at": "2026-05-24",
+        "shipped_at": "2026-05-27",
+        "delivered_at": "2026-06-01",
+        "refund_eligible": 1
+      }
+    },
+    {
+      "case_id": "e-005",
+      "mode": "required_human_handoff_missing",
+      "source_scenario_id": "support-0151",
+      "source_trace_ids": [
+        "048310a721348065f7e44dd6f072250c"
+      ],
+      "hw4_failure_flags": {
+        "048310a721348065f7e44dd6f072250c": 1
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 244,
+        "name": "Tessa Xu",
+        "role": "shopper",
+        "store_id": null
+      },
+      "order": {
+        "id": 9963,
+        "user_id": 244,
+        "store_id": 4,
+        "product_id": 131,
+        "quantity": 1,
+        "total_cents": 9000,
+        "status": "delivered",
+        "ordered_at": "2025-02-20",
+        "shipped_at": "2025-02-21",
+        "delivered_at": "2025-02-24",
+        "refund_eligible": 0
+      }
+    },
+    {
+      "case_id": "e-006",
+      "mode": "required_human_handoff_missing",
+      "source_scenario_id": "support-0152",
+      "source_trace_ids": [
+        "737e05580f6444e452db7c3c7a9fef7e"
+      ],
+      "hw4_failure_flags": {
+        "737e05580f6444e452db7c3c7a9fef7e": 1
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9018,
+        "name": "Imani Ekwueme",
+        "role": "merchant",
+        "store_id": 18
+      },
+      "order": {
+        "id": 4163,
+        "user_id": 409,
+        "store_id": 18,
+        "product_id": 715,
+        "quantity": 2,
+        "total_cents": 30100,
+        "status": "delivered",
+        "ordered_at": "2025-03-07",
+        "shipped_at": "2025-03-10",
+        "delivered_at": "2025-03-16",
+        "refund_eligible": 0
+      }
+    },
+    {
+      "case_id": "e-007",
+      "mode": "required_human_handoff_missing",
+      "source_scenario_id": "support-0156",
+      "source_trace_ids": [
+        "abd4237ab56f3186888383ce6a1d79b1"
+      ],
+      "hw4_failure_flags": {
+        "abd4237ab56f3186888383ce6a1d79b1": 1
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9501,
+        "name": "Rosa Volkov",
+        "role": "support",
+        "store_id": null
+      },
+      "order": {
+        "id": 2488,
+        "user_id": 263,
+        "store_id": 4,
+        "product_id": 159,
+        "quantity": 1,
+        "total_cents": 14675,
+        "status": "delivered",
+        "ordered_at": "2025-11-25",
+        "shipped_at": "2025-11-26",
+        "delivered_at": "2025-11-30",
+        "refund_eligible": 0
+      }
+    },
+    {
+      "case_id": "e-008",
+      "mode": "required_human_handoff_missing",
+      "source_scenario_id": "support-0159",
+      "source_trace_ids": [
+        "6db495da213d47128a48d522f265d0e5"
+      ],
+      "hw4_failure_flags": {
+        "6db495da213d47128a48d522f265d0e5": 1
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9504,
+        "name": "Grace Kaur",
+        "role": "support",
+        "store_id": null
+      },
+      "order": {
+        "id": 9045,
+        "user_id": 427,
+        "store_id": 7,
+        "product_id": 250,
+        "quantity": 1,
+        "total_cents": 14675,
+        "status": "delivered",
+        "ordered_at": "2026-04-22",
+        "shipped_at": "2026-04-23",
+        "delivered_at": "2026-04-30",
+        "refund_eligible": 0
+      }
+    },
+    {
+      "case_id": "e-009",
+      "mode": "required_human_handoff_missing",
+      "source_scenario_id": "support-0162",
+      "source_trace_ids": [
+        "490265edd3e8a70404e5e0da819d4e4f"
+      ],
+      "hw4_failure_flags": {
+        "490265edd3e8a70404e5e0da819d4e4f": 0
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9502,
+        "name": "Yuki Chen",
+        "role": "support",
+        "store_id": null
+      },
+      "order": null
+    },
+    {
+      "case_id": "e-010",
+      "mode": "required_human_handoff_missing",
+      "source_scenario_id": "support-0167",
+      "source_trace_ids": [
+        "30679ff47de71af838bf90f864c525de"
+      ],
+      "hw4_failure_flags": {
+        "30679ff47de71af838bf90f864c525de": 0
+      },
+      "scope": "Opening request only; followups and observed replies are not replayed. Exact action/state checks cover a narrower behavior than the full semantic taxonomy.",
+      "seed_verified": true,
+      "authenticated_user": {
+        "id": 9001,
+        "name": "Maya Johnson",
+        "role": "merchant",
+        "store_id": 1
+      },
+      "order": null
+    }
+  ]
+}

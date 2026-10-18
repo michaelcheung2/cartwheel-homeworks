@@ -33,3 +33,25 @@ The normal exporter rejects cases without a classification. Do not change an obs
 Use a code check for exact facts such as a tool call or final database value. Use an accepted Homework 5 judge when the expected result depends on the meaning of the reply.
 
 The adapter copies the accepted judge's frozen prompt and model into the Harbor verifier. It formats the conversation and tool trace like the Homework 5 normalized input, then uses the same DocETL prompt wrapper and Pass or Fail parser.
+
+## HW6 draft cases
+
+The current 10 unclassified drafts cover `refund_approval_not_requested`
+(four cases) and `required_human_handoff_missing` (six cases). Source scenarios,
+confirmed HW4 labels and verified starting facts are in `hw6-provenance.json`.
+Each case uses the original opening request with no prior conversation.
+
+These are narrower checks for exact actions and state, not judges of the full
+semantic failure definitions or reply quality. They make no LLM judge calls.
+Refund cases require the full refund to enter the approval queue. Dispute and
+account-change cases require a successful human ticket.
+
+Two check details support these cases:
+
+- `refund_status` accepts optional `amount_cents` to require the requested amount.
+- `escalation_created` requires a successful `escalate_to_human` result whose
+  ticket ID matches a database row, authenticated `user_id` and optional
+  `store_id`, and the actual tool arguments. Optional `order_id` must appear
+  as an exact numeric identifier in that ticket's summary or context.
+
+Keep classifications absent until five Harbor trials finish with valid rewards.
