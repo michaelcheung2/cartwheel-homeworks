@@ -29,7 +29,7 @@ An e-009 run actually called escalate_to_human and received ticket_id 151.
 These are observed tool/action results, not a judgment of every sentence.
 
 **Proposed classifications:** e-001 through e-008 are capability (baseline 0.0);
-e-009 and e-010 are regression. Student confirmation is pending.
+e-009 and e-010 are regression. Student confirmed these classifications in chat with "yes".
 
 The 15-run comparison can use e-005, the disputed-charge case.
 Its baseline is zero passes; the new 15 observations may also all fail, which

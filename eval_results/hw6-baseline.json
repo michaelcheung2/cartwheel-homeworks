@@ -1,5 +1,5 @@
 {
-  "status": "pending_student_classification_review",
+  "status": "student_confirmed_classifications",
   "run_url": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/39165524413",
   "commit": "cb9fa5b",
   "model": "ollama_chat/llama3.1:8b",
@@ -857,5 +857,12 @@
         }
       ]
     }
-  ]
+  ],
+  "classification_confirmation": {
+    "human_confirmed": true,
+    "source": "student_chat",
+    "response": "yes",
+    "confirmed_at": "2026-10-18T22:10:52.525550+00:00"
+  },
+  "classified_case_file_sha256": "11e55c6400e547a06784bcfad384ede89c2c83d60dfdba7315c546920ca640db"
 }

@@ -1,5 +1,5 @@
 {
-  "status": "draft_unclassified",
+  "status": "classified_from_observed_baselines",
   "seed": "dev deterministic seed; verified only in a temporary directory",
   "cases": [
     {
@@ -300,5 +300,11 @@
       },
       "order": null
     }
-  ]
+  ],
+  "classification_confirmation": {
+    "human_confirmed": true,
+    "source": "student_chat",
+    "response": "yes",
+    "confirmed_at": "2026-10-18T22:10:52.525550+00:00"
+  }
 }
