@@ -152,8 +152,6 @@ def model_settings_for(model: Any) -> ModelSettings:
             include_usage=True,
         )
     model_id = getattr(model, "model", "") if not isinstance(model, str) else ""
-    if model_id.startswith("ollama_chat/"):
-        return ModelSettings(temperature=0)
     if model_id.startswith("together_ai/"):
         return ModelSettings(extra_args={"allowed_openai_params": ["tools"]})
     if "claude" in model_id or "anthropic" in model_id:
