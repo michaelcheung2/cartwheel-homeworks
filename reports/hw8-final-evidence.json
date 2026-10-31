@@ -1,0 +1,113 @@
+{
+  "final_selected_before_test": true,
+  "final_commit": "63a952ae2786f37318e3c1f5472f7d505c967976",
+  "final_prompt_hash": "49b000c3c187",
+  "plan_sha256": "d9eecb5c04e0eea89a38c705e4dba6876b12be6e423674bbcf9e8a73f57a1558",
+  "final_development": {
+    "score": 0.771429,
+    "write_pass_5": 0.571429,
+    "evaluated_runs": 35
+  },
+  "test": {
+    "configurations": [
+      {
+        "configuration": "1",
+        "name": "starting-version-model-1",
+        "parent": "",
+        "git_commit": "0a906099d3b481555723a0813585d76345a04f25",
+        "model": "ollama_chat/qwen3:8b",
+        "score": "0.4",
+        "write_pass_5": "0.333333",
+        "cost_per_100_conversations_usd": "0.0",
+        "median_latency_seconds": "10.7021",
+        "dominated": "True",
+        "input_tokens": 35754,
+        "output_tokens": 11665,
+        "evaluated_runs": 15,
+        "case_passes": {
+          "e-003": 5,
+          "e-005": 0,
+          "e-009": 1
+        }
+      },
+      {
+        "configuration": "2",
+        "name": "starting-version-model-2",
+        "parent": "",
+        "git_commit": "0a906099d3b481555723a0813585d76345a04f25",
+        "model": "ollama_chat/qwen3:0.6b",
+        "score": "0.0",
+        "write_pass_5": "0",
+        "cost_per_100_conversations_usd": "0.0",
+        "median_latency_seconds": "1.3174",
+        "dominated": "True",
+        "input_tokens": 28030,
+        "output_tokens": 5946,
+        "evaluated_runs": 15,
+        "case_passes": {
+          "e-003": 0,
+          "e-005": 0,
+          "e-009": 0
+        }
+      },
+      {
+        "configuration": "3",
+        "name": "starting-version-model-3",
+        "parent": "",
+        "git_commit": "0a906099d3b481555723a0813585d76345a04f25",
+        "model": "ollama_chat/llama3.1:8b",
+        "score": "0.333333",
+        "write_pass_5": "0.333333",
+        "cost_per_100_conversations_usd": "0.0",
+        "median_latency_seconds": "1.719",
+        "dominated": "True",
+        "input_tokens": 22814,
+        "output_tokens": 1777,
+        "evaluated_runs": 15,
+        "case_passes": {
+          "e-003": 0,
+          "e-005": 0,
+          "e-009": 5
+        }
+      },
+      {
+        "configuration": "4",
+        "name": "final-version-model-3",
+        "parent": "starting-version-model-3",
+        "git_commit": "63a952ae2786f37318e3c1f5472f7d505c967976",
+        "model": "ollama_chat/llama3.1:8b",
+        "score": "0.933333",
+        "write_pass_5": "0.666667",
+        "cost_per_100_conversations_usd": "0.0",
+        "median_latency_seconds": "1.4251",
+        "dominated": "False",
+        "input_tokens": 30899,
+        "output_tokens": 1520,
+        "evaluated_runs": 15,
+        "case_passes": {
+          "e-003": 4,
+          "e-005": 5,
+          "e-009": 5
+        }
+      }
+    ],
+    "complete_trials": 60,
+    "recorded_errors": 0,
+    "provider_request_count": "Not measured; agent trials can contain multiple model requests.",
+    "judge_calls": 0,
+    "paid_model_api_calls": 0
+  },
+  "search_budget_used": 140,
+  "search_budget_maximum": 150,
+  "grader_hash_unchanged": true,
+  "protected_files_verified": true,
+  "final_agent_unchanged_after_test": true,
+  "startup_recovery": "One failure before any agent ran, then cleanup failure after complete configuration 1 result. Result reused on resume; configurations 1\u20134 each contain one complete 15-trial batch.",
+  "limits": [
+    "Three held-out cases; no claim of general reliability or statistical significance.",
+    "All API fees are zero; electricity/hardware costs are excluded.",
+    "Final refund case passed 4/5; two handoff cases passed 5/5.",
+    "Tests score tool/database behavior, not policy-grounding or reply quality."
+  ],
+  "student_video": "Pending"
+}

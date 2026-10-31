@@ -1,26 +1,25 @@
 # HW8 progress
 
-Preparation, baseline, manual experiments and automated development search
-are complete. Student accepted missing required human handoff as the target.
-Current handout: `homework/module-5/hw8.md`. Cases, tests and frozen judges
-were preserved; no held-out optimization case has run.
+**Technical deliverables complete; student video pending.**
 
-- Three local models checked; Llama 3.1 8B retained throughout development.
-- Fixed seven development / three test cases; starting version committed.
-- Manual prompt/tool/harness experiments recorded, including reverts and a
-  repeat of the prompt improvement.
-- Improve-loop skill used with `optimize/program.md`; 140/150 budgeted runs.
-  Ten remaining runs cannot cover a full batch, so search stopped.
-- Starting score: 14.3%. Proposed prompt candidate: 77.1%, write_pass_5 57.1%.
-  Four handoff cases passed 5/5; refund cases passed 3/5, 0/5 and 4/5.
-- Zero paid model API calls and zero judge calls. Usage from completed batches
-  is recorded; an interrupted attempt has no invented count or usage.
-- Existing authorization, thresholds, approval and pause logic unchanged.
+- Current handout: `homework/module-5/hw8.md`.
+- Student chose missing required human handoff, then selected the latest
+  prompt before test results. Source examples and choice are recorded.
+- Three installed local models checked and fixed; Llama used throughout
+  development. Split, budget and starting/final versions are committed.
+- Manual prompt/tool/harness experiments and improve-loop search complete.
+  Search used 140/150 runs; all attempts/reverts/repeats are preserved.
+- Final development rerun: score 77.1%, write_pass_5 57.1%.
+- Four-configuration held-out batch complete: 60 trials. Starting Qwen3 8B
+  40%; Qwen3 0.6B 0%; starting Llama 33.3%; final Llama 93.3%.
+- Final write_pass_5: 66.7%; refund 4/5, both handoffs 5/5.
+- Frontier table and plot saved. API fees are all zero; token usage and
+  latency recorded. Electricity/hardware cost excluded.
+- Cases, tests, labels, frozen judges and non-prompt agent code preserved.
+  Final agent unchanged after held-out evaluation. Scores/hashes recalculated
+  offline; startup/cleanup failures documented and completed trials reused.
+- No paid model APIs and no LLM judge calls.
 
-See `hw8-candidate-review.md` / `.json` for concrete alternatives, observed
-results, uncertainty and the recommended final selection. The small latest
-gain was not repeated within the search budget. The student's selection
-precedes the required final development rerun and one held-out test batch.
-
-Remaining: student final selection, final-version save, four-configuration
-test frontier, recording guide, and student's <=5-minute video.
+See `hw8-summary.md`, `hw8-final-evidence.json`, and the committed optimization
+records. The student's <=5-minute continuous video remains pending; use
+`hw8-video-guide.md`. The three-case test does not establish general reliability.

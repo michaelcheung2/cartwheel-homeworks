@@ -1,0 +1,5 @@
+configuration,name,parent,git_commit,model,score,write_pass_5,cost_per_100_conversations_usd,median_latency_seconds,dominated
+1,starting-version-model-1,,0a906099d3b481555723a0813585d76345a04f25,ollama_chat/qwen3:8b,0.4,0.333333,0.0,10.7021,True
+2,starting-version-model-2,,0a906099d3b481555723a0813585d76345a04f25,ollama_chat/qwen3:0.6b,0.0,0,0.0,1.3174,True
+3,starting-version-model-3,,0a906099d3b481555723a0813585d76345a04f25,ollama_chat/llama3.1:8b,0.333333,0.333333,0.0,1.719,True
+4,final-version-model-3,starting-version-model-3,63a952ae2786f37318e3c1f5472f7d505c967976,ollama_chat/llama3.1:8b,0.933333,0.666667,0.0,1.4251,False

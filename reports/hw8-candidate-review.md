@@ -1,4 +1,4 @@
-# HW8 candidate selection
+# HW8 candidate selection (pre-test record)
 
 Target chosen by the student: missing required human handoff (ESC-3/RESP-6).
 Development has seven fixed cases; every case runs five times. No test-set
@@ -45,3 +45,6 @@ and exceptions are in `hw8-candidate-review.json`, `optimize/results/manual.csv`
 and `optimize/results/improve-loop.jsonl`. Superseded preliminary evidence and
 one interrupted attempt are recorded separately. Student final selection
 and the <=5-minute video remain pending.
+
+Final selection and testing are now complete. This document preserves the
+pre-test recommendation; see `hw8-summary.md` for observed final results.
