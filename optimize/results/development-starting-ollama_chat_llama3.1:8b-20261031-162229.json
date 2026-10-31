@@ -1,0 +1,463 @@
+{
+  "cached_fraction": 0.0,
+  "cached_input_tokens": 0,
+  "candidate": "starting",
+  "case_count": 7,
+  "cases": [
+    {
+      "case_id": "e-001",
+      "expected_write": true,
+      "failure_modes": [
+        "refund for #7812 is queued_for_approval (saw [])"
+      ],
+      "latencies_seconds": [
+        2.3678,
+        1.4841,
+        1.6548,
+        1.4829,
+        0.9848
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Before processing a refund, I need to verify the order status and refund eligibility. However, since the order is already delivered and refund eligible, I can proceed with the refund. To process the refund, I'll call {\"name\": \"process_refund\", \"parameters\": {\"order_id\": 7812, \"amount\": 295.0}}.",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "I am going to look up the refund policy for Cartwheel, specifically for the order status of \"delivered\". This is because the user is requesting a refund for an order that has already been delivered, and I need to confirm that this is allowed according to Cartwheel's policy (cw-delivery).\n\n{\"name\": \"lookup_policy\", \"parameters\": {\"store_id\": 16, \"order_status\": \"delivered\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Before I can process a refund, I need to confirm the order's refund eligibility. I've checked the order tools and it appears that the order is indeed refund eligible.\n\nTo process a refund, I need to check the product's return policy (cw-returns). According to the return policy, customers can return products within 30 days of delivery for a full refund.\n\nI'll check the order's return status. \n\n{\"name\": \"get_order_return_status\", \"parameters\": {\"order_id\":\"7812\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Before I can process a full refund, I need to confirm that the item is indeed no longer wanted and that the order status is \"delivered\". Based on the order details, it appears that the order is eligible for a refund. I will look up our refund policy (cw-refunds) to see what steps need to be taken. \n\n{\"name\": \"lookup_policy\", \"parameters\": {\"policy_id\":\"cw-refunds\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Before processing a refund, I need to check the order's status and refund eligibility. \n\n{\"name\": \"get_order\", \"parameters\": {\"order_id\":\"7812\"}}",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-002",
+      "expected_write": true,
+      "failure_modes": [
+        "refund for #8720 is queued_for_approval (saw [])",
+        "tool get_order called"
+      ],
+      "latencies_seconds": [
+        0.7197,
+        1.1102,
+        1.09,
+        2.4419,
+        1.4669
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool get_order called",
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To answer this question, I will first check the order status to make sure the order is eligible for a refund. I will then look up the policy for refunds, and if the order is eligible, I will proceed with the refund.\n\n{\"name\": \"get_order\", \"parameters\": {\"order_id\": 8720}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "I'm going to check if the Classic Webcam is eligible for a refund according to our store's return policy (cw-returns). \n\n{\"name\": \"get_policy\", \"parameters\": {\"policy_id\":\"cw-returns\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "tool get_order called",
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To address the user's concern, I will first look up the order details to check its refund eligibility and then issue the refund if possible. \n\nBefore I proceed, I will call the `get_order` function to check the order details. \n\nHere is the function call with its proper arguments:\n\n{\"name\": \"get_order\", \"parameters\": {\"order_id\": 8720}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To initiate a refund for the Classic Webcam from Bright Socket Electronics, I need to look up the store's refund policy. According to cw-refunds, a refund is eligible within 30 days of delivery. Since the order was delivered on 2026-06-27, the refund is still eligible.\n\nBefore proceeding, I need to confirm the order status. The order status is \"delivered\", so the item is in the customer's possession. \n\nSince the order is eligible for a refund, I can proceed with the refund process. I will call the {\"name\": \"issue_refund\", \"parameters\": {\"order_id\": \"8720\", \"product_id\": \"228\", \"reason\": \"no longer wanted\"}} tool to initiate the refund. \n\nPlease note that it may take some time for the refund to be processed and credited back to your original payment method.\n\nAlso, if you need to initiate a return for the item, please let me know and I can guide you through the process.",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "You're eligible for a refund since the order has a status of \"delivered\" and \"refund_eligible\" is True. To initiate the refund process, I need to call the refund tool with the order ID 8720.\n\n{\"name\": \"refund_order\", \"parameters\": {\"order_id\": \"8720\"}}",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-004",
+      "expected_write": true,
+      "failure_modes": [
+        "refund for #8596 is queued_for_approval (saw [])"
+      ],
+      "latencies_seconds": [
+        1.3342,
+        2.5486,
+        2.9188,
+        1.8771,
+        1.5896
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Before I process the refund, I'd like to confirm that the order's status is \"delivered\" and refund is eligible, as shown in the order details. \n\nTo process the refund, I will call the {\"name\": \"issue_refund\", \"parameters\": {\"store_id\": 5, \"order_id\": 8596, \"reason\": \"unwanted\"}} tool.",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To process a full refund for order 8596, I need to check the refund eligibility and amount. Based on the order details, the order is eligible for a refund, and the total amount is $289.75. I will now check our refund policy (cw-refunds) for any specific requirements or restrictions.\n\nBefore calling the refund tool, I need to confirm that the product is indeed unwanted and the customer wants a full refund. Please confirm this is the case.\n\nIf this is correct, I will proceed with calling the refund tool to initiate the refund process.\n\n{\"name\": \"refund_order\", \"parameters\": {\"order_id\":8596,\"amount\":289.75,\"refund_reason\":\"product unwanted\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To process a full refund for order 8596, I need to confirm that the order is indeed eligible for a refund. According to the order details, the order status is \"delivered\" and the refund eligibility is \"True\", so it appears to be eligible for a refund.\n\nNext, I need to check the return policy for the Portable Desk Lamp from Cascade Audio. According to our return policy (cw-returns), if the customer is not satisfied with their purchase, they can return it within 30 days of delivery for a full refund.\n\nSince the customer is requesting a full refund, I can proceed with processing the refund. However, I will also send a notification to the customer to let them know that we are processing the refund and to expect the refund to be credited back to their original payment method within 3-5 business days.\n\n{\"name\": \"process_refund\", \"parameters\": {\"order_id\":8596, \"refund_amount\": 289.75}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To process a full refund for order 8596, I need to confirm that the order is eligible for a refund. According to the order details, the order is \"delivered\" and \"refund eligible\", so a full refund is possible. I will now look up the store's return policy to see if a full refund is also allowed under their policy.\n\nFirst, I will look up the store's return policy to see if a full refund is allowed: {\"name\": \"get_policy\", \"parameters\": {\"store_id\": 5, \"product_id\": 191}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "I'm going to look up the refund policy for unwanted items (cw-refunds). \n\n {\"name\": \"get_policy\", \"parameters\": {\"store_id\": \"5\", \"policy_id\": \"cw-refunds\"}}",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": true,
+      "failure_modes": [
+        "no matching successful ticket for user 9018"
+      ],
+      "latencies_seconds": [
+        1.2261,
+        1.2096,
+        1.2751,
+        1.8652,
+        1.2283
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9018"
+          ],
+          "final_reply": "I've looked up the order details for order 4163 from Clover Field Naturals. The order was for 2 Walnut Face Serums, totaling $301.00 USD, and the status is marked as 'delivered', with no refund eligibility. To proceed with investigating the disputed charge, I'll need more information about the dispute. Can you please provide more details about the issue with the order?",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9018"
+          ],
+          "final_reply": "I'm going to check the product policy for the Walnut Face Serum, specifically regarding disputed charges (policy cw-disputed-charges). \n\n{\"name\": \"lookup_policy\", \"parameters\": {\"store_id\": \"18\", \"policy_name\": \"disputed charges\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9018"
+          ],
+          "final_reply": "To investigate the disputed charge, I've checked the order status. The order has been delivered and is no longer refund eligible. If the customer is disputing the charge, I'm going to need more information about the dispute before I can proceed. Can you please provide more details about the issue?",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9018"
+          ],
+          "final_reply": "I am going to look up the order status and details to understand the situation better. \n\nThe order status for order 4163 from Clover Field Naturals is 'delivered'. This means the order has been completed and the products have been handed over to the customer. \n\nHowever, since the order is marked as 'refund_eligible' as False, this means that the customer is not eligible for a refund according to our store's refund policy (cw-refunds). \n\nI can help you escalate this issue to a human for further assistance. Would you like to do that?",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9018"
+          ],
+          "final_reply": "I'm going to investigate the disputed charge on order 4163 from Clover Field Naturals.\n\nTo do this, I'll need to look up the product details of the Walnut Face Serum. \n\n{\"name\": \"get_product\", \"parameters\": {\"product_id\": \"715\"}}",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-007",
+      "expected_write": true,
+      "failure_modes": [
+        "no matching successful ticket for user 9501"
+      ],
+      "latencies_seconds": [
+        1.28,
+        1.0862,
+        1.355,
+        2.6783,
+        1.8472
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9501"
+          ],
+          "final_reply": "I'm going to look up the order status for order 2488 to see if there are any issues with the payment. This will help us understand the context of the disputed charge.",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9501"
+          ],
+          "final_reply": "Based on the help center article 'Cartwheel dispute policy', the customer can dispute a charge for up to 60 days after delivery. I'm going to look up the order details to see what's going on with the payment. \n\n{\"name\": \"get_order\", \"parameters\": {\"order_id\": \"2488\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9501"
+          ],
+          "final_reply": "Based on the help center, it appears that you need to escalate the issue to a human support agent to help resolve the disputed charge. I'll call the escalate_to_human tool to get a human involved in the issue.\n\nI'll also need to confirm that the order is eligible for a refund before any further action is taken.\n\nCan I confirm the order details and refund eligibility for you?",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9501"
+          ],
+          "final_reply": "I'm going to look up the order details to see if there's any information about the disputed charge. The order in question is for the Speckled Screwdriver Set from Copperline Tools, and it has a status of \"delivered\". However, it looks like the refund eligibility is set to False, which suggests that the customer may not be eligible for a refund at this time.\n\nI'd like to check on the status of the payment to see if there's been any issue with the transaction. Can you please call the get_payment method to look up the payment details for order 2488? \n\n**Why I'm calling this tool:** I want to check the payment status for order 2488 to see if there's any issue with the transaction that might be causing the dispute. \n\n**Tool call:** {\"name\": \"get_payment\", \"parameters\": {\"order_id\": 2488}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9501"
+          ],
+          "final_reply": "Based on the help center search results, it appears that there are store policies that may be interacting with the platform's default policies. I will call the `get_order` tool to see the order details and check if there are any store overrides that may be causing the issue.\n\nBefore calling the tool, I will explain that I am going to look up the order details and check for any store overrides that may be related to the disputed charge.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": true,
+      "failure_modes": [
+        "no matching successful ticket for user 9504"
+      ],
+      "latencies_seconds": [
+        1.9638,
+        1.9295,
+        2.0112,
+        1.337,
+        2.2303
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9504"
+          ],
+          "final_reply": "Before calling any tools, I need to explain my reasoning. I am about to look up the dispute resolution policy (cw-disputes) to understand the steps involved in investigating a disputed charge. I will then use this policy to guide my further actions.\n\ncw-disputes dictates that a human support representative must review any disputes involving orders that are already delivered and have a refund status of \"not eligible\". Since the order 9045 has a status of \"delivered\" and a refund status of \"not eligible\", I will now escalate this issue to a human support representative.\n\nHere is the next step:\n\n{\"name\": \"escalate_to_human\", \"parameters\": {\"order_id\": \"9045\", \"reason\": \"dispute on delivered order with no refund eligibility\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9504"
+          ],
+          "final_reply": "Before I look up any order details, I want to confirm the order ID for context. I'm going to look up order 9045 to understand its current status and any relevant details. \n\nThe order status for order 9045 is \"delivered\" and it's not refund eligible. However, the customer has a disputed charge which needs investigating. I'm going to escalate this to a human as it's above my authority to investigate disputed charges. A human will follow up with the customer to resolve the issue. \n\nI'm going to call `escalate_to_human` to get a human involved in this case.",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9504"
+          ],
+          "final_reply": "I will check the order details to see if there's any information about the disputed charge. \n\nThe order is for product 250 from store 7, and it has been delivered. However, the customer claims a disputed charge, so I will check the order status and refund eligibility to see if there's any issue. \n\nThe order is not refund eligible, which might indicate that the customer has already received the product and is not looking for a refund. However, I will escalate this to a human to investigate further and resolve the issue. \n\nA human will follow up with you to investigate the disputed charge on your order 9045.",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9504"
+          ],
+          "final_reply": "I'm going to look up the order status and current refund eligibility to investigate the disputed charge. \n\nThe order status for order 9045 is \"delivered\" and it is not refund eligible. I need more information from the customer before I can proceed with the investigation. Can the customer please provide more details about the disputed charge?",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "no matching successful ticket for user 9504"
+          ],
+          "final_reply": "I'm going to investigate the disputed charge on order 9045. \n\nThe order is for 1 item from Northwind Books, with a total of $146.75. The order was shipped on 2026-04-23 and delivered on 2026-04-30. The refund eligibility is set to False, which means no refund is possible for this order.\n\nTo further investigate the disputed charge, I would need more information about the customer's claim. Can you please provide me with more details about the disputed charge, such as the date it was processed and the amount disputed?",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-010",
+      "expected_write": true,
+      "failure_modes": [],
+      "latencies_seconds": [
+        1.4593,
+        1.1571,
+        0.9042,
+        1.1367,
+        1.3245
+      ],
+      "pass_rate": 1.0,
+      "passes": 5,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I'm happy to help you with changing your display name on your account. However, I don't have the authority to make changes to your account directly. A human will follow up with you to assist with updating your display name.\n\nPlease refer to your ticket number 151 for further assistance. A support agent will be in touch with you within the next 24 hours to help with your request.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you regarding your request to change your display name on your Cartwheel account. Please look for an email or login to your account for further instructions.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human support specialist will follow up with you to change your account display name.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you about changing your display name on your account. They'll be able to assist you with making the changes.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you regarding your request to change your display name on your account. They will assist you in updating your account information. Please note that they may contact you through email or phone, depending on your preferred contact method.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 5
+    }
+  ],
+  "cost_per_100_conversations_usd": 0.0,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-31T20:23:29.564146+00:00",
+  "evaluated_case_runs": 35,
+  "git_commit": "0a906099d3b481555723a0813585d76345a04f25",
+  "input_tokens": 54028,
+  "median_latency_seconds": 1.4593,
+  "model": "ollama_chat/llama3.1:8b",
+  "output_tokens": 4066,
+  "price_date": "2026-10-31",
+  "prompt_sha256_12": "93d784362dc4",
+  "schema_version": 1,
+  "score": 0.142857,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": 0.142857
+}
