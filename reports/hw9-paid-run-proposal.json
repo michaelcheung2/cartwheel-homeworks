@@ -1,0 +1,20 @@
+{
+  "status": "pending explicit paid-run approval",
+  "model": "openai/gpt-4o-mini",
+  "evaluated_case_runs": 70,
+  "judge_calls": 0,
+  "compatibility_conversations": 1,
+  "prices_per_million_tokens_usd": {
+    "input": 0.15,
+    "cached_input": 0.075,
+    "output": 0.6
+  },
+  "price_checked_date": "2026-10-31",
+  "price_source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+  "caching_source": "https://developers.openai.com/api/docs/guides/prompt-caching",
+  "estimated_comparison_cost_usd": 0.026593,
+  "estimate_basis": "Two times HW8 final Llama usage, no cache discount assumed; OpenAI token counts and tool-call pattern may differ. Estimate excludes compatibility conversation, retries and hardware. This is not a hard cap.",
+  "OPENAI_API_KEY_present": true,
+  "compatibility_strategy": "Use existing LiteLLM openai/ route to avoid the current native GPT settings that request reasoning/verbosity unsupported by GPT-4o mini. No agent change or API call performed.",
+  "minimum_cacheable_prefix_note": "Handout describes 1024 tokens. Current official documentation says minimum for earlier models varies with request settings; do not guarantee a cache hit."
+}
