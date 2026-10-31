@@ -374,14 +374,7 @@ def issue_refund(
 def escalate_to_human(
     wrapper: RunContextWrapper[AuthContext], summary: str, context: str
 ) -> dict[str, Any]:
-    """Create the human ticket required for disputes, account changes or unresolved cases.
-
-    Call this tool to create a ticket; a promise to contact support creates none.
-    summary: the issue and any relevant order identifier supplied by the user
-    or an authorized lookup. context: the user's request and authorized facts.
-    Returns an actual ticket_id and sla_hours after saving the ticket.
-    This tool does not issue or approve a refund.
-    """
+    """Open a ticket for a human support agent when a case is above your authority."""
     return _call(wrapper, escalate_to_human_logic, summary, context)
 
 
