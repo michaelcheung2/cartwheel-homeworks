@@ -163,7 +163,8 @@ def run_one_configuration(
             )
         finally:
             subprocess.run(
-                ["git", "worktree", "remove", str(worktree)],
+                ["git", "-c", "filter.lfs.process=", "-c", "filter.lfs.smudge=",
+                 "-c", "filter.lfs.required=false", "worktree", "remove", str(worktree)],
                 cwd=git_root,
                 check=True,
                 capture_output=True,
@@ -195,7 +196,24 @@ def run_command() -> None:
         number = configuration["configuration"]
         output = RESULTS_DIR / f"test-configuration-{number}.json"
         if number not in state["completed_configurations"]:
-            result = run_one_configuration(configuration, plan, output)
+            if output.exists():
+                # A complete result can precede a cleanup/checkpoint failure.
+                # Verify its identity and completeness before resuming without
+                # repeating already observed held-out trials.
+                result = read_json(output)
+                split = read_json(SPLIT_PATH)
+                expected_ids = set(split["test_case_ids"])
+                if (result.get("test_plan_sha256") != plan["plan_sha256"]
+                    or result.get("git_commit") != configuration["git_commit"]
+                    or result.get("model") != configuration["model"]
+                    or result.get("split") != "test"
+                    or {c["case_id"] for c in result.get("cases", [])} != expected_ids
+                    or result.get("case_count") != len(expected_ids)
+                    or result.get("evaluated_case_runs") != sum(c["runs"] for c in result["cases"])
+                    or any(len(c["run_details"]) != c["runs"] for c in result["cases"])):
+                    raise ValueError("saved test result does not match the committed plan")
+            else:
+                result = run_one_configuration(configuration, plan, output)
             state["completed_configurations"].append(number)
             write_json(TEST_RUN_PATH, state)
         else:
