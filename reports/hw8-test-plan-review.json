@@ -1,0 +1,9 @@
+{
+  "plan_sha256": "d9eecb5c04e0eea89a38c705e4dba6876b12be6e423674bbcf9e8a73f57a1558",
+  "reviewed_before_execution": true,
+  "all_four_commits_and_models_verified": true,
+  "starting_final_grader_hashes_match": true,
+  "test_trials_planned": 60,
+  "judge_calls_planned": 0,
+  "paid_model_api_calls_planned": 0
+}
