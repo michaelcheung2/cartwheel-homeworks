@@ -1,0 +1,9 @@
+{
+  "agent_changes": "Only SYSTEM_PROMPT_TEMPLATE differs from the starting agent; other agent.py AST nodes are identical.",
+  "model_digests": {
+    "qwen3:8b": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "qwen3:0.6b": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "llama3.1:8b": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e"
+  },
+  "verified_before_test": true
+}

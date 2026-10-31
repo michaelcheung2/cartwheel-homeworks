@@ -10,5 +10,11 @@
     "improve-loop"
   ],
   "reason": "Student accepted the recommended prompt combining required handoff, eligible refund invocation and tool calls before narration.",
-  "final_development_evaluation": "Pending required rerun before saving final version."
+  "final_development_evaluation": {
+    "candidate": "final",
+    "score": 0.771429,
+    "write_pass_5": 0.571429,
+    "runs": 35,
+    "result_file": "optimize/results/development-final-ollama_chat_llama3.1:8b-20261031-164040.json"
+  }
 }
