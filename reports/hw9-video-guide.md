@@ -1,15 +1,17 @@
-# HW9 continuous video guide — pending completion of Part C
+# HW9 continuous video guide — local submission
 
 Record one continuous video, at most five minutes. The student's recording
-and final assessment remain pending. Do not present Part C as measured yet.
+and final assessment remain pending. Paid Part C checks were skipped at
+the student's request; explain this omission without claiming a measurement.
 
 1. **0:00–0:45:** Show `profile/results/costs.csv`. Explain the customer/judge
    distinction, zero local API fees, and labeled historical judge estimates.
 2. **0:45–1:30:** Show the concise reply experiment and summary table.
    Output tokens and latency fell, input tokens rose, and score dropped,
    so the change was reverted.
-3. **1:30–2:15:** After Part C is complete, show actual cached fractions,
-   prompt order and prices. Explain zero cache hits if that is observed.
+3. **1:30–2:15:** Show the prompt order diagram in `hw9-caching-plan.md`.
+   Explain how a stable prefix could help caching, and state that the paid
+   comparison was skipped. No cached fraction was measured.
 4. **2:15–3:15:** Show `cascade/results/thresholds.csv`, the frozen 0.9
    threshold and `check.json`. No threshold met 95% on development; test
    agreement was 19/38 = 50%, so the cascade is rejected.

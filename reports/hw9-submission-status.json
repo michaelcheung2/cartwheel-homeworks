@@ -1,0 +1,19 @@
+{
+  "status": "authorized local work complete; required paid caching measurement skipped",
+  "student_instruction": "but skip any checks that cost money - since I don't have an API key",
+  "paid_runs_authorized": false,
+  "paid_api_calls_made": 0,
+  "part_c": "skipped at student request; required by handout and unverified",
+  "completed": [
+    "call-site cost table",
+    "Part B development experiment and revert",
+    "local Part D development sweep and frozen test check",
+    "frontier of actual completed agent configurations",
+    "offline reproducibility and protected-input checks"
+  ],
+  "limitations": [
+    "Local proxy and oracle both have zero API fees, so cascade does not demonstrate dollar savings.",
+    "Student configuration assessment and video are pending."
+  ],
+  "existing_ci": "https://github.com/michaelcheung2/cartwheel-homeworks/actions/runs/41241716143"
+}

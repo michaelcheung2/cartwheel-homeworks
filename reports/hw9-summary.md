@@ -1,8 +1,11 @@
-# HW9: reducing cost — local results, OpenAI caching pending
+# HW9: reducing cost — local submission; paid caching checks skipped
 
-HW9 is **not complete**. Parts A, B and the local Part D experiment are saved;
-Part E includes completed runs only. Part C requires paid-run permission.
-The student configuration assessment and continuous video are also pending.
+The authorized local work is complete. Parts A, B and the local Part D
+experiment are saved; Part E includes completed runs only. The student
+requested that checks costing money be skipped, so the required live OpenAI
+Part C comparison is **skipped and unverified**. This submission does not
+fulfill that handout requirement. The student configuration assessment and
+continuous video remain pending.
 
 ## Part A: call-site costs
 
@@ -42,14 +45,15 @@ so the change was reverted under the handout's acceptance rule. Latency
 improvement alone cannot justify that score drop. No favorable reruns were
 used to override the observed outcome.
 
-## Part C: caching, pending
+## Part C: caching, skipped at student request
 
-No paid OpenAI calls have run. The live before/after comparison needs
-permission. See `hw9-paid-run-proposal.json` and `hw9-caching-plan.md`:
-GPT-4o mini, 35 trials per configuration, 70 evaluated runs total, zero
-judge calls, plus one compatibility conversation. Estimated comparison
-fee is $0.026593 using HW8 usage with no cache discount; this is an estimate,
-not a hard cap. Existing credentials are handled locally via `.env`.
+No paid OpenAI calls have run. The student superseded the earlier approval
+with: “but skip any checks that cost money - since I don't have an API key”.
+Neither the compatibility check nor the 70-trial comparison was started.
+The unrun proposal remains saved for context; it grants no active permission.
+The prompt order remains the HW8 order. No OpenAI score, cost, cached
+fraction or before/after result is available. A missing measurement is not
+an observed result of zero cached tokens.
 
 Official prices checked October 31, 2026: $0.15 input, $0.075 cached input,
 $0.60 output per million tokens. Sources:
@@ -94,7 +98,8 @@ Regenerate: `uv run python profile/scripts/frontier.py`.
 `profile/results/frontier.csv` contains the HW8 final and rejected Part B run.
 HW8 final is on the frontier; concise replies are dominated because they
 have a lower score at equal API cost. write_pass_5 and latency do not alter
-the required score/cost dominance rule. Part C rows await actual runs.
+the required score/cost dominance rule. Unrun Part C configurations have
+no rows in the measured frontier.
 
 Agent recommendation: retain the HW8 final agent and the existing human
 review process. The student's final configuration decision is pending.
@@ -107,5 +112,7 @@ review process. The student's final configuration decision is pending.
 - Paid models: zero.
 - Evaluation cases, existing tests, frozen judges and `optimize/state/`
   match the preparation hashes; no HW8 held-out agent cases were reused.
-- Remaining: permission and live Part C comparison; update frontier with
-  actual results; student assessment and continuous video of at most 5 minutes.
+- Skipped by student instruction: paid OpenAI compatibility and Part C
+  caching comparison. This required handout measurement remains unverified.
+- Remaining student deliverables: configuration assessment and continuous
+  video of at most 5 minutes.

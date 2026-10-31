@@ -1,8 +1,10 @@
-# HW9 Part C: OpenAI caching comparison (pending)
+# HW9 Part C: OpenAI caching comparison (skipped at student request)
 
 The handout requires a live OpenAI model for this measurement. Ollama's
-reported cached usage does not verify OpenAI prompt caching. No OpenAI
-requests have been authorized or run for HW9.
+reported cached usage does not verify OpenAI prompt caching. The student
+withdrew paid-run authorization before any API call and requested that all
+checks costing money be skipped. No OpenAI request was made. The following
+is an unrun plan, not an active task or evidence of caching.
 
 Request prefix order:
 
@@ -34,5 +36,5 @@ zero judge calls, plus one compatibility conversation. Each evaluated run
 may make multiple model requests. A monetary estimate and chosen model must
 be shown before approval; this document grants no paid-run permission.
 
-The active prompt has not been reordered while the before measurement is
-pending. An unrun comparison has no score, cost or cached fraction.
+The active prompt has not been reordered because the before/after
+measurements were skipped. An unrun comparison has no score, cost or cached fraction.
