@@ -1,0 +1,213 @@
+{
+  "target": "required_human_handoff_missing",
+  "selection_status": "Pending student selection; no final_version.json or test plan/run exists.",
+  "starting_configuration": "0a906099d3b481555723a0813585d76345a04f25",
+  "recommended_candidate": "loop_tools_before_narration",
+  "recommended_commit": "8158c28dd7f9c3e30f7b9972478e767552cf2287",
+  "recommendation_reason": "All four handoff development cases passed five trials each, matching the repeated prompt-only handoff fix. Highest observed development score and no decline in write_pass_5. Remaining refunds are unreliable; the small gain over the previous search candidate has not been repeated.",
+  "search_budget": {
+    "maximum_calls": 150,
+    "reservations": [
+      {
+        "calls": 35,
+        "label": "loop_baseline",
+        "reserved_at": "2026-10-31T20:31:15.804802+00:00"
+      },
+      {
+        "calls": 35,
+        "label": "loop_execute_refund",
+        "reserved_at": "2026-10-31T20:32:29.088826+00:00"
+      },
+      {
+        "calls": 35,
+        "label": "loop_execute_refund_repeat",
+        "reserved_at": "2026-10-31T20:33:44.883996+00:00"
+      },
+      {
+        "calls": 35,
+        "label": "loop_tools_before_narration",
+        "reserved_at": "2026-10-31T20:35:09.863832+00:00"
+      }
+    ],
+    "used_calls": 140
+  },
+  "search_stop_reason": "Only 10 runs remain; a full development batch needs 35. No further budgeted run was launched.",
+  "complete_development_batches": [
+    {
+      "candidate": "harness_deterministic",
+      "commit": "d8d7da4c0d4968dfd3795e9b3c751c8f6dd4f798",
+      "result_file": "optimize/results/development-harness_deterministic-ollama_chat_llama3.1:8b-20261031-163003.json",
+      "score": 0.571429,
+      "write_pass_5": 0.571429,
+      "runs": 35,
+      "input_tokens": 56930,
+      "output_tokens": 3488,
+      "median_latency_seconds": 1.3648,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "loop_baseline",
+      "commit": "fdae9a5e0372e54408c9bd566d12508a83918722",
+      "result_file": "optimize/results/development-loop_baseline-ollama_chat_llama3.1:8b-20261031-163115.json",
+      "score": 0.571429,
+      "write_pass_5": 0.571429,
+      "runs": 35,
+      "input_tokens": 56931,
+      "output_tokens": 3880,
+      "median_latency_seconds": 1.4019,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "loop_execute_refund",
+      "commit": "0b5407a9bf82ab8d978788cc325d4789906a169c",
+      "result_file": "optimize/results/development-loop_execute_refund-ollama_chat_llama3.1:8b-20261031-163229.json",
+      "score": 0.685714,
+      "write_pass_5": 0.571429,
+      "runs": 35,
+      "input_tokens": 66329,
+      "output_tokens": 3759,
+      "median_latency_seconds": 1.5711,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "loop_execute_refund_repeat",
+      "commit": "0b5407a9bf82ab8d978788cc325d4789906a169c",
+      "result_file": "optimize/results/development-loop_execute_refund_repeat-ollama_chat_llama3.1:8b-20261031-163344.json",
+      "score": 0.657143,
+      "write_pass_5": 0.571429,
+      "runs": 35,
+      "input_tokens": 65526,
+      "output_tokens": 3891,
+      "median_latency_seconds": 1.4918,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "loop_tools_before_narration",
+      "commit": "8158c28dd7f9c3e30f7b9972478e767552cf2287",
+      "result_file": "optimize/results/development-loop_tools_before_narration-ollama_chat_llama3.1:8b-20261031-163509.json",
+      "score": 0.771429,
+      "write_pass_5": 0.571429,
+      "runs": 35,
+      "input_tokens": 72880,
+      "output_tokens": 3617,
+      "median_latency_seconds": 1.6274,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "prompt_handoff",
+      "commit": "8d794740ebd75c7871e6f8c8dbe1991c193d2b23",
+      "result_file": "optimize/results/development-prompt_handoff-ollama_chat_llama3.1:8b-20261031-162616.json",
+      "score": 0.571429,
+      "write_pass_5": 0.571429,
+      "runs": 35,
+      "input_tokens": 56914,
+      "output_tokens": 3955,
+      "median_latency_seconds": 1.4994,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "prompt_handoff_repeat",
+      "commit": "8d794740ebd75c7871e6f8c8dbe1991c193d2b23",
+      "result_file": "optimize/results/development-prompt_handoff_repeat-ollama_chat_llama3.1:8b-20261031-162732.json",
+      "score": 0.571429,
+      "write_pass_5": 0.571429,
+      "runs": 35,
+      "input_tokens": 56916,
+      "output_tokens": 3721,
+      "median_latency_seconds": 1.424,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "starting",
+      "commit": "cd6f3630b9dcb22879bfb833eccee3649e4853b7",
+      "result_file": "optimize/results/development-starting-ollama_chat_llama3.1:8b-20261031-162100.json",
+      "score": 0.142857,
+      "write_pass_5": 0,
+      "runs": 19,
+      "input_tokens": 29036,
+      "output_tokens": 1852,
+      "median_latency_seconds": 1.4782,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "starting",
+      "commit": "0a906099d3b481555723a0813585d76345a04f25",
+      "result_file": "optimize/results/development-starting-ollama_chat_llama3.1:8b-20261031-162229.json",
+      "score": 0.142857,
+      "write_pass_5": 0.142857,
+      "runs": 35,
+      "input_tokens": 54028,
+      "output_tokens": 4066,
+      "median_latency_seconds": 1.4593,
+      "cost_per_100_conversations_usd": 0.0
+    },
+    {
+      "candidate": "tool_handoff_contract",
+      "commit": "41e9ff8b400053aab7b7502cd8dcc7c8962ef3bb",
+      "result_file": "optimize/results/development-tool_handoff_contract-ollama_chat_llama3.1:8b-20261031-162847.json",
+      "score": 0.542857,
+      "write_pass_5": 0.428571,
+      "runs": 35,
+      "input_tokens": 58879,
+      "output_tokens": 3939,
+      "median_latency_seconds": 1.5752,
+      "cost_per_100_conversations_usd": 0.0
+    }
+  ],
+  "complete_evaluated_runs_in_saved_results": 334,
+  "superseded_preliminary_runs": 19,
+  "pre_split_model_checks": 3,
+  "interrupted_attempt": "One uncommitted baseline attempt was interrupted without a saved result; its usage and partial trial count were not measured and are not included in totals.",
+  "paid_model_api_calls": 0,
+  "judge_calls": 0,
+  "protected_files_verified": [
+    "eval_cases/cases.jsonl",
+    "eval_cases/README.md",
+    "eval_cases/hw6-provenance.json",
+    "tests/test_langfuse_export.py",
+    "tests/conftest.py",
+    "tests/test_hw1_additional_tool.py",
+    "tests/test_hw7_monitor.py",
+    "tests/test_normalization_metadata.py",
+    "tests/test_auth.py",
+    "tests/test_db.py",
+    "tests/test_hw1_prompt.py",
+    "tests/test_observability.py",
+    "tests/__init__.py",
+    "tests/test_harbor_result_layout.py",
+    "tests/test_adversarial.py",
+    "tests/test_hw_holes.py",
+    "tests/test_seed_determinism.py",
+    "tests/test_hw6_case_checks.py",
+    "tests/test_agent_tools.py",
+    "tests/test_scenario_runner.py",
+    "tests/test_eligibility.py",
+    "tests/test_replay_harness.py",
+    "tests/test_optimization.py",
+    "tests/test_cli.py",
+    "tests/test_harbor_adapter.py",
+    "tests/test_scenario_validation.py",
+    "tests/eval/conftest.py",
+    "tests/eval/__init__.py",
+    "tests/eval/test_unit.py",
+    "tests/eval/passk.py",
+    "tests/eval/test_e2e.py",
+    "tests/eval/test_integration.py",
+    "tests/eval/fake_model.py",
+    "analysis/state/judges/unsupported_policy_claim-v2.json",
+    "analysis/state/judges/_history_unsupported_policy_claim.json",
+    "analysis/state/judges/unsupported_policy_claim-v0.json",
+    "analysis/state/judges/unsupported_policy_claim-v1.json"
+  ],
+  "grader_hash_unchanged": true,
+  "final_candidate_case_passes": {
+    "e-001": "3/5",
+    "e-002": "0/5",
+    "e-004": "4/5",
+    "e-006": "5/5",
+    "e-007": "5/5",
+    "e-008": "5/5",
+    "e-010": "5/5"
+  },
+  "test_set_executed": false
+}
