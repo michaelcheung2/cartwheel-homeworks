@@ -1,0 +1,47 @@
+{
+  "verified_at": "2026-10-31T19:53:34.549198+00:00",
+  "judge_id": "unsupported_policy_claim-v2",
+  "model": "ollama_chat/llama3.1:8b",
+  "judge_sha256": "223ff898d9f2eea670f5a8f1cb2f40796b079dadd15a58048dcee64491590a16",
+  "selected_conversations": 1,
+  "failure_positive_verdicts": {
+    "fa6f48bf8e7f43bfcac8cf64cdae50eb": 0
+  },
+  "purpose": "Execution preflight only; not a monitoring-period estimate or human label.",
+  "paid_api_calls": 0,
+  "frozen_settings": {
+    "api_base": "http://localhost:11434",
+    "temperature": 0,
+    "max_tokens": 1024,
+    "num_ctx": 16384,
+    "max_threads": 1,
+    "output_mode": "structured_output",
+    "model_digest_prefix": "46e0c10c039e"
+  },
+  "initial_cached_pipeline_check": {
+    "verified_at": "2026-10-31T19:53:01.221330+00:00",
+    "judge_id": "unsupported_policy_claim-v2",
+    "model": "ollama_chat/llama3.1:8b",
+    "judge_sha256": "223ff898d9f2eea670f5a8f1cb2f40796b079dadd15a58048dcee64491590a16",
+    "selected_conversations": 1,
+    "failure_positive_verdicts": {
+      "392c08613bfc60b1da8d3a5c92699c05": 1
+    },
+    "purpose": "Execution preflight only, outside the two monitoring periods. Not a human label.",
+    "paid_api_calls": 0,
+    "frozen_settings": {
+      "api_base": "http://localhost:11434",
+      "temperature": 0,
+      "max_tokens": 1024,
+      "num_ctx": 16384,
+      "max_threads": 1,
+      "output_mode": "structured_output",
+      "model_digest_prefix": "46e0c10c039e"
+    },
+    "execution_note": "First record reused a DocETL cache entry; this verifies the pipeline and parser, not new inference."
+  },
+  "input_tokens": 2724,
+  "output_tokens": 148,
+  "execution_seconds": 5.56,
+  "execution_note": "DocETL reported token usage for the fresh preflight. An earlier pipeline check reused a cached HW5 result."
+}

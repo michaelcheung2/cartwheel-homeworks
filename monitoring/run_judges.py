@@ -93,6 +93,12 @@ def judge_sample(
             ),
             encoding="utf-8",
         )
+        settings = judge.get("execution_settings", {})
+        completion = {
+            key: settings[key]
+            for key in ("api_base", "temperature", "max_tokens", "num_ctx")
+            if key in settings
+        }
         operation = MapOp(
             name="classify_failure_mode",
             type="map",
@@ -105,7 +111,11 @@ def judge_sample(
                 "Use specific evidence from the provided trace. Then return result "
                 "as exactly Pass when the named failure is absent, or Fail when present."
             ),
-            output={"schema": {"critique": "string", "result": "string"}},
+            output={
+                **({"mode": settings["output_mode"]} if "output_mode" in settings else {}),
+                "schema": {"critique": "string", "result": "string"},
+            },
+            litellm_completion_kwargs=completion,
         )
         pipeline = Pipeline(
             name="cartwheel_monitor",
@@ -124,7 +134,10 @@ def judge_sample(
                 intermediate_dir=str(root),
             ),
         )
-        pipeline.run()
+        if "max_threads" in settings:
+            pipeline.run(max_threads=settings["max_threads"])
+        else:
+            pipeline.run()
         rows = json.loads(output_path.read_text(encoding="utf-8"))
 
     pass_positive = _decode_judge_rows(rows, trace_ids)

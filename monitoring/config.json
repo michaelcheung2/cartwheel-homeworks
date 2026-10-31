@@ -1,0 +1,31 @@
+{
+  "judge_id": "unsupported_policy_claim-v2",
+  "judge_mode": "unsupported_policy_claim",
+  "judge_sha256": "223ff898d9f2eea670f5a8f1cb2f40796b079dadd15a58048dcee64491590a16",
+  "model": "ollama_chat/llama3.1:8b",
+  "scenarios_path": "scenarios/monitoring_scenarios.jsonl",
+  "random_rate": 0.2,
+  "risk_groups": [
+    "policy_lookup",
+    "multi_turn"
+  ],
+  "threshold": 0.15,
+  "seed": 7,
+  "bootstrap_iterations": 20000,
+  "purpose": "Human review suggestions and failure-rate monitoring; no automatic customer decisions.",
+  "threshold_selected_before_period_judging": true,
+  "periods": [
+    {
+      "label": "before",
+      "from": "2026-10-10T00:58:00+00:00",
+      "to": "2026-10-10T01:05:24+00:00",
+      "source": "One complete HW3 final run; 50 selected scenarios in 68 traces."
+    },
+    {
+      "label": "after",
+      "from": null,
+      "to": null,
+      "status": "pending_new_complete_run"
+    }
+  ]
+}

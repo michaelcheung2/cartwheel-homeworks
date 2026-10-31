@@ -1,0 +1,43 @@
+name: monitor
+
+on:
+  schedule:
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hw7-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    # Local Langfuse and the frozen Ollama judge require a local runner.
+    # Registration and the first successful dispatch are still pending.
+    runs-on: [self-hosted, hw7-monitor]
+    timeout-minutes: 90
+    env:
+      LANGFUSE_HOST: ${{ vars.LANGFUSE_HOST }}
+      LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
+      LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
+      OLLAMA_API_BASE: http://localhost:11434
+      OLLAMA_NO_CLOUD: "1"
+      OPENAI_AGENTS_DISABLE_TRACING: "1"
+      OTEL_SDK_DISABLED: "true"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - name: Monitor existing conversations from the previous 24 hours
+        run: uv run python -m monitoring.run --last-hours 24
+      - name: Upload monitoring evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitoring-${{ github.run_id }}
+          path: monitoring/output/
+          if-no-files-found: warn
