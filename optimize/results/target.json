@@ -1,0 +1,91 @@
+{
+  "failure_mode": "required_human_handoff_missing",
+  "source": "HW4 confirmed failure report carried into HW5: analysis/report/review_summary.md and analysis/state/patterns.json",
+  "prevalence": 0.1,
+  "prevalence_scope": "10/100 deliberately selected reviewed traces; not population prevalence",
+  "requirement": "ESC-3, RESP-6",
+  "example_trace_ids": [
+    "048310a721348065f7e44dd6f072250c",
+    "abd4237ab56f3186888383ce6a1d79b1",
+    "6db495da213d47128a48d522f265d0e5"
+  ],
+  "why_agent_can_change_it": "The three observed replies redirect a dispute to the merchant, promise escalation without executing it, or print a nonexistent dispute tool call. Explicit dispute routing and actual tool-use guidance can create the required human ticket.",
+  "student_choice": "User accepted the recommendation in chat.",
+  "examples": [
+    {
+      "trace_id": "048310a721348065f7e44dd6f072250c",
+      "user": [
+        {
+          "parts": [
+            {
+              "content": "Check disputed charge on my order 9963 from Copperline Tools.",
+              "type": "text"
+            }
+          ],
+          "role": "user"
+        }
+      ],
+      "reply": [
+        {
+          "parts": [
+            {
+              "content": "To check the disputed charge on your order 9963 from Copperline Tools, I looked up the order in our system. According to the order details, the status is \"delivered\" and it's no longer refund eligible. If you're experiencing an issue with a charge, I recommend checking the order details again or reaching out to Copperline Tools directly. If you have any other questions or need further assistance, feel free to ask!",
+              "type": "text"
+            }
+          ],
+          "role": "assistant"
+        }
+      ]
+    },
+    {
+      "trace_id": "abd4237ab56f3186888383ce6a1d79b1",
+      "user": [
+        {
+          "parts": [
+            {
+              "content": "I'm having trouble with a customer's order 2488 and I'm not sure who to speak with about the disputed charge for the Speckled Screwdriver Set from Copperline Tools. I'm trying to figure out what's going on with the payment and I'd really appreciate some help resolving the issue, if possible.",
+              "type": "text"
+            }
+          ],
+          "role": "user"
+        }
+      ],
+      "reply": [
+        {
+          "parts": [
+            {
+              "content": "Based on the help center, it seems that the disputed charge for the Speckled Screwdriver Set from Copperline Tools is being handled through the Cartwheel dispute policy. I will call the escalate_to_human tool to have a human support agent assist with the dispute.\n\n\"Please hold for a moment while I escalate this issue to a human support agent. They will be able to assist you with the disputed charge and provide a resolution to the issue.\"",
+              "type": "text"
+            }
+          ],
+          "role": "assistant"
+        }
+      ]
+    },
+    {
+      "trace_id": "6db495da213d47128a48d522f265d0e5",
+      "user": [
+        {
+          "parts": [
+            {
+              "content": "Disputed charge on customer's order 9045 needs investigating.",
+              "type": "text"
+            }
+          ],
+          "role": "user"
+        }
+      ],
+      "reply": [
+        {
+          "parts": [
+            {
+              "content": "I'm going to investigate the disputed charge on order 9045. Since the order is marked as delivered, I will first check if there are any returns or disputes on this order. \n\n{\"name\": \"get_order_disputes\", \"parameters\": {\"order_id\": \"9045\"}}",
+              "type": "text"
+            }
+          ],
+          "role": "assistant"
+        }
+      ]
+    }
+  ]
+}

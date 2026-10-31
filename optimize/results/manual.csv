@@ -1,0 +1,3 @@
+candidate,layer,predicted_effect,dev_score,write_pass_5,cost_per_100_conversations_usd,decision,git_commit,result_file
+starting_version,baseline,Unchanged starting agent,0.142857,0.142857,0.0,baseline,0a906099d3b481555723a0813585d76345a04f25,optimize/results/development-starting-ollama_chat_llama3.1:8b-20261031-162229.json
+prompt_handoff,prompt,Explicitly route disputes to actual escalation calls and remove mandatory pre-call narration that led to stalled replies.,,,,,,
