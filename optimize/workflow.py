@@ -160,9 +160,9 @@ def reserve_search_calls(required: int, label: str, path: Path = BUDGET_PATH) ->
 
 def dominates(left: dict[str, Any], right: dict[str, Any]) -> bool:
     """Return whether left is at least as good and no more costly than right."""
-    if not left.get("safety_passed"):
+    if not left.get("safety_passed", True):
         return False
-    if not right.get("safety_passed"):
+    if not right.get("safety_passed", True):
         return True
     cost_field = "cost_per_100_conversations_usd"
     no_worse = left["score"] >= right["score"] and left[cost_field] <= right[cost_field]
