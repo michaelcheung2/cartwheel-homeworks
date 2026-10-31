@@ -1,0 +1,4 @@
+cost_category,call_site,purpose,model,calls,input_tokens,output_tokens,cost_usd
+customer_conversation,server/app.py:202,SDK customer model generations; API token counts; observation IDs deduplicated across exports,ollama_chat/llama3.1:8b,815,709183,39563,0.0
+judge,analysis/helpers/scale.py:267,HW5 saved logical verdicts across versions; tokens ESTIMATED UTF-8 bytes/4; excludes unknown schema overhead and retries/cache reuse,ollama_chat/llama3.1:8b,152,374015,17597,0.0
+judge,monitoring/run_judges.py:138,HW7 saved logical verdicts; input tokens ESTIMATED UTF-8 bytes/4; output ESTIMATED 1024-token configured cap per verdict (upper bound); provider requests/cache hits unknown,ollama_chat/llama3.1:8b,54,134271,55296,0.0

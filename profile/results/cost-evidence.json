@@ -1,0 +1,30 @@
+{
+  "source_exports": [
+    "traces/support_traces.json",
+    "monitoring/output/before-live-traces.json",
+    "monitoring/output/after-live-traces.json"
+  ],
+  "customer_examples": [
+    {
+      "observation_id": "d589901530beaa40",
+      "trace_id": "f2019eb179ecb5ac4206bfe024112f63",
+      "input_tokens": 1797,
+      "output_tokens": 21
+    },
+    {
+      "observation_id": "5df2bca49aa778f6",
+      "trace_id": "fb97522a12a27863208b7b4d33a184f9",
+      "input_tokens": 1696,
+      "output_tokens": 23
+    },
+    {
+      "observation_id": "ebc235208c508b00",
+      "trace_id": "4edf4c04d33d7d2a0c04c22b0f1e4867",
+      "input_tokens": 1665,
+      "output_tokens": 41
+    }
+  ],
+  "cost_basis": "Local Ollama API fees only; excludes hardware/electricity. All call sites tie at $0. Tokens rank resource usage, not measured dollar savings.",
+  "historical_judge_usage": "Missing API usage; estimates are labeled in CSV. Logical saved verdict counts are not provider request counts.",
+  "call_site_mapping": "Customer exports identify chat generations, not source lines. Mapped to the verified server Runner.run entry point; judges mapped to their DocETL dispatch sites."
+}
