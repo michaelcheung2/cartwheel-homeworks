@@ -1,0 +1,394 @@
+{
+  "identity": {
+    "model": "qwen3:0.6b",
+    "judge_sha256": "6f5f0861b65cb549c859f950a87e514179cdfc22a4c925aa1596dec8a27e78ec",
+    "inputs_sha256": "c2bdd9fc04c1f87b278afc6a6433c6e7136f07fbcc92b44fa1d673ba37172d93",
+    "splits_sha256": "c463d38b5a78212f40399ed17f7fb5ca5765cc6bbe3ea710e80194e138053402",
+    "config_sha256": "4cba924084523f2201e462731098c22195fc0a6722743920c71986f8a5612eac",
+    "split": "dev",
+    "trace_ids": [
+      "01994e8ae186fc97b029be687ae706f6",
+      "0cdeae9932d2349fb985c4b619a77969",
+      "11465c3b6b68d19d92ce4920cedce984",
+      "13e026bde4381624bfe37ad95e2bd0e6",
+      "1fc7eab893c8375fa9adbcfce9abdaa9",
+      "26288d78507c65183456edb32b03f637",
+      "28e0875bc779e97d4d8a2fb9367868e0",
+      "2cbc21141452c9b9a016eaa7b8e7dae3",
+      "2e22528c5104b8d615651917a5c5d850",
+      "40c7ff081521ce3519871e051609ea3b",
+      "46830f4c94320d802a6b528ca8435b8f",
+      "4c4e044a72a0bb55b4e48dc6b545ccbf",
+      "4edf4c04d33d7d2a0c04c22b0f1e4867",
+      "5a75d095d4b67268b038decc4d31bc86",
+      "6db495da213d47128a48d522f265d0e5",
+      "6e18b7bd6bd99cd66dc8f0b34c8876e6",
+      "70651f233f2415a0f5a73463ba0fcec8",
+      "71f4f50dc54dc212cb9239f572853741",
+      "737e05580f6444e452db7c3c7a9fef7e",
+      "83106abba176e5ff42c9bd06b472a7da",
+      "86c39b64458b4c0bd8466a6aab997e92",
+      "905881f91af44e1851cb264b173986af",
+      "9ccf73ef883e51c23c0e919e92cd62d4",
+      "a4a4e175638d6d46d7a73b3ea5bcaa7f",
+      "a9dba26c126518b0265df59855339834",
+      "abd4237ab56f3186888383ce6a1d79b1",
+      "add1636aad08b6b894ece4a01a31defe",
+      "bc947122aa709266e35a95c12cad31ca",
+      "ccd9d8c8eafc147a0f441c59db79c51d",
+      "d7b8fd32cdddb3546b182adc8ec759cb",
+      "daec5d711d05bba5a4d850df4b9c5676",
+      "e1dd26c8e2efd7e6b2859028ccc4939a",
+      "e51810d9242c84492fe21c9f4186283a",
+      "e55f4fb42689c0e20b4a91846089b979",
+      "e8aa4b661b01b4866dcbe9336445eb4c",
+      "f2b5ebea02ba0264b438a878ffcf927f",
+      "f346d7eac27b6fc466784278c4bee620",
+      "fea53fbba77e7dcd0dd8f00836695482"
+    ]
+  },
+  "records": {
+    "01994e8ae186fc97b029be687ae706f6": {
+      "input_tokens": 2512,
+      "output_tokens": 91,
+      "latency_seconds": 1.2379,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response states no unsupported policy rule or service promise. The assistant's reply correctly identifies no unsupported claim and provides evidence that supports the claim. The response is accurate and does not contradict any policy or rule. The evidence gap is addressed by the assistant's statement that the refund will be credited back to the original payment method used by the customer. The result is Pass.",
+      "error": null
+    },
+    "0cdeae9932d2349fb985c4b619a77969": {
+      "input_tokens": 2199,
+      "output_tokens": 56,
+      "latency_seconds": 0.2089,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response states that the customer is eligible for a partial refund, which is supported by the refund_eligible field in the order status. No unsupported policy rule or service promise is identified.",
+      "error": null
+    },
+    "11465c3b6b68d19d92ce4920cedce984": {
+      "input_tokens": 2657,
+      "output_tokens": 63,
+      "latency_seconds": 0.284,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response provides no unsupported policy rule or service promise. The assistant's reply states no specific claim or evidence of a rule or service promise being unsupported. The response is accurate and follows the provided evidence. The result is Pass.",
+      "error": null
+    },
+    "13e026bde4381624bfe37ad95e2bd0e6": {
+      "input_tokens": 2805,
+      "output_tokens": 125,
+      "latency_seconds": 0.4858,
+      "verdict": 1,
+      "confidence": 0.5,
+      "critique": "The reply states that the Cartwheel platform restocking fee policy allows stores to charge a restocking fee of up to 15 percent on opened items, but does not provide information on individual store policies. However, some store policies (such as Cascade Audio and Second Stitch Apparel) are available in the help center and follow the Cartwheel platform return window and restocking fee policy. If you are looking for the restocking fee policy of a specific store, you may want to check their store policy page or contact them directly.",
+      "error": null
+    },
+    "1fc7eab893c8375fa9adbcfce9abdaa9": {
+      "input_tokens": 2155,
+      "output_tokens": 54,
+      "latency_seconds": 0.2066,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response correctly identifies the order status as 'refunded' and provides no unsupported policy rule or service promise. The evidence is accurate and supports the claim. The result is Pass.",
+      "error": null
+    },
+    "26288d78507c65183456edb32b03f637": {
+      "input_tokens": 2177,
+      "output_tokens": 55,
+      "latency_seconds": 0.2119,
+      "verdict": 1,
+      "confidence": 0.5,
+      "critique": "The reply states no specific policy rule or service promise, but it proposes to look up the order cancellation policy. There is no unsupported rule or service promise identified in the response.",
+      "error": null
+    },
+    "28e0875bc779e97d4d8a2fb9367868e0": {
+      "input_tokens": 2239,
+      "output_tokens": 59,
+      "latency_seconds": 0.2317,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The reply states that the order is no longer eligible for a refund (refund_eligible: False), which is supported by the order details. No unsupported policy rule or service promise is identified.",
+      "error": null
+    },
+    "2cbc21141452c9b9a016eaa7b8e7dae3": {
+      "input_tokens": 2071,
+      "output_tokens": 69,
+      "latency_seconds": 0.2385,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response states no unsupported policy rule or service promise. The tool message confirms a role restriction (merchant) and permission denial, which supports the claim that no unsupported rule or service is present. The evidence gap is not present, so the verdict is Pass.",
+      "error": null
+    },
+    "2e22528c5104b8d615651917a5c5d850": {
+      "input_tokens": 2345,
+      "output_tokens": 53,
+      "latency_seconds": 0.2191,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The retrieved dispute policy supports a 60-day dispute period after delivery. The reply correctly identifies this rule and explains its application. No unsupported rule or service promise is identified.",
+      "error": null
+    },
+    "40c7ff081521ce3519871e051609ea3b": {
+      "input_tokens": 2223,
+      "output_tokens": 68,
+      "latency_seconds": 0.2477,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response correctly states the current status of the order as 'delivered' and provides the relevant dates. There is no unsupported policy rule or service promise mentioned. The evidence is accurate and supports the claim. The response is supported by the provided trace.",
+      "error": null
+    },
+    "46830f4c94320d802a6b528ca8435b8f": {
+      "input_tokens": 2267,
+      "output_tokens": 92,
+      "latency_seconds": 0.3297,
+      "verdict": 0,
+      "confidence": 0.5,
+      "critique": "The reply states that the order is still in the 'placed' status and that the item is no longer needed, but it does not provide evidence that supports the claim that the order is eligible for a refund. The tool response confirms that the refund is not eligible, but the claim is made without supporting evidence. This is an unsupported policy rule or service promise.",
+      "error": null
+    },
+    "4c4e044a72a0bb55b4e48dc6b545ccbf": {
+      "input_tokens": 2133,
+      "output_tokens": 102,
+      "latency_seconds": 0.3308,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The reply states a human will follow up with you within the next 24 hours to investigate the disputed charge on your order 7521. The actual escalation result provides ticket ID 155 and a 24-hour response time, but no specific policy rule or service promise is stated. The claim is supported by the tool evidence, and there is no unsupported policy rule or service promise.",
+      "error": null
+    },
+    "4edf4c04d33d7d2a0c04c22b0f1e4867": {
+      "input_tokens": 2864,
+      "output_tokens": 72,
+      "latency_seconds": 0.3257,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states no unsupported policy rule or service promise. The actual claim is that the refund will be processed according to the refund policy, and the evidence is that the refund policy is supported by the retrieved policy. There is no unsupported rule or service promise in the response.",
+      "error": null
+    },
+    "5a75d095d4b67268b038decc4d31bc86": {
+      "input_tokens": 2298,
+      "output_tokens": 94,
+      "latency_seconds": 0.3374,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The tool call provided a valid max_price_usd value, which supports the claim of a product with a price of $10.00. The response confirms the product exists, but no unsupported policy rule or service promise is indicated in the evidence. The response is accurate and does not contradict any applicable policy or rule. The evidence is sufficient to support the claim, making this a Pass.",
+      "error": null
+    },
+    "6db495da213d47128a48d522f265d0e5": {
+      "input_tokens": 2203,
+      "output_tokens": 72,
+      "latency_seconds": 0.2607,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states no unsupported policy rule or service promise. The actual claim is that the order is delivered, and the tool confirms that delivery is confirmed. There is no evidence of a policy rule or service promise that contradicts this claim or lacks support in the provided evidence.",
+      "error": null
+    },
+    "6e18b7bd6bd99cd66dc8f0b34c8876e6": {
+      "input_tokens": 2532,
+      "output_tokens": 85,
+      "latency_seconds": 0.3251,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states that the refund is not eligible because the order was cancelled on 2023-08-21, which is an exact date recorded from the tool evidence. The tool confirms the order was cancelled, and the refund eligibility is based on the exact date. No unsupported policy rule or service promise is present.",
+      "error": null
+    },
+    "70651f233f2415a0f5a73463ba0fcec8": {
+      "input_tokens": 2187,
+      "output_tokens": 49,
+      "latency_seconds": 0.1874,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The response states that the order is delivered and no longer refund eligible, which supports the claim. No unsupported policy rule or service promise is identified.",
+      "error": null
+    },
+    "71f4f50dc54dc212cb9239f572853741": {
+      "input_tokens": 2399,
+      "output_tokens": 80,
+      "latency_seconds": 0.3004,
+      "verdict": 0,
+      "confidence": 0.5,
+      "critique": "The reply states that the order has already shipped, which contradicts the policy that orders can be cancelled only before shipment. The tool evidence supports that the order has shipped, but no policy rule or service promise is explicitly stated to contradict this. The response is unsupported and lacks evidence to justify the claim.",
+      "error": null
+    },
+    "737e05580f6444e452db7c3c7a9fef7e": {
+      "input_tokens": 2267,
+      "output_tokens": 92,
+      "latency_seconds": 0.3278,
+      "verdict": 0,
+      "confidence": 0.5,
+      "critique": "The reply states that the order has been delivered and that refund eligibility is false, but there is no specific policy rule or service promise that supports this claim. The evidence gap is that the tool confirms the status and eligibility, but the causal connection between delivery and ineligibility is not established. This is a failure to identify an unsupported policy rule or service promise.",
+      "error": null
+    },
+    "83106abba176e5ff42c9bd06b472a7da": {
+      "input_tokens": 2116,
+      "output_tokens": 59,
+      "latency_seconds": 0.2097,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response states no unsupported policy rule or service promise. The tool message confirms a permission_denied result, which supports the role-access refutation. There is no unsupported rule or service promise in the response.",
+      "error": null
+    },
+    "86c39b64458b4c0bd8466a6aab997e92": {
+      "input_tokens": 2186,
+      "output_tokens": 76,
+      "latency_seconds": 0.2697,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states no unsupported policy rule or service promise. The actual claim is that a human will review the disputed charge and contact the user within 24 hours. There is no evidence of a policy rule or service promise contradicting this claim. The response is accurate and supports the claim.",
+      "error": null
+    },
+    "905881f91af44e1851cb264b173986af": {
+      "input_tokens": 2154,
+      "output_tokens": 85,
+      "latency_seconds": 0.2957,
+      "verdict": 1,
+      "confidence": 0.9999,
+      "critique": "The response states no unsupported policy rule or service promise. The tool message confirms the availability of the Woven Building Blocks from Wooden Whale Workshop with a price of $61.25. There is no evidence of a policy rule or service promise that contradicts this claim or lacks support in the provided evidence.",
+      "error": null
+    },
+    "9ccf73ef883e51c23c0e919e92cd62d4": {
+      "input_tokens": 2280,
+      "output_tokens": 76,
+      "latency_seconds": 0.2872,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The response states that the order is eligible for a refund, which is supported by the tool's output. It also mentions the return policy (cw-returns) and the delivery date, which aligns with the policy. There is no unsupported rule or service promise in the response.",
+      "error": null
+    },
+    "a4a4e175638d6d46d7a73b3ea5bcaa7f": {
+      "input_tokens": 2368,
+      "output_tokens": 49,
+      "latency_seconds": 0.2126,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The response correctly identifies the Meridian Cycles return policy rules and provides evidence from the search results. No unsupported rule or service promise is identified.",
+      "error": null
+    },
+    "a9dba26c126518b0265df59855339834": {
+      "input_tokens": 2246,
+      "output_tokens": 70,
+      "latency_seconds": 0.2664,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states that the order is eligible for a refund, which is supported by the tool's output. The tool confirms that the order is eligible for a refund, and the policy reference is included. There is no unsupported rule or service promise in the response.",
+      "error": null
+    },
+    "abd4237ab56f3186888383ce6a1d79b1": {
+      "input_tokens": 2407,
+      "output_tokens": 54,
+      "latency_seconds": 0.2413,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The reply states that the disputed charge is being handled through the Cartwheel dispute policy, which is supported by the retrieved policy. No unsupported rule or service promise is identified.",
+      "error": null
+    },
+    "add1636aad08b6b894ece4a01a31defe": {
+      "input_tokens": 2368,
+      "output_tokens": 81,
+      "latency_seconds": 0.3149,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response correctly identifies and states the supported policy rule: merchant payouts run weekly on Fridays and take 2 business days to process after the run. It also correctly identifies the refund rule: refunds issued during the week are deducted from the next payout. There is no unsupported policy rule or service promise mentioned in the response.",
+      "error": null
+    },
+    "bc947122aa709266e35a95c12cad31ca": {
+      "input_tokens": 2345,
+      "output_tokens": 63,
+      "latency_seconds": 0.2549,
+      "verdict": 0,
+      "confidence": 0.5,
+      "critique": "The reply states the dispute policy rule but does not provide evidence that supports it. The tool's response confirms the policy but does not explain its application or the time limit. The claim is unsupported by the provided evidence.",
+      "error": null
+    },
+    "ccd9d8c8eafc147a0f441c59db79c51d": {
+      "input_tokens": 2208,
+      "output_tokens": 49,
+      "latency_seconds": 0.1975,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The reply states the current status of the order as 'delivered', which supports the claim. No unsupported policy rule or service promise is identified.",
+      "error": null
+    },
+    "d7b8fd32cdddb3546b182adc8ec759cb": {
+      "input_tokens": 2360,
+      "output_tokens": 75,
+      "latency_seconds": 0.2952,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The response states that the search will be performed using the search_products tool with specific parameters, but no unsupported policy rule or service promise is identified. The evidence provided is the tool execution details, which do not contradict any policy or service rule. There is no unsupported claim or evidence gap.",
+      "error": null
+    },
+    "daec5d711d05bba5a4d850df4b9c5676": {
+      "input_tokens": 2817,
+      "output_tokens": 64,
+      "latency_seconds": 0.314,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states that individual stores may override the platform's default return policy, which is supported by the search results. The evidence is clear and consistent with the provided policy. There is no unsupported rule or service promise in the response.",
+      "error": null
+    },
+    "e1dd26c8e2efd7e6b2859028ccc4939a": {
+      "input_tokens": 2412,
+      "output_tokens": 65,
+      "latency_seconds": 0.2704,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states no unsupported policy rule or service promise. The actual claim is that the order is still 'placed' and refund ineligible. The tool evidence supports these claims. There is no unsupported policy rule or service promise in the response.",
+      "error": null
+    },
+    "e51810d9242c84492fe21c9f4186283a": {
+      "input_tokens": 2271,
+      "output_tokens": 66,
+      "latency_seconds": 0.258,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states that the order is eligible for a refund, which is supported by the retrieved policy. The tool confirms the order status as 'delivered', which indicates eligibility. There is no unsupported policy rule or service promise in the response.",
+      "error": null
+    },
+    "e55f4fb42689c0e20b4a91846089b979": {
+      "input_tokens": 2376,
+      "output_tokens": 61,
+      "latency_seconds": 0.258,
+      "verdict": 1,
+      "confidence": 0.894,
+      "critique": "The retrieved policy supports the return window of 30 days from delivery and the restocking fee policy. The reply correctly identifies and states these rules. No unsupported rule or service promise is present.",
+      "error": null
+    },
+    "e8aa4b661b01b4866dcbe9336445eb4c": {
+      "input_tokens": 2044,
+      "output_tokens": 61,
+      "latency_seconds": 0.225,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states no unsupported policy rule or service promise. The actual claim is to check the order status, and the evidence is provided by the tool call. There is no unsupported rule or service promise in the response.",
+      "error": null
+    },
+    "f2b5ebea02ba0264b438a878ffcf927f": {
+      "input_tokens": 2023,
+      "output_tokens": 78,
+      "latency_seconds": 0.269,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The reply states no unsupported policy rule or service promise. The actual claim is that legal advice is not provided, and the evidence is that the response is based on the assumption that legal advice is outside the scope of Cartwheel's support. There is no contradiction with the policy or evidence gap.",
+      "error": null
+    },
+    "f346d7eac27b6fc466784278c4bee620": {
+      "input_tokens": 2653,
+      "output_tokens": 63,
+      "latency_seconds": 0.2892,
+      "verdict": 1,
+      "confidence": 1,
+      "critique": "The reply states no unsupported policy rule or service promise. The actual claim is that the order status can be checked by looking up order history, which is supported by the tool evidence. There is no contradiction or unsupported rule mentioned.",
+      "error": null
+    },
+    "fea53fbba77e7dcd0dd8f00836695482": {
+      "input_tokens": 2157,
+      "output_tokens": 41,
+      "latency_seconds": 0.1718,
+      "verdict": 1,
+      "confidence": 0.8,
+      "critique": "The retrieved order status confirms that the order is delivered. No unsupported policy rule or service promise is added.",
+      "error": null
+    }
+  }
+}

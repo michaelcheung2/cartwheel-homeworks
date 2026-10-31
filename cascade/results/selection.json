@@ -1,0 +1,10 @@
+{
+  "threshold": 0.9,
+  "minimum_agreement": 0.95,
+  "development_results_sha256": "f2feb7c8fc3e0d14be83b66103386c3c21c5e6f36debfd7537cb53ea601863e2",
+  "config_sha256": "4cba924084523f2201e462731098c22195fc0a6722743920c71986f8a5612eac",
+  "selected_before_test": true,
+  "selected_at_epoch": 1793480442.10439,
+  "development_requirement_met": false,
+  "decision_basis": "No threshold met requirement: reject cascade; test the lowest threshold at best development agreement without retuning"
+}

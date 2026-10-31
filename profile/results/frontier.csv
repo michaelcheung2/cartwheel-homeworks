@@ -1,0 +1,3 @@
+candidate,model,development_score,write_pass_5,cost_per_100_conversations_usd,median_latency_seconds,frontier_status
+hw8-final,ollama_chat/llama3.1:8b,0.771429,0.571429,0.0,1.5244,frontier
+fewer-tokens,ollama_chat/llama3.1:8b,0.742857,0.571429,0.0,1.4221,dominated

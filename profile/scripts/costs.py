@@ -41,7 +41,7 @@ def main():
         inputs = sum(int(o["promptTokens"]) for o in group)
         outputs = sum(int(o["completionTokens"]) for o in group)
         price = config["prices_per_million_tokens_usd"][model]
-        rows.append(["customer_conversation", "server/app.py:202", 
+        rows.append(["customer_conversation", "server/app.py:202",
                      "SDK customer model generations; API token counts; observation IDs deduplicated across exports",
                      model, len(group), inputs, outputs,
                      (inputs * price["input"] + outputs * price["output"]) / 1e6])
@@ -79,7 +79,7 @@ def main():
     target = ROOT / "profile/results"
     target.mkdir(parents=True, exist_ok=True)
     with (target / "costs.csv").open("w", newline="") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(["cost_category", "call_site", "purpose", "model", "calls", "input_tokens", "output_tokens", "cost_usd"])
         writer.writerows(rows)
     (target / "cost-evidence.json").write_text(json.dumps({
