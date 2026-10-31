@@ -1,0 +1,8 @@
+{
+  "initial_launch": "Failed before checkout completed or any agent ran",
+  "cause": "git-lfs filter-process: git-lfs: command not found",
+  "agent_runs_before_failure": 0,
+  "completed_configurations_before_failure": 0,
+  "resolution": "Disable optional LFS reference-patch filters for temporary worktree checkout only. Agent, cases, grader and committed test plan remain unchanged.",
+  "resume": "Same optimize.frontier run command and saved plan"
+}

@@ -116,7 +116,13 @@ def run_one_configuration(
     with tempfile.TemporaryDirectory(prefix=f"hw8-configuration-{number}-") as temp:
         worktree = Path(temp) / "repo"
         subprocess.run(
-            ["git", "worktree", "add", "--detach", str(worktree), configuration["git_commit"]],
+            # LFS applies only to optional homework reference patches. The
+            # evaluated agent, cases and graders are ordinary Git files.
+            # Leave those unused patches as pointers when creating a checkout
+            # so a missing git-lfs binary cannot block evaluation.
+            ["git", "-c", "filter.lfs.process=", "-c", "filter.lfs.smudge=",
+             "-c", "filter.lfs.required=false", "worktree", "add", "--detach",
+             str(worktree), configuration["git_commit"]],
             cwd=git_root,
             check=True,
             capture_output=True,
