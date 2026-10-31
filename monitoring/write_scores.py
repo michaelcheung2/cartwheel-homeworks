@@ -84,6 +84,9 @@ def build_score_records(
         "score_id": _stable_id(mode, "prevalence", batch_label),
         "name": f"{mode}_corrected_prevalence", "value": estimate["corrected"],
         "data_type": "NUMERIC", "trace_id": None,
+        # Recent Langfuse requires every score to target a trace or session.
+        # This session represents the monitoring batch, not an agent trace.
+        "session_id": f"cartwheel-monitor-{mode}-{batch_label}",
         "comment": f"95% CI {estimate['ci_low']}-{estimate['ci_high']}, "
         f"raw {estimate['raw']}, n={estimate['n_sample']}",
     })
@@ -99,8 +102,9 @@ def build_score_records(
 def post_scores(records: list[dict[str, Any]]) -> int:
     """Write score records to Langfuse. Returns the number written.
 
-    Uses the SDK's ``create_score`` with the ``score_id`` idempotency
-    parameter, so writing a record again updates the existing score.
+    Uses the SDK's public Scores API with a stable ``id``. This works even
+    when OTel tracing is disabled and raises HTTP errors instead of silently
+    dropping score tasks. Writing an id again updates the existing score.
     """
     from analysis.helpers import langfuse_io
 
@@ -110,6 +114,7 @@ def post_scores(records: list[dict[str, Any]]) -> int:
             "to write scores; the offline path only builds score records"
         )
     from langfuse import get_client
+    from langfuse.api.resources.score.types.create_score_request import CreateScoreRequest
 
     client = get_client()
     for record in records:
@@ -117,12 +122,18 @@ def post_scores(records: list[dict[str, Any]]) -> int:
             "name": record["name"],
             "value": record["value"],
             "data_type": record["data_type"],
-            "score_id": record["score_id"],
+            "id": record["score_id"],
         }
         if record.get("trace_id") is not None:
-            kwargs["trace_id"] = record["trace_id"]
+            kwargs["traceId"] = record["trace_id"]
+        elif record.get("session_id"):
+            kwargs["sessionId"] = record["session_id"]
+        else:
+            raise ValueError("batch prevalence score needs a monitoring session id")
         if record.get("comment"):
             kwargs["comment"] = record["comment"]
-        client.create_score(**kwargs)
-    client.flush()
+        kwargs["dataType"] = kwargs.pop("data_type")
+        response = client.api.score.create(request=CreateScoreRequest(**kwargs))
+        if response.id != record["score_id"]:
+            raise RuntimeError("Langfuse returned a different score id")
     return len(records)

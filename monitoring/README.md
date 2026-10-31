@@ -2,10 +2,29 @@
 
 ## Current status
 
-The monitor implementation and offline checks are ready. Live comparison
-results, Langfuse score readback, dashboard, successful scheduled dispatch,
-and the student's interpretation/video are **pending**. No period estimates
-or chart have been fabricated.
+Both comparable periods, the history/chart, 62 Langfuse scores, and the
+three-widget dashboard are complete. All 50 new scenarios completed in 68
+traced turns using local Ollama. No paid model API calls were used.
+Scheduling, successful workflow dispatch, and student interpretations/video
+remain pending.
+
+| Observation | Before | After |
+|---|---:|---:|
+| Conversations / traces | 50 / 68 | 50 / 68 |
+| Random flags | 5 / 10 | 5 / 10 |
+| Risk flags (inspection only) | 10 / 20 | 14 / 20 |
+| Risk flags outside random sample | 9 | 11 |
+| Raw random flag rate | 50% | 50% |
+| Corrected prevalence | 0% | 0% |
+| 95% bootstrap interval | 0%–100% | 0%–100% |
+
+These are judge flags, not confirmed failures. The correction clamps an
+otherwise negative estimate to zero because the measured false-positive
+rate exceeds the observed random flag rate. The full-range intervals do
+not establish improvement or absence of failures. Failure sensitivity is
+0.8333 and pass specificity is 0.4231. Neither point estimate crosses the
+preselected 0.15 threshold. Observed evidence is summarized in
+`reports/hw7-monitoring-evidence.json`.
 
 The configuration keeps the HW3/HW6 Cartwheel model
 `ollama_chat/llama3.1:8b` and the student-selected frozen judge
@@ -15,7 +34,7 @@ checks the frozen artifact before use. The judge supports human review
 suggestions; scores and threshold crossings do not make customer decisions.
 
 The original HW3 period contains all 50 selected scenarios in 68 traces.
-The new period's timestamps remain null until one complete new run exists.
+The new period's verified timestamps are recorded in `config.json`.
 The comparison rejects missing scenarios or turns, changed requests, missing
 models, mixed models, duplicate trace IDs, and sessions from separate retries.
 
@@ -57,7 +76,7 @@ The original HW5 live cache was also checked: all 15 overlapping final-trace
 inputs match HW5 byte for byte. The sorted archived export preserves the
 same fields and evidence but orders nested JSON keys differently.
 
-Once Langfuse is restored, fetch live traces and run:
+To repeat the completed live comparison:
 
 ```bash
 uv run python -m monitoring.run --period before
@@ -106,13 +125,24 @@ by session ID. Empty windows save a zero count and succeed without calling
 the judge. The workflow uploads outputs even after failure. Scheduling takes
 effect only after the workflow is on the default branch.
 
-The pending Langfuse dashboard must show:
+The [local dashboard](http://localhost:3000/project/cartwheel-dev/dashboards/cmvwu5tz8000cs307uf1wi72a) contains:
 
 1. `unsupported_policy_claim_verdict` over time (random sample).
 2. `unsupported_policy_claim_risk_verdict` over time (risk groups).
 3. Traces with either score equal to 1, for human inspection.
 
-## Student interpretation — pending observed periods
+Dashboard and widget definitions were created and verified through the
+Langfuse public API; browser rendering remains unverified because local
+Chrome failed to launch. Select a date range including October 10 and
+October 31, 2026. Definitions are in `reports/hw7-dashboard.json`.
+
+Langfuse v3.225.11 requires period scores to target a monitoring batch
+session, `cartwheel-monitor-<mode>-<period>`. Verdicts target actual final
+traces. Synchronous public score writes propagate errors with tracing
+disabled. Readback verified 31 IDs/names/values per period; repeating after
+left 62 total named scores with no duplicates.
+
+## Student interpretation — pending
 
 The student completes these four answers after inspecting the actual results:
 

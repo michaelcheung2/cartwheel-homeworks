@@ -23,9 +23,10 @@
     },
     {
       "label": "after",
-      "from": null,
-      "to": null,
-      "status": "pending_new_complete_run"
+      "from": "2026-10-31T19:58:57.659999+00:00",
+      "to": "2026-10-31T20:00:32.968412+00:00",
+      "status": "verified_complete_run",
+      "source": "One new current-agent run; 50 scenarios with all scripted turns completed."
     }
   ]
 }

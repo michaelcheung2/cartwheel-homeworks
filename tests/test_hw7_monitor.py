@@ -114,6 +114,35 @@ def test_history_repeat_replaces_same_period(tmp_path):
     assert len(records) == 1 and records[0]["scores_written"] == 3
 
 
+def test_score_api_targets_batch_session_and_propagates_rejected_writes(monkeypatch):
+    from types import SimpleNamespace
+    import langfuse
+    from analysis.helpers import langfuse_io
+    from monitoring.write_scores import build_score_records, post_scores
+
+    requests = []
+    def create(*, request):
+        requests.append(request)
+        return SimpleNamespace(id=request.id)
+    monkeypatch.setenv("OTEL_SDK_DISABLED", "true")
+    monkeypatch.setattr(langfuse_io, "is_configured", lambda: True)
+    monkeypatch.setattr(langfuse, "get_client", lambda: SimpleNamespace(
+        api=SimpleNamespace(score=SimpleNamespace(create=create))))
+    estimate = dict(corrected=.1, ci_low=0, ci_high=.5, raw=.2, n_sample=10)
+    records = build_score_records("mode", {"trace-1": 1}, {}, estimate, "after")
+    assert post_scores(records) == 2
+    assert requests[0].trace_id == "trace-1" and requests[0].session_id is None
+    assert requests[1].trace_id is None
+    assert requests[1].session_id == "cartwheel-monitor-mode-after"
+    assert [r.id for r in requests] == [r["score_id"] for r in records]
+    def rejected(*, request):
+        raise RuntimeError("score request rejected")
+    monkeypatch.setattr(langfuse, "get_client", lambda: SimpleNamespace(
+        api=SimpleNamespace(score=SimpleNamespace(create=rejected))))
+    with pytest.raises(RuntimeError, match="score request rejected"):
+        post_scores(records)
+
+
 def test_frozen_docetl_settings_wrapper_and_parser_are_preserved(monkeypatch):
     from docetl import api
     from monitoring.run_judges import judge_sample

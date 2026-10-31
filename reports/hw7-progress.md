@@ -1,79 +1,52 @@
 # HW7 progress
 
-Started on branch `hw7/monitoring`, preserving all committed HW6 work.
+## Completed
 
-## Implemented and verified
+- Preserved the frozen student-selected HW5 judge and local Llama 3.1 8B.
+- Implemented sampling, Rogan–Gladen correction/bootstrap, monitoring,
+  stable score writes, two-period history/chart, and daily/manual workflow.
+- Docker and local Langfuse are healthy. Seeded an isolated temporary world,
+  preserving existing data and policies. All 50 new scenarios completed
+  once, with 68 traced turns. Both live periods passed completeness checks.
+- Judged 27 unique conversations per period: 10 random, 20 risk, seven
+  overlaps. Random and risk evidence remain separate.
+- Both raw random rates are 50%; corrected estimates are 0%, with 95%
+  intervals of 0–100%. Risk flags are 10/20 before and 14/20 after.
+  Judge flags are not confirmed failures. The uncertain estimates do not
+  establish improvement or absence of failures.
+- Wrote and read back 31 stable IDs/names/values per period. Repeated after
+  reused exact judgments and created no duplicates (62 total named scores).
+  Current Langfuse requires batch scores to target a monitoring session;
+  synchronous Scores API writes propagate errors with OTel disabled.
+- Created and read back the three-widget dashboard. Browser rendering
+  remains unverified because local Chrome launch failed.
+- A real empty rolling window succeeded with zero judge calls.
+  No paid model APIs were used.
 
-- Read the handout, monitoring contracts, specification, and the student's
-  HW3/HW5/HW6 artifacts. No reference patches or new judges were introduced.
-- Confirmed the original monitoring set: 50 scenarios, 68 original HW3
-  traces, one complete period and the same local Llama model.
-- Sampling, Rogan–Gladen correction with both bootstrap uncertainty sources,
-  and stable Langfuse score records implemented.
-- Monitor command validates scenario/model/turn completeness, rejects
-  separate session retries, preserves ordered HW5 conversation/tool evidence,
-  uses the final trace for scores, and keeps random/risk verdicts separate.
-- Repeated periods reuse exact saved verdicts and send the same score IDs.
-  Empty rolling windows record zero conversations without judge calls.
-- Frozen prompt/model/wrapper/parser preserved. Restored the supplied
-  monitoring adapter's missing frozen completion settings, including the
-  student's structured output mode, context size, temperature and threads.
-- All 15 overlapping original final-trace inputs match the student's HW5
-  input bytes when prepared from the original live cache. The frozen local
-  model digest was verified.
-- Configured 20% random sampling, policy lookup and multi-turn risk groups,
-  and threshold 0.15 before monitoring-period judgments. The original plan
-  contains 10 random, 20 unique risk, 27 unique selected records; risk groups
-  overlap. No period failure rate was calculated from this plan.
-- A fresh preflight succeeded through DocETL and local Ollama: 2,724 input
-  tokens, 148 output tokens, 5.56 seconds. An initial pipeline check reused
-  an exact HW5 cache entry. Neither is a completed monitoring period or
-  human assessment. Details are in `reports/hw7-judge-preflight.json`.
-- Daily/manual workflow scaffold uses a self-hosted runner labelled
-  `hw7-monitor` for local Langfuse and the frozen local Ollama judge. It
-  uploads output even after failure and needs no paid provider key.
+See `hw7-monitoring-evidence.json`, `hw7-dashboard.json`, scenario results,
+and `monitoring/history.jsonl` / `prevalence.svg`. Raw exports, generated
+worlds, and credentials stay out of commits.
 
 ## Checks
 
-All tests and planning checks below ran offline, with no model calls:
+- Offline focused handout HW7 checks: **3 passed**.
+- Offline monitor checks after score fix: **13 passed**; one dependency
+  deprecation warning.
+- Earlier expanded offline CI: **103 passed, 13 skipped, 1 xfailed,
+  15 xpassed**. Remaining homework placeholders were preserved.
+- Live checks used local Ollama/Langfuse: both comparison periods, score
+  write/readback, cached after repeat, empty window, dashboard API.
+- Initial fresh preflight: 2,724 input tokens, 148 output tokens, 5.56
+  seconds (`hw7-judge-preflight.json`). Period provider-request totals were
+  not measured; DocETL can reuse exact caches.
 
-- Focused handout HW7 checks with `--runxfail`: **3 passed**.
-- Added monitor checks: **12 passed**, including incomplete periods, mixed
-  models, retries, sampling/prevalence separation, stable repeated score
-  payloads, empty windows, and frozen DocETL settings.
-- Expanded CI selection with process-only `OTEL_SDK_DISABLED=false`:
-  **103 passed, 13 skipped, 1 xfailed, 15 xpassed**. One DocETL dependency
-  deprecation warning. Remaining homework placeholders were preserved.
-- Before-period dry-run succeeded; after-period invocation correctly
-  rejects its pending timestamps.
+## Remaining
 
-The preflight above is the only fresh live model evaluation so far.
-No paid model APIs were called. Existing database, scenario results, student
-labels, frozen judge and local settings were preserved.
+The workflow exists on `hw7/monitoring`. GitHub requires it on the default
+branch before dispatch; attempted branch dispatch returned 404. No local
+GitHub runner is registered. User decision requested before publishing
+HW6/HW7 to main and enabling daily jobs on the Mac.
 
-## Pending infrastructure and deliverables
-
-Docker is unavailable: no daemon socket, and launching Docker Desktop returns
-macOS error -54. Local Langfuse on port 3000 is offline. The student has been
-asked whether to restore local Langfuse with a self-hosted runner or use an
-existing reachable Langfuse host. No runner was registered and no new service
-was purchased.
-
-After Langfuse is available:
-
-1. Seed an isolated temporary database with the supplied tool, preserving
-   local data. Start the traced server against it and run all 50 monitoring
-   scenarios once with the same Cartwheel model.
-2. Verify both live periods, record the actual after UTC timestamps, and
-   commit `scenarios/hw7-after-results.jsonl`.
-3. Execute both periods, save actual `monitoring/history.jsonl` and
-   `monitoring/prevalence.svg`, and rerun after to verify score IDs update in
-   Langfuse. Offline idempotency tests do not establish remote behavior.
-4. Configure the reachable host/runner and secrets locally, create the three
-   required dashboard views, manually dispatch and verify the workflow.
-   Daily scheduling starts only after the workflow is on the default branch.
-5. The student writes the four interpretations in `monitoring/README.md`
-   after inspecting actual results and records the required ≤5-minute video.
-
-Missing histories, charts, scores, dashboard and scenario results remain
-pending. No synthetic test data was recorded as homework evidence.
+The student supplies four interpretations in `monitoring/README.md`,
+inspects the dashboard, and records a video of at most five minutes.
+Successful manual workflow dispatch remains pending infrastructure.
