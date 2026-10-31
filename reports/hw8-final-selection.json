@@ -1,0 +1,14 @@
+{
+  "candidate": "loop_tools_before_narration",
+  "candidate_commit": "8158c28",
+  "student_confirmed": true,
+  "student_response": "yes",
+  "selection_made_before_test_results": true,
+  "changed_layer": "prompt",
+  "methods": [
+    "manual",
+    "improve-loop"
+  ],
+  "reason": "Student accepted the recommended prompt combining required handoff, eligible refund invocation and tool calls before narration.",
+  "final_development_evaluation": "Pending required rerun before saving final version."
+}
