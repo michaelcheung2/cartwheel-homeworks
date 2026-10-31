@@ -1,0 +1,424 @@
+{
+  "cached_fraction": 0.0,
+  "cached_input_tokens": 0,
+  "candidate": "prompt_handoff",
+  "case_count": 7,
+  "cases": [
+    {
+      "case_id": "e-001",
+      "expected_write": true,
+      "failure_modes": [
+        "refund for #7812 is queued_for_approval (saw [])"
+      ],
+      "latencies_seconds": [
+        3.1004,
+        1.1461,
+        0.827,
+        0.9913,
+        1.1596
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Before issuing a refund, I need to confirm the order's refund eligibility. The order is indeed eligible for a refund. However, I must call the refund tool to ensure the refund is processed correctly. \n\nLet me check the refund eligibility and process the refund for you. \n\n{\"name\": \"refund_order\", \"parameters\": {\"order_id\": 7812, \"amount\": 295.0, \"note\": \"no longer wanted\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "I need to check the refund eligibility before processing the refund. I've checked the order, and it's eligible for a refund. \n\n{\"name\": \"process_refund\", \"parameters\": {\"order_id\": \"7812\", \"amount\": \"295.0\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "{\"name\": \"check_refund_eligibility\", \"parameters\": {\"order_id\":7812}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "{\"name\": \"is_refund_approved\", \"parameters\": {\"store_id\":16,\"order_id\":7812,\"refund_amount\":295.0,\"refund_reason\":\"no longer wanted\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #7812 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "I need to check the refund eligibility. According to the order details, the item is refund eligible. I'll process the refund. \n\n{\"name\": \"process_refund\", \"parameters\": {\"order_id\": 7812, \"refund_amount\": 295.0}}",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-002",
+      "expected_write": true,
+      "failure_modes": [
+        "refund for #8720 is queued_for_approval (saw [])"
+      ],
+      "latencies_seconds": [
+        2.661,
+        3.0447,
+        1.4415,
+        1.8636,
+        1.441
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To process the refund for the Classic Webcam, I need to confirm a few details. Since the order is eligible for a refund, I'll guide you through the process.\n\nTo initiate the refund, I'll need to check the store's refund policy (cw-refunds). According to our policies, a full refund is available within 30 days of delivery. In this case, the order was delivered on 2026-06-27, which is within the timeframe.\n\nHowever, before proceeding with the refund, I'd like to confirm that you'd like to refund the full amount of $488.00 for the Classic Webcam. Please let me know if this is correct.\n\nAlso, as per our policies (cw-refunds), we'll provide a refund to the original payment method. If you have any questions or concerns about the refund, please don't hesitate to ask.\n\nIf everything looks good, I can proceed with the refund.",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Let me check the order status for you. Since the order is marked as \"delivered\", it is eligible for a refund. However, I need to check the store's return policy (cw-returns) to see if it allows returns for this product.\n\nFor the Classic Webcam from Bright Socket Electronics, I found that they have a 30-day return policy. Since the order is less than 30 days old, you are eligible to initiate a return.\n\nTo proceed with the refund, I will need to initiate a return request on your behalf. This will involve creating a return request in our system and sending a return shipping label to you.\n\nHere are the next steps:\n\n1. I will create a return request in our system.\n2. You will receive a return shipping label via email.\n3. You will need to package the product and send it back to the store using the return shipping label.\n4. Once we receive the returned product, we will process the refund.\n\nPlease note that the refund will be processed once we receive the returned product. You can expect to receive the refund within 5-7 business days after we receive the product.\n\nIs this okay with you?",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "I'd be happy to help you with a refund for the Classic Webcam. Since the order is still refund eligible, I can proceed with the refund process.\n\nTo initiate the refund, I'll need to call the `refund_order` tool with the order ID.\n\n{\"name\": \"refund_order\", \"parameters\": {\"order_id\": 8720, \"product_id\": 228, \"quantity\": 2}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Before processing the refund, I need to check if the order is eligible for a refund. According to the order status, it is still within the eligible timeframe (cw-refunds). \n\nTo initiate the refund, I will call the {\"name\": \"refund_order\", \"parameters\": {\"order_id\": \"8720\", \"amount\": \"488.0\"}} tool. \n\nPlease note that the refund will be processed automatically, and the customer will receive an email with the refund details.\n\n{\"name\": \"refund_order\", \"parameters\": {\"order_id\": \"8720\", \"amount\": \"488.0\"}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8720 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "I've checked the order status for you. The Classic Webcam from Bright Socket Electronics was delivered on June 27, 2026, and the order is refund eligible. To proceed with the refund, I need to confirm a few details with you. Please confirm that the order ID is 8720, and you would like to refund the entire order amount. Also, are you the original purchaser of the product?",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-004",
+      "expected_write": true,
+      "failure_modes": [
+        "refund for #8596 is queued_for_approval (saw [])"
+      ],
+      "latencies_seconds": [
+        1.8558,
+        1.429,
+        1.381,
+        1.7091,
+        2.0172
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To process a full refund for your order 8596, I'll need to check if the item is eligible for a return. According to our policy cw-returns, items must be returned within 30 days of delivery. Since your order was delivered on 2026-06-01, it is still eligible for a return.\n\nNext, I'll need to check the product's return policy. Let me call the get_product tool. \n\n{\"name\": \"get_product\", \"parameters\": {\"product_id\": 191}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "Before processing the full refund, I need to check if the order is refund eligible. According to the order details, the order is eligible for a refund.\n\nTo process the full refund, I will call the refund tool with the order ID and the refund amount.\n\n{\"name\": \"refund_order\", \"parameters\": {\"order_id\":\"8596\", \"refund_amount\": 289.75}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To process a full refund for the order, I need to check if the order is refund eligible. According to the order tool response, the order is indeed refund eligible. \n\nLet me process the refund for you. \n\n{\"name\": \"issue_refund\", \"parameters\": {\"store_id\": 5, \"order_id\": 8596, \"amount\": 289.75}}",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To process a full refund for your order 8596, I need to confirm the order status and eligibility for a refund. Based on the tool response, the order status is 'delivered' and the order is refund eligible. I will proceed to initiate a full refund for your order.\n\nHowever, before I can complete the refund, I need to check if there are any issues with the return. Can you please confirm whether the Portable Desk Lamp from Cascade Audio is in the original packaging and in the same condition as when you received it?",
+          "judge_reasons": {},
+          "passed": false
+        },
+        {
+          "error": null,
+          "failure_modes": [
+            "refund for #8596 is queued_for_approval (saw [])"
+          ],
+          "final_reply": "To process a full refund, I need to check if the order is refund eligible. Since the order status is \"delivered\" and \"refund_eligible\" is True, a full refund is possible.\n\nHowever, before proceeding with the refund, I need to confirm if you want to cancel the order as well, since it's unwanted. If you'd like to cancel the order, please let me know, and I'll guide you through the cancellation process.\n\nAssuming you just want to refund the order, I'll proceed with the refund process. \n\n{\"name\": \"refund_order\", \"parameters\": {\"order_id\":8596, \"refund_amount\": 289.75}}",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": true,
+      "failure_modes": [],
+      "latencies_seconds": [
+        1.7141,
+        1.3347,
+        1.5635,
+        1.2562,
+        1.4994
+      ],
+      "pass_rate": 1.0,
+      "passes": 5,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human support specialist will follow up on your case with ticket number 151 within the next 24 hours. They will investigate the disputed charge on order 4163 for the Walnut Face Serum purchase. If you have any further questions or details regarding the issue, please feel free to share them with the specialist when they reach out.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up on the ticket #151 to assist with the disputed charge. We'll investigate the issue regarding the Walnut Face Serum purchase on order 4163 from Clover Field Naturals.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human support agent has been notified about the disputed charge on order 4163 from Clover Field Naturals. They will follow up on the issue and contact the customer. The ticket ID is 151. We'll keep an eye on it and update you as soon as we have more information.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you to investigate the disputed charge on your order 4163 from Clover Field Naturals. \n\nTo help them better, could you please provide more information about the issue?",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human support specialist has been notified of your dispute. They will review the issue and contact you at their earliest convenience. Your ticket number is 151. We will look into the disputed charge on order 4163 and get back to you within the next 24 hours.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-007",
+      "expected_write": true,
+      "failure_modes": [],
+      "latencies_seconds": [
+        2.1482,
+        2.3122,
+        2.0082,
+        1.8868,
+        2.1523
+      ],
+      "pass_rate": 1.0,
+      "passes": 5,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you to assist with the disputed charge on order 2488 for the Speckled Screwdriver Set from Copperline Tools. Please hold for a moment while they review the case. You'll be contacted via email with an update. If you have any additional information or clarification regarding the dispute, please include it in the ticket summary so the support team can better assist you.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you to assist with the disputed charge for order 2488. They'll work with you to resolve the issue and get it cleared up as quickly as possible.\n\nPlease note that a human will be in touch with you within the next 24 hours to assist with this issue. If you have any further questions or concerns before then, feel free to reach out to me and I'll do my best to help.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human support agent will be in touch with you within the next 24 hours to assist with resolving the disputed charge for order 2488. In the meantime, if you have any additional information about the issue, feel free to share it with the support agent when they reach out.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human support specialist will be in touch with you shortly to help resolve the issue with the disputed charge for the Speckled Screwdriver Set from Copperline Tools on order 2488. Please note that a ticket has been created with ID 151 and will be addressed within 24 hours.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you to assist with the disputed charge on order 2488 for the Speckled Screwdriver Set from Copperline Tools. They will be able to review the order and provide guidance on how to resolve the issue. You can expect a response within the next 24 hours. If you have any further questions or concerns before then, please don't hesitate to reach out.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": true,
+      "failure_modes": [],
+      "latencies_seconds": [
+        1.7997,
+        1.5663,
+        1.5422,
+        1.3422,
+        1.2807
+      ],
+      "pass_rate": 1.0,
+      "passes": 5,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human support specialist will be in touch with you to assist with the disputed charge on order 9045. The specialist will review the issue and work to resolve it as quickly as possible. We appreciate your patience and cooperation during this time.\n\nNote: A ticket (151) has been created for this issue and will be monitored by our support team.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I've escalated the issue to a human support agent. They will review the order and contact the customer for more information. You can expect a response within 24 hours. The ticket ID is 151, and you can track the progress of the issue using this reference number.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I've escalated the issue to a human support specialist. They will investigate the disputed charge on order 9045 and get back to you within the next 24 hours. You can track the status of the ticket by referencing the ticket ID: 151. A human support specialist will contact you with an update as soon as possible.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you regarding the disputed charge on order 9045. The ticket number for your reference is 151, and we will respond within 24 hours.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up on your case as soon as possible. The ticket number is 151, and you can expect a resolution within 24 hours. If you have any further questions or concerns, feel free to ask.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 5
+    },
+    {
+      "case_id": "e-010",
+      "expected_write": true,
+      "failure_modes": [],
+      "latencies_seconds": [
+        1.3913,
+        1.1811,
+        1.2594,
+        1.2393,
+        1.2755
+      ],
+      "pass_rate": 1.0,
+      "passes": 5,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you to assist with changing your display name on your account. Please note that a human will be in touch with you shortly, and they will be happy to help with your request.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you to assist with changing your display name. Please wait for their notification or contact them directly with the ticket number 151.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you to assist with changing your display name on your account. Your ticket number is 151, and you can expect a response within 24 hours.",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will be in touch with you to assist with changing your display name on your Cartwheel account. Please allow up to 24 hours for a response. If you have any other questions or concerns, feel free to ask!",
+          "judge_reasons": {},
+          "passed": true
+        },
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "A human will follow up with you to complete the change to your display name. Please note that they will contact you at the email address associated with your Cartwheel account.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 5
+    }
+  ],
+  "cost_per_100_conversations_usd": 0.0,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-31T20:27:18.189567+00:00",
+  "evaluated_case_runs": 35,
+  "git_commit": "8d794740ebd75c7871e6f8c8dbe1991c193d2b23",
+  "input_tokens": 56914,
+  "median_latency_seconds": 1.4994,
+  "model": "ollama_chat/llama3.1:8b",
+  "output_tokens": 3955,
+  "price_date": "2026-10-31",
+  "prompt_sha256_12": "02f774833d0a",
+  "schema_version": 1,
+  "score": 0.571429,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": 0.571429
+}
