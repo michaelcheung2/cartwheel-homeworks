@@ -1,0 +1,237 @@
+{
+  "handout": "homework/module-5/hw8.md",
+  "upstream_commit": "a3aa8d5ce4691e63e2b0140ed89a23790ca0fb77",
+  "case_count": 10,
+  "regression_count": 2,
+  "capability_count": 8,
+  "model_checks": {
+    "ollama_chat/qwen3:8b": {
+      "completed": true,
+      "passed": true,
+      "case_id": "e-001"
+    },
+    "ollama_chat/qwen3:0.6b": {
+      "completed": true,
+      "passed": false,
+      "case_id": "e-001"
+    },
+    "ollama_chat/llama3.1:8b": {
+      "completed": true,
+      "passed": false,
+      "case_id": "e-001"
+    }
+  },
+  "model_check_evaluated_runs": 3,
+  "judge_calls": 0,
+  "paid_model_api_calls": 0,
+  "offline_workflow_tests": {
+    "passed": 7
+  },
+  "preserved_files_before_preparation": [
+    {
+      "path": "agent/killswitch.py",
+      "sha256": "7c87691d2b6c44ab227421a6d9f0d3e028f143d5cc67adc069c7448864a61252"
+    },
+    {
+      "path": "agent/auth.py",
+      "sha256": "877e8322ee3c8e49665d89114000cba52116c042defb8a252e6b857dd221b07f"
+    },
+    {
+      "path": "agent/db.py",
+      "sha256": "a2b6963f6c8bd3f13f91e3d6ac86c1fa1bfdcc6d1590eb64a8b594d8ae670854"
+    },
+    {
+      "path": "agent/config.py",
+      "sha256": "25a08b67f2b6b755f03520819b47e722cb9f4725b3ae10e190814cb7578456cb"
+    },
+    {
+      "path": "agent/guards.py",
+      "sha256": "828e5cfb088dfc97bf47bb6c54f78765f4bd8dacb75e57c7f941bc5381f6cd97"
+    },
+    {
+      "path": "agent/approvals.py",
+      "sha256": "527deb031245451b492ededfee050e69c2f48e4afcfab2024d46be6b0b57ca8c"
+    },
+    {
+      "path": "agent/tools.py",
+      "sha256": "7ebff151b1950d84b6822625119af48c8718749020f3f6b9b41043b71445a851"
+    },
+    {
+      "path": "agent/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "agent/helpcenter.py",
+      "sha256": "b60225499f6ae7434e18e4a651b197077e201c454d18a9496f71301248652010"
+    },
+    {
+      "path": "agent/review.py",
+      "sha256": "6ca1811f8941253d17b47398f9f71a677b48a054cfc3e8fff57fdf3344d6a05c"
+    },
+    {
+      "path": "agent/cli.py",
+      "sha256": "ae8b8c4060190033a08b71f063d7012485cdcd6d307e8329d8cc1526f98c67e6"
+    },
+    {
+      "path": "agent/agent.py",
+      "sha256": "929a2f244c426fd9fb91fffe39c51341bbf438b9ab2c22f2e2e233f83214b84e"
+    },
+    {
+      "path": "eval_cases/cases.jsonl",
+      "sha256": "11e55c6400e547a06784bcfad384ede89c2c83d60dfdba7315c546920ca640db"
+    },
+    {
+      "path": "eval_cases/README.md",
+      "sha256": "4c680a30f9d1731a50081df0efbcf3c6c834e0e52645185b1de3faec298cee92"
+    },
+    {
+      "path": "eval_cases/hw6-provenance.json",
+      "sha256": "7f6770c16039918f8ea98fefd9b5e73775207b6fdfcf7664efabcfdda1113a2b"
+    },
+    {
+      "path": "tests/test_langfuse_export.py",
+      "sha256": "5679d549b0c588a9fdaf595e71b28585b36eb3bd1b0156a15219893df3aab3c2"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "a0339d37748ed64408bbca2ecc3802de9b692c666ce566ab0e8a874ddb0da2b9"
+    },
+    {
+      "path": "tests/test_hw1_additional_tool.py",
+      "sha256": "d79e7a486f052208604d714140c4e6a330b5dd839582affaa1d100e8a898fc74"
+    },
+    {
+      "path": "tests/test_hw7_monitor.py",
+      "sha256": "c9a355839df14ee485743af9312883dcc0649310bfe415d855ac0ecf0e6fceec"
+    },
+    {
+      "path": "tests/test_normalization_metadata.py",
+      "sha256": "611a73d0db9492a6df0e469409cc0655320c0c849072de3e0a10c367e93f6ff5"
+    },
+    {
+      "path": "tests/test_auth.py",
+      "sha256": "5d412c38ad41001dfe13f711817a8daccf6b2ce6ae99d6ccac27260c481cd6e8"
+    },
+    {
+      "path": "tests/test_db.py",
+      "sha256": "d5f1fce7895567367272229e1b30c8def28f389ad85c72c127983a5639e60a38"
+    },
+    {
+      "path": "tests/test_hw1_prompt.py",
+      "sha256": "d4a9da9d931175a8e0d21d1c76c8dd2d2f5116c5c7c5b247576232401faff0cb"
+    },
+    {
+      "path": "tests/test_observability.py",
+      "sha256": "50d8114ebcd010a7d046e8660bc6908455172424062c6a42764233ed8d74ad2c"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/test_harbor_result_layout.py",
+      "sha256": "88e676392f21f7a73079a322038065bee3dc32ece353352b94b69b04e7a75cee"
+    },
+    {
+      "path": "tests/test_adversarial.py",
+      "sha256": "b7a097daac3374ef4d46958624ca5b0c38d20eb5d65b452ecf1f5c15c7eab0d1"
+    },
+    {
+      "path": "tests/test_hw_holes.py",
+      "sha256": "168297c81ae4a23be56c2651044cbb880f89c407cee44fd04352041e997e54f1"
+    },
+    {
+      "path": "tests/test_seed_determinism.py",
+      "sha256": "b698f2d18abf4f6f7247096c1a3d28f8bd0790da8c88b26c9ddee92ceaf8e0bb"
+    },
+    {
+      "path": "tests/test_hw6_case_checks.py",
+      "sha256": "256fcd3b971e1f236e04821c963149f9f236db97e21f9ff641ed864e936536f7"
+    },
+    {
+      "path": "tests/test_agent_tools.py",
+      "sha256": "0245a28ab7bf0a85f523097ea97c46251b47e3d568548cbe0d80377c6f8a8233"
+    },
+    {
+      "path": "tests/test_scenario_runner.py",
+      "sha256": "df1f88909d99767f766c27ead67b012f678431e12c629eea2c977eb136f4bb1f"
+    },
+    {
+      "path": "tests/test_eligibility.py",
+      "sha256": "92718c05eba4be56d1edffa232a99669357f89c96ebe32273bf1e20658b2d9c9"
+    },
+    {
+      "path": "tests/test_replay_harness.py",
+      "sha256": "8362386f26ee21234fe0d8e509923644a8b40d39a351ab0e82b39314a44dd2de"
+    },
+    {
+      "path": "tests/test_optimization.py",
+      "sha256": "ba25c28c4dd87820117168ab5436bf23a995d6b8f66333110901505771db2599"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha256": "f3aad9e26fc1c3b71292c0e4e1c134a1c0d47649aaeacc6b6426c46086c86545"
+    },
+    {
+      "path": "tests/test_harbor_adapter.py",
+      "sha256": "a3cf72585318076c1f249a760130703959a5563400f37e5f9b4f4e60a2ed111f"
+    },
+    {
+      "path": "tests/test_scenario_validation.py",
+      "sha256": "f4feb5c89b6998ea2a8fede38edb9a94c32ca1648e060bfe3089be2a0eed560a"
+    },
+    {
+      "path": "tests/eval/conftest.py",
+      "sha256": "84751fe59a4017eb022ab6701df05e0e3a107fca28796b57cf3913f00e517655"
+    },
+    {
+      "path": "tests/eval/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/eval/test_unit.py",
+      "sha256": "d066c9c6041462c6eb71c360b55886e34a283b5ff92177b0bbe246de3524a1a2"
+    },
+    {
+      "path": "tests/eval/passk.py",
+      "sha256": "21bbcd73c782b69dca3f2f2f55ccf163c577750acc533804a6ad43e899dd4852"
+    },
+    {
+      "path": "tests/eval/test_e2e.py",
+      "sha256": "a943a9a7fd6a479255a667606e97cedcdc20ebaf6e3b78b30dce35e927a391e8"
+    },
+    {
+      "path": "tests/eval/test_integration.py",
+      "sha256": "5e4afb4a4e4641c50016b5f128835ed4bac9d006b1c2f561eb16b216cbd9806d"
+    },
+    {
+      "path": "tests/eval/fake_model.py",
+      "sha256": "3cecc4e4c117833c0d5a3676c78b6a96a92039d78787106b378d29fa8d14b17f"
+    },
+    {
+      "path": "analysis/state/judges/unsupported_policy_claim-v2.json",
+      "sha256": "6f5f0861b65cb549c859f950a87e514179cdfc22a4c925aa1596dec8a27e78ec"
+    },
+    {
+      "path": "analysis/state/judges/_history_unsupported_policy_claim.json",
+      "sha256": "c4dafbb73f243843ba92edcc2f2dfef028311df2b2f02979df2f49acac4641f7"
+    },
+    {
+      "path": "analysis/state/judges/unsupported_policy_claim-v0.json",
+      "sha256": "92d462ff9ed5781707c3cea191f402c27e49523b99832022b1334805430c8133"
+    },
+    {
+      "path": "analysis/state/judges/unsupported_policy_claim-v1.json",
+      "sha256": "f121c5560e36ac5fa49a8064853969e57f09abefc4ea9554095b21670dfada84"
+    }
+  ],
+  "pending_decisions": [
+    "Student choice of target failure mode",
+    "Student selection of final candidate before any test-set execution"
+  ],
+  "notes": [
+    "Updated only optimization starters and imported the current upstream handout/program/skill. Preserved existing dominance contract and adapted provider helper import to this checkout.",
+    "Grader hashes exclude generated Python bytecode; scoring source files and frozen judges remain unchanged.",
+    "No development/test split existed before this preparation. Compatibility checks ran before split creation, as required."
+  ]
+}

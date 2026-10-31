@@ -1,13 +1,27 @@
 {
-  "price_date": "REPLACE_WITH_YYYY-MM-DD",
+  "price_date": "2026-10-31",
   "models": {
-    "development_and_search": "glm-5.2",
-    "comparison": ["gpt-5.5", "claude-opus-4-6", "glm-5.2"],
-    "gepa_reflection": "anthropic/claude-opus-4-6"
+    "development_and_search": "ollama_chat/llama3.1:8b",
+    "comparison": [
+      "ollama_chat/qwen3:8b",
+      "ollama_chat/qwen3:0.6b",
+      "ollama_chat/llama3.1:8b"
+    ],
+    "gepa_reflection": "ollama_chat/qwen3:8b"
   },
   "prices_per_million_tokens_usd": {
-    "claude-opus-4-6": {"input": null, "output": null},
-    "glm-5.2": {"input": null, "output": null},
-    "gpt-5.5": {"input": null, "output": null}
-  }
+    "ollama_chat/qwen3:8b": {
+      "input": 0.0,
+      "output": 0.0
+    },
+    "ollama_chat/qwen3:0.6b": {
+      "input": 0.0,
+      "output": 0.0
+    },
+    "ollama_chat/llama3.1:8b": {
+      "input": 0.0,
+      "output": 0.0
+    }
+  },
+  "price_basis": "Local Ollama inference has no model API fee. Zero values exclude electricity and hardware costs; use token usage and latency as additional resource measures."
 }
