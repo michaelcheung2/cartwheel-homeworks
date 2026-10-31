@@ -188,8 +188,9 @@ def is_expected_write(case: dict[str, Any]) -> bool:
     from replay.rollout import WRITE_TOOLS
 
     return any(
-        check["check"] == "refund_status"
+        check["check"] in {"refund_status", "escalation_created"}
         or (check["check"] == "tool_called" and check.get("name") in WRITE_TOOLS)
+        or (check["check"] == "tool_called" and check.get("name") == "escalate_to_human")
         for check in case["expected"].get("checks", [])
     )
 
